@@ -13,7 +13,6 @@ namespace TaskBasedForms
         string[] function_names = new string[8];
         public void Start(Application app)
         {
-
             Form1 form1 = new Form1(app);
             form1.ShowDialog();
         }

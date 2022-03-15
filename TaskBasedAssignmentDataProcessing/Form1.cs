@@ -20,6 +20,8 @@ namespace TaskBasedForms
         int SelectedSupplierTypeIndex;
         int SelectedDateIndex;
 
+        //Will be used in the future as a method of selcting a specfic type of data processing
+        //Fullfilling different data processing methods
         int SelectedNum;
 
         public string[] fileNames = new string[0];
@@ -30,6 +32,7 @@ namespace TaskBasedForms
         HashSet<Date> dates = new HashSet<Date>();
         List<string> supplier_names = new List<string>();
         public Application _App;
+
         public string DataDirectoryPath;
         public string StoreCodesFile;
 
@@ -69,8 +72,8 @@ namespace TaskBasedForms
             task1.Start();
             Task.WaitAll(task1);
 
+            //Gets All Supply Names from each order, the processes them into a distinct list, containing only each instance of a supplier sname , 
             List<string> supplier_names_dupes = new List<string>();
-
             foreach (Order order in orders)
             {
                 string supplier_name = order.SupplierName;
@@ -78,7 +81,7 @@ namespace TaskBasedForms
             }
             supplier_names = supplier_names_dupes.Distinct().ToList();
 
-
+            //Same thing we did above for the supplier names
             List<string> supplier_types_dupes = new List<string>();
             foreach (Order order in orders)
             {
@@ -88,9 +91,12 @@ namespace TaskBasedForms
 
             supplier_types = supplier_types_dupes.Distinct().ToList();
 
+            //Lods Selection lists for data processing , data processing of filtering threw orders is done via c# query system
             LoadList();
         }
 
+
+        //Similar to the old load data method ,segrating data into adding into lists and using .split method ,can find old version on other gitrepos or bb
         public void LoadData(int start, int end)
         {
 
@@ -180,11 +186,13 @@ namespace TaskBasedForms
 
         }
 
+
+
+        //Upon Selecting element , ot stores the element value in in variable , used for seartching "ElemementAt" Queries function
         private void SupplierTypeList_SelectedIndexChanged(object sender, EventArgs e)
         {
             SelectedSupplierTypeIndex = SupplierTypeList.SelectedIndex;
         }
-
         private void SupplierNameList_SelectedIndexChanged(object sender, EventArgs e)
         {
             SelectedSupplierNameIndex = SupplierNameList.SelectedIndex;
@@ -236,6 +244,7 @@ namespace TaskBasedForms
 
         }
 
+        //Updates the query filtering results, and some minor data
         private void UpdateQueryListView(IEnumerable<Order> orders)
         {
 
@@ -258,6 +267,8 @@ namespace TaskBasedForms
             TotalCostFilteredOrders.Text = "Total Cost >> " + Order_Query_Total.ToString();
         }
 
+
+        //Deslect of options function
         private void DeselectSupplierType_Click(object sender, EventArgs e)
         {
             SupplierTypeList.SelectedIndex = -1;
