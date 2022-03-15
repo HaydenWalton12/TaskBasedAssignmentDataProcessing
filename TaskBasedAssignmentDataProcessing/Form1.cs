@@ -13,6 +13,29 @@ namespace TaskBasedForms
     public partial class Form1 : Form
     {
 
+        /// <summary>
+        /// When creating the data processing segment, remember to allow differetn data to be processed at once, remember the "Allow the Finances team to find the following data:"
+        ///Segmenet , e.g if a supplier type is only chosen for data porocessing , only process the totla that type has made all time  , or if a date is chosen too , show how much
+        ///that ssupplier type has made in  a week too . 
+        ///The total cost of all orders available in the supplied data
+
+//        o The total cost of all orders for a single store
+
+//        o The total cost of orders in a week for all stores
+
+//o The total cost of orders in a week for a single store
+
+//o The total cost of all orders to a supplier
+
+//o The cost of all orders from a supplier type
+
+//o The cost of orders in a week for a supplier type
+
+//o The cost of orders for a supplier type for a store
+
+//o The cost of orders in a week for a supplier type for a store
+        /// </summary>
+
 
         //To locate the queried filtered data at this point , we use ints to access the elementat from the query.
         int SelectedStoreCodeIndex;
