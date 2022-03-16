@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 namespace TaskBasedForms
 {
     public partial class Form1 : Form
@@ -19,21 +20,21 @@ namespace TaskBasedForms
         ///that ssupplier type has made in  a week too . 
         ///The total cost of all orders available in the supplied data
 
-//        o The total cost of all orders for a single store
-//        o The total cost of orders in a week for all stores
+        //        o The total cost of all orders for a single store
+        //        o The total cost of orders in a week for all stores
 
 
-//o The total cost of orders in a week for a single store
+        //o The total cost of orders in a week for a single store
 
-//o The total cost of all orders to a supplier
+        //o The total cost of all orders to a supplier
 
-//o The cost of all orders from a supplier type
+        //o The cost of all orders from a supplier type
 
-//o The cost of orders in a week for a supplier type
+        //o The cost of orders in a week for a supplier type
 
-//o The cost of orders for a supplier type for a store
+        //o The cost of orders for a supplier type for a store
 
-//o The cost of orders in a week for a supplier type for a store
+        //o The cost of orders in a week for a supplier type for a store
         /// </summary>
 
 
@@ -76,10 +77,10 @@ namespace TaskBasedForms
         {
             _App = application;
             InitializeComponent();
-            StoreCodeActive = false ;
-             SupplierTypeActive = false;
-             SupplierNameActive = false;
-             DateActive = false;
+            StoreCodeActive = false;
+            SupplierTypeActive = false;
+            SupplierNameActive = false;
+            DateActive = false;
         }
 
 
@@ -233,13 +234,14 @@ namespace TaskBasedForms
             switch (SelectionCode)
             {
 
-               //Total Of Orders/Cost From A Single Store
+                //Total Of Orders/Cost From A Single Store
                 case 10:
                     order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
                     CheckQuery(order_query);
+                  
                     break;
-                    //Total Of Orders From All Stores At A Specfic Date
-                    case 20:                    
+                //Total Of Orders From All Stores At A Specfic Date
+                case 20:
                     order_query = order_query.Where(order => order.Date.Week == dates.ElementAt(SelectedDateIndex).Week);
                     order_query = order_query.Where(order => order.Date.Year == dates.ElementAt(SelectedDateIndex).Year);
                     CheckQuery(order_query);
@@ -251,6 +253,18 @@ namespace TaskBasedForms
                     order_query = order_query.Where(order => order.Date.Week == dates.ElementAt(SelectedDateIndex).Week);
                     order_query = order_query.Where(order => order.Date.Year == dates.ElementAt(SelectedDateIndex).Year);
                     CheckQuery(order_query);
+
+
+
+                    chart2.Series.Clear();
+                    foreach (var storecode in order_query)
+                    {
+                        int num = 0;
+
+                        string order = "Order :" + num.ToString();
+                        chart2.Series.Add(storecode.);
+                        num++;
+                    }
                     break;
                 //Total Of Orders/Cost From A Specfic SupplierType From All Stores
                 case 50:
@@ -316,9 +330,13 @@ namespace TaskBasedForms
                 default:
 
                     break;
-               
+
             }
             SelectionCode = 0;
+            StoreCodesList.SelectedIndex = -1;
+            SupplierNameList.SelectedIndex = -1;
+            SupplierTypeList.SelectedIndex = -1;
+            DatesListBox.SelectedIndex = -1;
         }
 
         //Updates the query filtering results, and some minor data
@@ -335,7 +353,7 @@ namespace TaskBasedForms
                 subitem[1] = order.SupplierName;
                 subitem[2] = order.SupplierType;
                 subitem[3] = order.Date.Week.ToString() + " , " + order.Date.Year.ToString();
-                subitem[4] = "£ " +  order.Cost.ToString();
+                subitem[4] = "£ " + order.Cost.ToString();
 
                 ListViewItem item = new ListViewItem(subitem);
                 OrderSerchResultsListView.Items.Add(item);
@@ -345,7 +363,7 @@ namespace TaskBasedForms
         }
 
 
-       private void CheckQuery(IEnumerable<Order> queried_orders)
+        private void CheckQuery(IEnumerable<Order> queried_orders)
         {
             //Count<TSource> - TSource Is the Type of Elements you want to get from the source, the source being order_query , the type being Order
             if (queried_orders.Count<Order>() == 0)
@@ -362,10 +380,10 @@ namespace TaskBasedForms
         {
             SelectedSupplierTypeIndex = SupplierTypeList.SelectedIndex;
             SupplierTypeSelectLabel.Text = "Supplier Type : " + SupplierTypeList.Text;
-            if(SelectedSupplierTypeIndex != -1)
+            if (SelectedSupplierTypeIndex != -1)
             {
 
-            AddToSelectionCode(SupplierNameCode, SupplierNameActive);
+                AddToSelectionCode(SupplierNameCode, SupplierNameActive);
 
 
             }
@@ -385,9 +403,9 @@ namespace TaskBasedForms
         private void StoreCodesList_SelectedIndexChanged(object sender, EventArgs e)
         {
             SelectedStoreCodeIndex = StoreCodesList.SelectedIndex;
-            StoreCodeSelectLabel.Text  = "Store Code : " + StoreCodesList.Text;
-  
-            if(SelectedStoreCodeIndex != -1)
+            StoreCodeSelectLabel.Text = "Store Code : " + StoreCodesList.Text;
+
+            if (SelectedStoreCodeIndex != -1)
             {
                 AddToSelectionCode(StoreSelectCode, StoreCodeActive);
 
@@ -438,7 +456,7 @@ namespace TaskBasedForms
             }
             else
             {
-                
+
                 SelectedSupplierNameIndex = -1;
                 SupplierNameList.SelectedIndex = -1;
                 SupplierNameSelectLabel.Text = "Supplier Name :";
@@ -458,7 +476,7 @@ namespace TaskBasedForms
             {
                 SelectedStoreCodeIndex = -1;
                 StoreCodesList.SelectedIndex = -1;
-                
+
                 StoreCodeSelectLabel.Text = "Store Code : ";
                 SelectionCode -= StoreSelectCode;
             }
@@ -470,11 +488,11 @@ namespace TaskBasedForms
         {
             if (DatesListBox.SelectedIndex == -1)
             {
-                MessageBox.Show("Already Deselected",  "Select Something To Deselect" ,MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Already Deselected", "Select Something To Deselect", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
-                SelectedDateIndex = -1;  
+                SelectedDateIndex = -1;
                 DatesListBox.SelectedIndex = -1;
                 DateSelectLabel.Text = "Date :";
                 SelectionCode -= DateCode;
@@ -486,19 +504,22 @@ namespace TaskBasedForms
             OrderSerchResultsListView.Items.Clear();
         }
 
-        private void AddToSelectionCode(int num1 , bool flag)
+        private void AddToSelectionCode(int num1, bool flag)
         {
             flag = true;
             if (flag == true)
             {
                 SelectionCode -= num1;
-              
-               
+
                 flag = false;
             }
-            if(flag == false)
+            if (flag == false)
             {
-                SelectionCode += num1;
+                if (SelectionCode < 0)
+                {
+                    SelectionCode += num1;
+                }
+
                 SelectionCode += num1;
             }
 
@@ -506,9 +527,16 @@ namespace TaskBasedForms
 
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+     
 
+
+        
+        }
+
+    
     }
 
 }
-
 
