@@ -59,6 +59,16 @@ namespace TaskBasedForms
             this.DeselectDateList = new System.Windows.Forms.Button();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label2 = new System.Windows.Forms.Label();
+            this.SupplierNameSelectLabel = new System.Windows.Forms.Label();
+            this.StoreCodeSelectLabel = new System.Windows.Forms.Label();
+            this.SupplierTypeSelectLabel = new System.Windows.Forms.Label();
+            this.DateSelectLabel = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.ClearOrderList = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.SuspendLayout();
@@ -114,9 +124,9 @@ namespace TaskBasedForms
             this.StoreCodesList.Font = new System.Drawing.Font("Segoe UI", 7F);
             this.StoreCodesList.FormattingEnabled = true;
             this.StoreCodesList.ItemHeight = 12;
-            this.StoreCodesList.Location = new System.Drawing.Point(10, 70);
+            this.StoreCodesList.Location = new System.Drawing.Point(12, 71);
             this.StoreCodesList.Name = "StoreCodesList";
-            this.StoreCodesList.Size = new System.Drawing.Size(121, 160);
+            this.StoreCodesList.Size = new System.Drawing.Size(121, 172);
             this.StoreCodesList.TabIndex = 5;
             this.StoreCodesList.SelectedIndexChanged += new System.EventHandler(this.StoreCodesList_SelectedIndexChanged);
             // 
@@ -140,9 +150,9 @@ namespace TaskBasedForms
             this.OrderSerchResultsListView.FullRowSelect = true;
             this.OrderSerchResultsListView.GridLines = true;
             this.OrderSerchResultsListView.HideSelection = false;
-            this.OrderSerchResultsListView.Location = new System.Drawing.Point(10, 284);
+            this.OrderSerchResultsListView.Location = new System.Drawing.Point(9, 284);
             this.OrderSerchResultsListView.Name = "OrderSerchResultsListView";
-            this.OrderSerchResultsListView.Size = new System.Drawing.Size(534, 187);
+            this.OrderSerchResultsListView.Size = new System.Drawing.Size(535, 187);
             this.OrderSerchResultsListView.TabIndex = 7;
             this.OrderSerchResultsListView.UseCompatibleStateImageBehavior = false;
             this.OrderSerchResultsListView.View = System.Windows.Forms.View.Details;
@@ -150,7 +160,7 @@ namespace TaskBasedForms
             // StoreCode
             // 
             this.StoreCode.Text = "Store";
-            this.StoreCode.Width = 140;
+            this.StoreCode.Width = 100;
             // 
             // SupplierType
             // 
@@ -159,7 +169,7 @@ namespace TaskBasedForms
             // 
             // SupplierName
             // 
-            this.SupplierName.Text = "Supplier";
+            this.SupplierName.Text = "Supplier Name";
             this.SupplierName.Width = 130;
             // 
             // Date
@@ -184,7 +194,7 @@ namespace TaskBasedForms
             // DatesListBox
             // 
             this.DatesListBox.FormattingEnabled = true;
-            this.DatesListBox.Location = new System.Drawing.Point(422, 70);
+            this.DatesListBox.Location = new System.Drawing.Point(423, 70);
             this.DatesListBox.Name = "DatesListBox";
             this.DatesListBox.Size = new System.Drawing.Size(121, 173);
             this.DatesListBox.TabIndex = 9;
@@ -194,7 +204,7 @@ namespace TaskBasedForms
             // 
             this.SearchOrderButton.Location = new System.Drawing.Point(565, 70);
             this.SearchOrderButton.Name = "SearchOrderButton";
-            this.SearchOrderButton.Size = new System.Drawing.Size(179, 185);
+            this.SearchOrderButton.Size = new System.Drawing.Size(179, 114);
             this.SearchOrderButton.TabIndex = 10;
             this.SearchOrderButton.Text = "Search Order";
             this.SearchOrderButton.UseVisualStyleBackColor = true;
@@ -203,17 +213,18 @@ namespace TaskBasedForms
             // TotalCostFilteredOrders
             // 
             this.TotalCostFilteredOrders.AutoSize = true;
-            this.TotalCostFilteredOrders.Location = new System.Drawing.Point(10, 481);
+            this.TotalCostFilteredOrders.Location = new System.Drawing.Point(550, 303);
             this.TotalCostFilteredOrders.Name = "TotalCostFilteredOrders";
-            this.TotalCostFilteredOrders.Size = new System.Drawing.Size(55, 13);
+            this.TotalCostFilteredOrders.Size = new System.Drawing.Size(70, 13);
             this.TotalCostFilteredOrders.TabIndex = 11;
-            this.TotalCostFilteredOrders.Text = "Total Cost";
+            this.TotalCostFilteredOrders.Text = "Total Cost : £";
             // 
             // DeselectStoreCode
             // 
-            this.DeselectStoreCode.Location = new System.Drawing.Point(10, 245);
+            this.DeselectStoreCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
+            this.DeselectStoreCode.Location = new System.Drawing.Point(13, 249);
             this.DeselectStoreCode.Name = "DeselectStoreCode";
-            this.DeselectStoreCode.Size = new System.Drawing.Size(122, 18);
+            this.DeselectStoreCode.Size = new System.Drawing.Size(122, 29);
             this.DeselectStoreCode.TabIndex = 13;
             this.DeselectStoreCode.Text = "Deselect Store Code";
             this.DeselectStoreCode.UseVisualStyleBackColor = true;
@@ -221,9 +232,10 @@ namespace TaskBasedForms
             // 
             // DeselectSupplierName
             // 
-            this.DeselectSupplierName.Location = new System.Drawing.Point(152, 245);
+            this.DeselectSupplierName.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
+            this.DeselectSupplierName.Location = new System.Drawing.Point(152, 249);
             this.DeselectSupplierName.Name = "DeselectSupplierName";
-            this.DeselectSupplierName.Size = new System.Drawing.Size(122, 18);
+            this.DeselectSupplierName.Size = new System.Drawing.Size(122, 29);
             this.DeselectSupplierName.TabIndex = 14;
             this.DeselectSupplierName.Text = "Deselect Supplier Name";
             this.DeselectSupplierName.UseVisualStyleBackColor = true;
@@ -231,9 +243,10 @@ namespace TaskBasedForms
             // 
             // DeselectSupplierType
             // 
-            this.DeselectSupplierType.Location = new System.Drawing.Point(287, 248);
+            this.DeselectSupplierType.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
+            this.DeselectSupplierType.Location = new System.Drawing.Point(287, 249);
             this.DeselectSupplierType.Name = "DeselectSupplierType";
-            this.DeselectSupplierType.Size = new System.Drawing.Size(120, 18);
+            this.DeselectSupplierType.Size = new System.Drawing.Size(120, 29);
             this.DeselectSupplierType.TabIndex = 15;
             this.DeselectSupplierType.Text = "Deselect Supplier List";
             this.DeselectSupplierType.UseVisualStyleBackColor = true;
@@ -241,9 +254,10 @@ namespace TaskBasedForms
             // 
             // DeselectDateList
             // 
-            this.DeselectDateList.Location = new System.Drawing.Point(422, 248);
+            this.DeselectDateList.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
+            this.DeselectDateList.Location = new System.Drawing.Point(424, 249);
             this.DeselectDateList.Name = "DeselectDateList";
-            this.DeselectDateList.Size = new System.Drawing.Size(120, 19);
+            this.DeselectDateList.Size = new System.Drawing.Size(120, 29);
             this.DeselectDateList.TabIndex = 16;
             this.DeselectDateList.Text = "Deselect Date List";
             this.DeselectDateList.UseVisualStyleBackColor = true;
@@ -283,11 +297,117 @@ namespace TaskBasedForms
             this.chart2.TabIndex = 18;
             this.chart2.Text = "chart2";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(562, 187);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(132, 13);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Order Search Parameters :";
+            // 
+            // SupplierNameSelectLabel
+            // 
+            this.SupplierNameSelectLabel.AutoSize = true;
+            this.SupplierNameSelectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.SupplierNameSelectLabel.Location = new System.Drawing.Point(563, 230);
+            this.SupplierNameSelectLabel.Name = "SupplierNameSelectLabel";
+            this.SupplierNameSelectLabel.Size = new System.Drawing.Size(81, 13);
+            this.SupplierNameSelectLabel.TabIndex = 20;
+            this.SupplierNameSelectLabel.Text = "Supplier Name: ";
+            // 
+            // StoreCodeSelectLabel
+            // 
+            this.StoreCodeSelectLabel.AutoSize = true;
+            this.StoreCodeSelectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.StoreCodeSelectLabel.Location = new System.Drawing.Point(563, 211);
+            this.StoreCodeSelectLabel.Name = "StoreCodeSelectLabel";
+            this.StoreCodeSelectLabel.Size = new System.Drawing.Size(69, 13);
+            this.StoreCodeSelectLabel.TabIndex = 20;
+            this.StoreCodeSelectLabel.Text = "Store Code : ";
+            // 
+            // SupplierTypeSelectLabel
+            // 
+            this.SupplierTypeSelectLabel.AutoSize = true;
+            this.SupplierTypeSelectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.SupplierTypeSelectLabel.Location = new System.Drawing.Point(563, 253);
+            this.SupplierTypeSelectLabel.Name = "SupplierTypeSelectLabel";
+            this.SupplierTypeSelectLabel.Size = new System.Drawing.Size(79, 13);
+            this.SupplierTypeSelectLabel.TabIndex = 21;
+            this.SupplierTypeSelectLabel.Text = "Supplier Type : ";
+            // 
+            // DateSelectLabel
+            // 
+            this.DateSelectLabel.AutoSize = true;
+            this.DateSelectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.DateSelectLabel.Location = new System.Drawing.Point(563, 272);
+            this.DateSelectLabel.Name = "DateSelectLabel";
+            this.DateSelectLabel.Size = new System.Drawing.Size(36, 13);
+            this.DateSelectLabel.TabIndex = 22;
+            this.DateSelectLabel.Text = "Date :";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 57);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 13);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Select Item";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(149, 57);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(60, 13);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "Select Item";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(284, 57);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(60, 13);
+            this.label9.TabIndex = 25;
+            this.label9.Text = "Select Item";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(421, 57);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(60, 13);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "Select Item";
+            // 
+            // ClearOrderList
+            // 
+            this.ClearOrderList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.ClearOrderList.Location = new System.Drawing.Point(9, 479);
+            this.ClearOrderList.Name = "ClearOrderList";
+            this.ClearOrderList.Size = new System.Drawing.Size(122, 29);
+            this.ClearOrderList.TabIndex = 27;
+            this.ClearOrderList.Text = "Clear List";
+            this.ClearOrderList.UseVisualStyleBackColor = true;
+            this.ClearOrderList.Click += new System.EventHandler(this.ClearOrderList_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1095, 520);
+            this.Controls.Add(this.ClearOrderList);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.DateSelectLabel);
+            this.Controls.Add(this.SupplierTypeSelectLabel);
+            this.Controls.Add(this.StoreCodeSelectLabel);
+            this.Controls.Add(this.SupplierNameSelectLabel);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.chart2);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.DeselectDateList);
@@ -344,6 +464,16 @@ namespace TaskBasedForms
         private System.Windows.Forms.Button DeselectDateList;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label SupplierNameSelectLabel;
+        private System.Windows.Forms.Label StoreCodeSelectLabel;
+        private System.Windows.Forms.Label SupplierTypeSelectLabel;
+        private System.Windows.Forms.Label DateSelectLabel;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button ClearOrderList;
     }
 }
 

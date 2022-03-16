@@ -20,8 +20,8 @@ namespace TaskBasedForms
         ///The total cost of all orders available in the supplied data
 
 //        o The total cost of all orders for a single store
-
 //        o The total cost of orders in a week for all stores
+
 
 //o The total cost of orders in a week for a single store
 
@@ -43,6 +43,19 @@ namespace TaskBasedForms
         int SelectedSupplierTypeIndex;
         int SelectedDateIndex;
 
+        bool StoreCodeActive;
+        bool SupplierTypeActive;
+        bool SupplierNameActive;
+        bool DateActive;
+
+
+        int StoreActiveCode = 10;
+        int DateActiveCode = 20;
+        int SupplierTypeCode = 50;
+        int SupplierNameCode = 100;
+
+        int SelectionCode = 0;
+
         //Will be used in the future as a method of selcting a specfic type of data processing
         //Fullfilling different data processing methods
         int SelectedNum;
@@ -63,6 +76,10 @@ namespace TaskBasedForms
         {
             _App = application;
             InitializeComponent();
+            StoreCodeActive = false ;
+             SupplierTypeActive = false;
+             SupplierNameActive = false;
+             DateActive = false;
         }
 
 
@@ -210,62 +227,149 @@ namespace TaskBasedForms
         }
 
 
-
-        //Upon Selecting element , ot stores the element value in in variable , used for seartching "ElemementAt" Queries function
-        private void SupplierTypeList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            SelectedSupplierTypeIndex = SupplierTypeList.SelectedIndex;
-        }
-        private void SupplierNameList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            SelectedSupplierNameIndex = SupplierNameList.SelectedIndex;
-        }
-        private void StoreCodesList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            SelectedStoreCodeIndex = StoreCodesList.SelectedIndex;
-        }
-        private void DatesListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            SelectedDateIndex = DatesListBox.SelectedIndex;
-        }
-
         private void SearchOrderButton_Click(object sender, EventArgs e)
         {
-            if (SelectedDateIndex == null || SelectedStoreCodeIndex == null || SelectedSupplierNameIndex == null || SelectedSupplierTypeIndex == null)
-            {
-                MessageBox.Show("Unable to find any orders with specified parameters", "No orders found", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-            }
-            else
+            var order_query = from order in orders select order;
+            switch (SelectionCode)
             {
 
-                //Query - Used to store filtered data. We get the data "from" order class,
-                //"in" the orders list, this allows us to chose the data we want to
-                //"select" "from" "in" a specfic peice of data.
+               //The total cost of all orders for a single store
+                case 10:
+                    order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
+                    CheckQuery(order_query);
+                    break;
+                    //The Total Cost Of Orders In A week For All Stores
+                    case 30:
+                    
+                    order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
+                    order_query = order_query.Where(order => order.Date.Week == dates.ElementAt(SelectedDateIndex).Week);
+                    order_query = order_query.Where(order => order.Date.Year == dates.ElementAt(SelectedDateIndex).Year);
+                    CheckQuery(order_query);
+                    break;
+                // The total cost of all orders to a supplier type
+                case 50:
 
-                var order_query = from order in orders select order;
+                    break;
 
+                // The total cost of all orders to a supplier type from a store
+                case 60:
+                    break;
+                // The total cost of all orders in a week to a supplier type
+                case 70:
+                    break;
 
-                order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
-                order_query = order_query.Where(order => order.SupplierName == supplier_names.ElementAt(SelectedSupplierNameIndex));
-                order_query = order_query.Where(order => order.SupplierType == supplier_types.ElementAt(SelectedSupplierTypeIndex));
-                order_query = order_query.Where(order => order.Date.Week == dates.ElementAt(SelectedDateIndex).Week);
-                order_query = order_query.Where(order => order.Date.Year == dates.ElementAt(SelectedDateIndex).Year);
-
-
-                //Count<TSource> - TSource Is the Type of Elements you want to get from the source, the source being order_query , the type being Order
-                if (order_query.Count<Order>() == 0)
-                {
-                    MessageBox.Show("Unable to find any orders with specified parameters", "No orders found", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-                else
-                {
+                // The total cost of all orders in a week to a supplier type from a store
+                case 90:
+                    break;
+                // The total cost of all orders to a supplier 
+                case 100:
+                    order_query = order_query.Where(order => order.SupplierName == supplier_names.ElementAt(SelectedSupplierNameIndex));
                     UpdateQueryListView(order_query);
-                }
+                    break;
 
+
+                default:
+
+                    break;
             }
-
         }
+
+
+        //    private void SearchOrderButton_Click(object sender, EventArgs e)
+        //{
+        //    //Query - Used to store filtered data. We get the data "from" order class,
+        //    //"in" the orders list, this allows us to chose the data we want to
+        //    //"select" "from" "in" a specfic peice of data.
+
+        //    //The Total Cost Of All Orders For A Single Store
+        //    if (StoreCodeActive == true && SupplierTypeActive == false && SupplierNameActive == false && DateActive == false )
+        //    {
+
+        //        var order_query = from order in orders select order;
+        //        order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
+        //        CheckQuery(order_query);
+
+        //    }
+
+        //    //The Total Cost Of All Orders In a Week For All Stores
+        //    else if(StoreCodeActive == true && SupplierTypeActive == false && SupplierNameActive == false && DateActive == true)
+        //    {
+        //        var order_query = from order in orders select order;
+        //        order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
+        //        order_query = order_query.Where(order => order.Date.Week == dates.ElementAt(SelectedDateIndex).Week);
+        //        order_query = order_query.Where(order => order.Date.Year == dates.ElementAt(SelectedDateIndex).Year);
+        //        CheckQuery(order_query);
+        //    }
+        //    //The Total Cost of All Orders To A Supplier
+        //    else if(StoreCodeActive == false && SupplierTypeActive == false && SupplierNameActive == true && DateActive == false)
+        //    {
+        //        var order_query = from order in orders select order;
+        //        order_query = order_query.Where(order => order.SupplierName == supplier_names.ElementAt(SelectedSupplierNameIndex));
+        //        UpdateQueryListView(order_query);
+        //    }
+        //    //The Total Cost of All Orders To A Supplier From A Store
+        //    else if (StoreCodeActive == true && SupplierTypeActive == false && SupplierNameActive == true && DateActive == false)
+        //    {
+        //        var order_query = from order in orders select order;
+        //        order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
+        //        order_query = order_query.Where(order => order.SupplierName == supplier_names.ElementAt(SelectedSupplierNameIndex));
+        //        UpdateQueryListView(order_query);
+        //    }
+        //    //The Total Cost of All Orders To A Supplier From A Store At  A Specifc Date
+        //    else if (StoreCodeActive == true && SupplierTypeActive == false && SupplierNameActive == true && DateActive == true)
+        //    {
+        //        var order_query = from order in orders select order;
+        //        order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
+        //        order_query = order_query.Where(order => order.SupplierName == supplier_names.ElementAt(SelectedSupplierNameIndex));
+        //        order_query = order_query.Where(order => order.Date.Week == dates.ElementAt(SelectedDateIndex).Week);
+        //        order_query = order_query.Where(order => order.Date.Year == dates.ElementAt(SelectedDateIndex).Year);
+        //        UpdateQueryListView(order_query);
+        //    }
+        //    //The Cost Of All Orders From A Supplier Type
+        //    else if(StoreCodeActive == false && SupplierTypeActive == true && SupplierNameActive == false && DateActive == false)
+        //    {
+        //        var order_query = from order in orders select order;
+        //        order_query = order_query.Where(order => order.SupplierType == supplier_types.ElementAt(SelectedSupplierTypeIndex));
+        //        CheckQuery(order_query);
+
+        //    }
+        //    //The Cost Of All Orders From A Supplier Type Within A Week/Date
+        //    else if (StoreCodeActive == false && SupplierTypeActive == true && SupplierNameActive == false && DateActive == false)
+        //    {
+        //        var order_query = from order in orders select order;
+        //        order_query = order_query.Where(order => order.SupplierType == supplier_types.ElementAt(SelectedSupplierTypeIndex));
+        //        order_query = order_query.Where(order => order.Date.Week == dates.ElementAt(SelectedDateIndex).Week);
+        //        order_query = order_query.Where(order => order.Date.Year == dates.ElementAt(SelectedDateIndex).Year);
+        //        CheckQuery(order_query);
+
+        //    }
+        //    //The cost of orders for a supplier type for a store
+        //    else if (StoreCodeActive == true && SupplierTypeActive == true && SupplierNameActive == false && DateActive == false)
+        //    {
+        //        var order_query = from order in orders select order;
+        //        order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
+        //        order_query = order_query.Where(order => order.SupplierType == supplier_types.ElementAt(SelectedSupplierTypeIndex));
+        //        CheckQuery(order_query);
+
+        //    }
+
+        //    //The cost of orders in a week for a supplier type for a store
+        //    else if (StoreCodeActive == true && SupplierTypeActive == true && SupplierNameActive == false && DateActive == true)
+        //    {
+
+        //        var order_query = from order in orders select order;
+        //        order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
+        //        order_query = order_query.Where(order => order.SupplierType == supplier_types.ElementAt(SelectedSupplierTypeIndex));
+        //        order_query = order_query.Where(order => order.Date.Week == dates.ElementAt(SelectedDateIndex).Week);
+        //        order_query = order_query.Where(order => order.Date.Year == dates.ElementAt(SelectedDateIndex).Year);
+        //        CheckQuery(order_query);
+
+
+
+        //    }
+           
+
+        //}
 
         //Updates the query filtering results, and some minor data
         private void UpdateQueryListView(IEnumerable<Order> orders)
@@ -281,40 +385,106 @@ namespace TaskBasedForms
                 subitem[1] = order.SupplierName;
                 subitem[2] = order.SupplierType;
                 subitem[3] = order.Date.Week.ToString() + " , " + order.Date.Year.ToString();
-                subitem[4] = order.Cost.ToString();
+                subitem[4] = "£ " +  order.Cost.ToString();
 
                 ListViewItem item = new ListViewItem(subitem);
                 OrderSerchResultsListView.Items.Add(item);
             }
             double Order_Query_Total = orders.Sum(item => item.Cost);
-            TotalCostFilteredOrders.Text = "Total Cost >> " + Order_Query_Total.ToString();
+            TotalCostFilteredOrders.Text = "Total Cost : £ " + Order_Query_Total.ToString();
         }
 
+
+       private void CheckQuery(IEnumerable<Order> queried_orders)
+        {
+            //Count<TSource> - TSource Is the Type of Elements you want to get from the source, the source being order_query , the type being Order
+            if (queried_orders.Count<Order>() == 0)
+            {
+                MessageBox.Show("Unable to find any orders with specified parameters", "No orders found", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                UpdateQueryListView(queried_orders);
+            }
+        }
+        //Upon Selecting element , ot stores the element value in in variable , used for seartching "ElemementAt" Queries function
+        private void SupplierTypeList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SelectedSupplierTypeIndex = SupplierTypeList.SelectedIndex;
+            SupplierTypeSelectLabel.Text = "Supplier Type : " + SupplierTypeList.Text;
+            SupplierTypeActive = true;
+
+        }
+        private void SupplierNameList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SelectedSupplierNameIndex = SupplierNameList.SelectedIndex;
+            SupplierNameSelectLabel.Text = "Supplier Name :" + SupplierNameList.Text;
+            SupplierNameActive = true;
+            AddToSelectionCode(StoreActiveCode);
+        }
+        private void StoreCodesList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SelectedStoreCodeIndex = StoreCodesList.SelectedIndex;
+            StoreCodeSelectLabel.Text  = "Store Code : " + StoreCodesList.Text;
+            StoreCodeActive = true;
+        }
+        private void DatesListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SelectedDateIndex = DatesListBox.SelectedIndex;
+            DateSelectLabel.Text = "Date :" + DatesListBox.Text;
+            DateActive = true;
+        }
 
         //Deslect of options function
         private void DeselectSupplierType_Click(object sender, EventArgs e)
         {
             SupplierTypeList.SelectedIndex = -1;
             SelectedSupplierTypeIndex = -1;
+            SupplierTypeSelectLabel.Text = "Supplier Type : ";
+            SupplierTypeActive = false;
+
         }
 
         private void DeselectSupplierName_Click(object sender, EventArgs e)
         {
             SupplierNameList.SelectedIndex = -1;
             SelectedSupplierNameIndex = -1;
-
+            SupplierNameSelectLabel.Text = "Supplier Name :";
+            SupplierNameActive = false;
         }
 
         private void DeselectStoreCode_Click(object sender, EventArgs e)
         {
             StoreCodesList.SelectedIndex = -1;
             SelectedStoreCodeIndex = -1;
+            StoreCodeSelectLabel.Text = "Store Code : ";
+            StoreCodeActive = false;
         }
 
         private void DeselectDateList_Click(object sender, EventArgs e)
         {
             DatesListBox.SelectedIndex = -1;
             SelectedDateIndex = -1;
+            DateSelectLabel.Text = "Date :";
+            DateActive = false;
+        }
+
+        private void ClearOrderList_Click(object sender, EventArgs e)
+        {
+            OrderSerchResultsListView.Items.Clear();
+        }
+
+        private void AddToSelectionCode(int num1)
+        {
+            SelectionCode += num1;
+
+
+        }
+        private void ReduceFromSelectionCode(int num1)
+        {
+            SelectionCode -= num1;
+
+
         }
 
     }
