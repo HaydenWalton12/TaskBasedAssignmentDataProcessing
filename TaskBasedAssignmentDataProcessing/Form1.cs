@@ -49,8 +49,8 @@ namespace TaskBasedForms
         bool DateActive;
 
 
-        int StoreActiveCode = 10;
-        int DateActiveCode = 20;
+        int StoreSelectCode = 10;
+        int DateCode = 20;
         int SupplierTypeCode = 50;
         int SupplierNameCode = 100;
 
@@ -316,7 +316,9 @@ namespace TaskBasedForms
                 default:
 
                     break;
+               
             }
+            SelectionCode = 0;
         }
 
         //Updates the query filtering results, and some minor data
@@ -360,61 +362,123 @@ namespace TaskBasedForms
         {
             SelectedSupplierTypeIndex = SupplierTypeList.SelectedIndex;
             SupplierTypeSelectLabel.Text = "Supplier Type : " + SupplierTypeList.Text;
-            SupplierTypeActive = true;
+            if(SelectedSupplierTypeIndex != -1)
+            {
+
+            AddToSelectionCode(SupplierNameCode, SupplierNameActive);
+
+
+            }
 
         }
         private void SupplierNameList_SelectedIndexChanged(object sender, EventArgs e)
         {
             SelectedSupplierNameIndex = SupplierNameList.SelectedIndex;
             SupplierNameSelectLabel.Text = "Supplier Name :" + SupplierNameList.Text;
-            SupplierNameActive = true;
-            AddToSelectionCode(StoreActiveCode);
+            if (SelectedSupplierNameIndex != -1)
+            {
+
+                AddToSelectionCode(SupplierNameCode, SupplierNameActive);
+            }
+
         }
         private void StoreCodesList_SelectedIndexChanged(object sender, EventArgs e)
         {
             SelectedStoreCodeIndex = StoreCodesList.SelectedIndex;
             StoreCodeSelectLabel.Text  = "Store Code : " + StoreCodesList.Text;
-            StoreCodeActive = true;
+  
+            if(SelectedStoreCodeIndex != -1)
+            {
+                AddToSelectionCode(StoreSelectCode, StoreCodeActive);
+
+
+            }
+
         }
         private void DatesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SelectedDateIndex = DatesListBox.SelectedIndex;
             DateSelectLabel.Text = "Date :" + DatesListBox.Text;
-            DateActive = true;
+
+            if (SelectedDateIndex != -1)
+            {
+                AddToSelectionCode(DateCode, DateActive);
+
+
+            }
         }
 
         //Deslect of options function
         private void DeselectSupplierType_Click(object sender, EventArgs e)
         {
-            SupplierTypeList.SelectedIndex = -1;
-            SelectedSupplierTypeIndex = -1;
-            SupplierTypeSelectLabel.Text = "Supplier Type : ";
-            SupplierTypeActive = false;
+            if (SupplierTypeList.SelectedIndex == -1)
+            {
+                MessageBox.Show("Already Deselected", "Select Something To Deselect", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+            }
+            else
+            {
+                SelectedSupplierTypeIndex = -1;
+                SupplierTypeList.SelectedIndex = -1;
+                SupplierTypeSelectLabel.Text = "Supplier Type : ";
+                SelectionCode -= SupplierTypeCode;
+
+            }
 
         }
 
         private void DeselectSupplierName_Click(object sender, EventArgs e)
         {
-            SupplierNameList.SelectedIndex = -1;
-            SelectedSupplierNameIndex = -1;
-            SupplierNameSelectLabel.Text = "Supplier Name :";
-            SupplierNameActive = false;
+            if (SupplierNameList.SelectedIndex == -1)
+            {
+                MessageBox.Show("Already Deselected", "Select Something To Deselect", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+            }
+            else
+            {
+                
+                SelectedSupplierNameIndex = -1;
+                SupplierNameList.SelectedIndex = -1;
+                SupplierNameSelectLabel.Text = "Supplier Name :";
+                SelectionCode -= SupplierNameCode;
+            }
+
+
         }
 
         private void DeselectStoreCode_Click(object sender, EventArgs e)
         {
-            StoreCodesList.SelectedIndex = -1;
-            SelectedStoreCodeIndex = -1;
-            StoreCodeSelectLabel.Text = "Store Code : ";
-            StoreCodeActive = false;
+            if (StoreCodesList.SelectedIndex == -1)
+            {
+                MessageBox.Show("Already Deselected", "Select Something To Deselect", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                SelectedStoreCodeIndex = -1;
+                StoreCodesList.SelectedIndex = -1;
+                
+                StoreCodeSelectLabel.Text = "Store Code : ";
+                SelectionCode -= StoreSelectCode;
+            }
+
+
         }
 
         private void DeselectDateList_Click(object sender, EventArgs e)
         {
-            DatesListBox.SelectedIndex = -1;
-            SelectedDateIndex = -1;
-            DateSelectLabel.Text = "Date :";
-            DateActive = false;
+            if (DatesListBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("Already Deselected",  "Select Something To Deselect" ,MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                SelectedDateIndex = -1;  
+                DatesListBox.SelectedIndex = -1;
+                DateSelectLabel.Text = "Date :";
+                SelectionCode -= DateCode;
+            }
         }
 
         private void ClearOrderList_Click(object sender, EventArgs e)
@@ -422,18 +486,26 @@ namespace TaskBasedForms
             OrderSerchResultsListView.Items.Clear();
         }
 
-        private void AddToSelectionCode(int num1)
+        private void AddToSelectionCode(int num1 , bool flag)
         {
-            SelectionCode += num1;
+            flag = true;
+            if (flag == true)
+            {
+                SelectionCode -= num1;
+              
+               
+                flag = false;
+            }
+            if(flag == false)
+            {
+                SelectionCode += num1;
+                SelectionCode += num1;
+            }
+
 
 
         }
-        private void ReduceFromSelectionCode(int num1)
-        {
-            SelectionCode -= num1;
 
-
-        }
 
     }
 
