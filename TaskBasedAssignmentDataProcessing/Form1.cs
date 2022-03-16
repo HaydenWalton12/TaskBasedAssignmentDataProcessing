@@ -233,143 +233,91 @@ namespace TaskBasedForms
             switch (SelectionCode)
             {
 
-               //The total cost of all orders for a single store
+               //Total Of Orders/Cost From A Single Store
                 case 10:
                     order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
                     CheckQuery(order_query);
                     break;
-                    //The Total Cost Of Orders In A week For All Stores
-                    case 30:
-                    
+                    //Total Of Orders From All Stores At A Specfic Date
+                    case 20:                    
+                    order_query = order_query.Where(order => order.Date.Week == dates.ElementAt(SelectedDateIndex).Week);
+                    order_query = order_query.Where(order => order.Date.Year == dates.ElementAt(SelectedDateIndex).Year);
+                    CheckQuery(order_query);
+                    break;
+                //Total Of Order/Cost From A Specfic Store At A Specfic Date
+                case 30:
+
                     order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
                     order_query = order_query.Where(order => order.Date.Week == dates.ElementAt(SelectedDateIndex).Week);
                     order_query = order_query.Where(order => order.Date.Year == dates.ElementAt(SelectedDateIndex).Year);
                     CheckQuery(order_query);
                     break;
-                // The total cost of all orders to a supplier type
+                //Total Of Orders/Cost From A Specfic SupplierType From All Stores
                 case 50:
-
+                    order_query = order_query.Where(order => order.SupplierType == supplier_types.ElementAt(SelectedSupplierTypeIndex));
+                    CheckQuery(order_query);
                     break;
 
-                // The total cost of all orders to a supplier type from a store
+                //Total Of Orders/Cost From A Specfic SupplierType From A Specfic Store
                 case 60:
-                    break;
-                // The total cost of all orders in a week to a supplier type
-                case 70:
+                    order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
+                    order_query = order_query.Where(order => order.SupplierType == supplier_types.ElementAt(SelectedSupplierTypeIndex));
+                    CheckQuery(order_query);
                     break;
 
-                // The total cost of all orders in a week to a supplier type from a store
-                case 90:
+                //Total Of Orders/Cost From A Specific SupplierType From A Specific Date
+                case 70:
+
+                    order_query = order_query.Where(order => order.SupplierType == supplier_types.ElementAt(SelectedSupplierTypeIndex));
+                    order_query = order_query.Where(order => order.Date.Week == dates.ElementAt(SelectedDateIndex).Week);
+                    order_query = order_query.Where(order => order.Date.Year == dates.ElementAt(SelectedDateIndex).Year);
+                    CheckQuery(order_query);
                     break;
-                // The total cost of all orders to a supplier 
+
+                //Total Of Orders/Cost From A Specific SupplierType From A Specific Store At A Specific Date
+                case 80:
+                    order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
+                    order_query = order_query.Where(order => order.SupplierType == supplier_types.ElementAt(SelectedSupplierTypeIndex));
+                    order_query = order_query.Where(order => order.Date.Week == dates.ElementAt(SelectedDateIndex).Week);
+                    order_query = order_query.Where(order => order.Date.Year == dates.ElementAt(SelectedDateIndex).Year);
+                    CheckQuery(order_query);
+                    break;
+                //Total Of Orders/Cost From A Specific Supplier Name
                 case 100:
                     order_query = order_query.Where(order => order.SupplierName == supplier_names.ElementAt(SelectedSupplierNameIndex));
                     UpdateQueryListView(order_query);
                     break;
 
+                //Total Of Orders/Cost From A Specific SupplierName From A Specfic Store
+                case 110:
+                    order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
+                    order_query = order_query.Where(order => order.SupplierName == supplier_names.ElementAt(SelectedSupplierNameIndex));
+                    UpdateQueryListView(order_query);
+                    break;
+
+                //Total Of Orders/Cost From A Specific SupplierName From A Specfic Store At A Specific Date
+                case 130:
+                    order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
+                    order_query = order_query.Where(order => order.SupplierName == supplier_names.ElementAt(SelectedSupplierNameIndex));
+                    order_query = order_query.Where(order => order.Date.Week == dates.ElementAt(SelectedDateIndex).Week);
+                    order_query = order_query.Where(order => order.Date.Year == dates.ElementAt(SelectedDateIndex).Year);
+                    UpdateQueryListView(order_query);
+                    break;
+                //Total Orders/Cost From A Specific Store, From A Specific SupplierName & Type Within A Specific Date
+                case 180:
+                    order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
+                    order_query = order_query.Where(order => order.SupplierType == supplier_types.ElementAt(SelectedSupplierTypeIndex));
+                    order_query = order_query.Where(order => order.SupplierName == supplier_names.ElementAt(SelectedSupplierNameIndex));
+                    order_query = order_query.Where(order => order.Date.Week == dates.ElementAt(SelectedDateIndex).Week);
+                    order_query = order_query.Where(order => order.Date.Year == dates.ElementAt(SelectedDateIndex).Year);
+                    UpdateQueryListView(order_query);
+                    break;
 
                 default:
 
                     break;
             }
         }
-
-
-        //    private void SearchOrderButton_Click(object sender, EventArgs e)
-        //{
-        //    //Query - Used to store filtered data. We get the data "from" order class,
-        //    //"in" the orders list, this allows us to chose the data we want to
-        //    //"select" "from" "in" a specfic peice of data.
-
-        //    //The Total Cost Of All Orders For A Single Store
-        //    if (StoreCodeActive == true && SupplierTypeActive == false && SupplierNameActive == false && DateActive == false )
-        //    {
-
-        //        var order_query = from order in orders select order;
-        //        order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
-        //        CheckQuery(order_query);
-
-        //    }
-
-        //    //The Total Cost Of All Orders In a Week For All Stores
-        //    else if(StoreCodeActive == true && SupplierTypeActive == false && SupplierNameActive == false && DateActive == true)
-        //    {
-        //        var order_query = from order in orders select order;
-        //        order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
-        //        order_query = order_query.Where(order => order.Date.Week == dates.ElementAt(SelectedDateIndex).Week);
-        //        order_query = order_query.Where(order => order.Date.Year == dates.ElementAt(SelectedDateIndex).Year);
-        //        CheckQuery(order_query);
-        //    }
-        //    //The Total Cost of All Orders To A Supplier
-        //    else if(StoreCodeActive == false && SupplierTypeActive == false && SupplierNameActive == true && DateActive == false)
-        //    {
-        //        var order_query = from order in orders select order;
-        //        order_query = order_query.Where(order => order.SupplierName == supplier_names.ElementAt(SelectedSupplierNameIndex));
-        //        UpdateQueryListView(order_query);
-        //    }
-        //    //The Total Cost of All Orders To A Supplier From A Store
-        //    else if (StoreCodeActive == true && SupplierTypeActive == false && SupplierNameActive == true && DateActive == false)
-        //    {
-        //        var order_query = from order in orders select order;
-        //        order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
-        //        order_query = order_query.Where(order => order.SupplierName == supplier_names.ElementAt(SelectedSupplierNameIndex));
-        //        UpdateQueryListView(order_query);
-        //    }
-        //    //The Total Cost of All Orders To A Supplier From A Store At  A Specifc Date
-        //    else if (StoreCodeActive == true && SupplierTypeActive == false && SupplierNameActive == true && DateActive == true)
-        //    {
-        //        var order_query = from order in orders select order;
-        //        order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
-        //        order_query = order_query.Where(order => order.SupplierName == supplier_names.ElementAt(SelectedSupplierNameIndex));
-        //        order_query = order_query.Where(order => order.Date.Week == dates.ElementAt(SelectedDateIndex).Week);
-        //        order_query = order_query.Where(order => order.Date.Year == dates.ElementAt(SelectedDateIndex).Year);
-        //        UpdateQueryListView(order_query);
-        //    }
-        //    //The Cost Of All Orders From A Supplier Type
-        //    else if(StoreCodeActive == false && SupplierTypeActive == true && SupplierNameActive == false && DateActive == false)
-        //    {
-        //        var order_query = from order in orders select order;
-        //        order_query = order_query.Where(order => order.SupplierType == supplier_types.ElementAt(SelectedSupplierTypeIndex));
-        //        CheckQuery(order_query);
-
-        //    }
-        //    //The Cost Of All Orders From A Supplier Type Within A Week/Date
-        //    else if (StoreCodeActive == false && SupplierTypeActive == true && SupplierNameActive == false && DateActive == false)
-        //    {
-        //        var order_query = from order in orders select order;
-        //        order_query = order_query.Where(order => order.SupplierType == supplier_types.ElementAt(SelectedSupplierTypeIndex));
-        //        order_query = order_query.Where(order => order.Date.Week == dates.ElementAt(SelectedDateIndex).Week);
-        //        order_query = order_query.Where(order => order.Date.Year == dates.ElementAt(SelectedDateIndex).Year);
-        //        CheckQuery(order_query);
-
-        //    }
-        //    //The cost of orders for a supplier type for a store
-        //    else if (StoreCodeActive == true && SupplierTypeActive == true && SupplierNameActive == false && DateActive == false)
-        //    {
-        //        var order_query = from order in orders select order;
-        //        order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
-        //        order_query = order_query.Where(order => order.SupplierType == supplier_types.ElementAt(SelectedSupplierTypeIndex));
-        //        CheckQuery(order_query);
-
-        //    }
-
-        //    //The cost of orders in a week for a supplier type for a store
-        //    else if (StoreCodeActive == true && SupplierTypeActive == true && SupplierNameActive == false && DateActive == true)
-        //    {
-
-        //        var order_query = from order in orders select order;
-        //        order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
-        //        order_query = order_query.Where(order => order.SupplierType == supplier_types.ElementAt(SelectedSupplierTypeIndex));
-        //        order_query = order_query.Where(order => order.Date.Week == dates.ElementAt(SelectedDateIndex).Week);
-        //        order_query = order_query.Where(order => order.Date.Year == dates.ElementAt(SelectedDateIndex).Year);
-        //        CheckQuery(order_query);
-
-
-
-        //    }
-           
-
-        //}
 
         //Updates the query filtering results, and some minor data
         private void UpdateQueryListView(IEnumerable<Order> orders)
