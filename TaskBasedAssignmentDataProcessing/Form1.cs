@@ -14,29 +14,6 @@ namespace TaskBasedForms
     public partial class Form1 : Form
     {
 
-        /// <summary>
-        /// When creating the data processing segment, remember to allow differetn data to be processed at once, remember the "Allow the Finances team to find the following data:"
-        ///Segmenet , e.g if a supplier type is only chosen for data porocessing , only process the totla that type has made all time  , or if a date is chosen too , show how much
-        ///that ssupplier type has made in  a week too . 
-        ///The total cost of all orders available in the supplied data
-
-        //        o The total cost of all orders for a single store
-        //        o The total cost of orders in a week for all stores
-
-
-        //o The total cost of orders in a week for a single store
-
-        //o The total cost of all orders to a supplier
-
-        //o The cost of all orders from a supplier type
-
-        //o The cost of orders in a week for a supplier type
-
-        //o The cost of orders for a supplier type for a store
-
-        //o The cost of orders in a week for a supplier type for a store
-        /// </summary>
-
 
         //To locate the queried filtered data at this point , we use ints to access the elementat from the query.
         int SelectedStoreCodeIndex;
@@ -66,7 +43,7 @@ namespace TaskBasedForms
 
         List<Order> orders = new List<Order>();
         List<string> supplier_types = new List<string>();
-        HashSet<Date> dates = new HashSet<Date>();
+        List<Date> dates = new List<Date>();    
         List<string> supplier_names = new List<string>();
         public Application _App;
 
@@ -132,6 +109,8 @@ namespace TaskBasedForms
 
             supplier_types = supplier_types_dupes.Distinct().ToList();
 
+
+   
             //Lods Selection lists for data processing , data processing of filtering threw orders is done via c# query system
             LoadList();
         }
@@ -227,7 +206,7 @@ namespace TaskBasedForms
 
         }
 
-
+        //CHarting Functionality Will need to be located within this function , since this where data for order results is queried
         private void SearchOrderButton_Click(object sender, EventArgs e)
         {
             var order_query = from order in orders select order;
@@ -238,7 +217,8 @@ namespace TaskBasedForms
                 case 10:
                     order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
                     CheckQuery(order_query);
-                  
+
+                   
                     break;
                 //Total Of Orders From All Stores At A Specfic Date
                 case 20:
@@ -256,15 +236,6 @@ namespace TaskBasedForms
 
 
 
-                    chart2.Series.Clear();
-                    foreach (var storecode in order_query)
-                    {
-                        int num = 0;
-
-                        string order = "Order :" + num.ToString();
-                        chart2.Series.Add(storecode.);
-                        num++;
-                    }
                     break;
                 //Total Of Orders/Cost From A Specfic SupplierType From All Stores
                 case 50:
@@ -342,7 +313,8 @@ namespace TaskBasedForms
         //Updates the query filtering results, and some minor data
         private void UpdateQueryListView(IEnumerable<Order> orders)
         {
-
+            //Stores The Type & Cost
+            Dictionary<string, double> graphSupplierTypesData = new Dictionary<string, double>();
             OrderSerchResultsListView.Items.Clear();
             foreach (var order in orders)
             {
@@ -357,9 +329,35 @@ namespace TaskBasedForms
 
                 ListViewItem item = new ListViewItem(subitem);
                 OrderSerchResultsListView.Items.Add(item);
+
+          
+
+            }
+
+            foreach(var order in orders)
+            {
+                //Check To See If The Dictionary Already Contains The Supplier Type , If The Key Has Already Been Added, We Enter Into Loop , ANd Add the Order values into the pre-exisiting dictionary
+                if(graphSupplierTypesData.ContainsKey(order.SupplierType))
+                {
+                    graphSupplierTypesData[order.SupplierType] = graphSupplierTypesData[order.SupplierType] + order.Cost;
+                }
+                else
+                {
+                    graphSupplierTypesData.Add(order.SupplierType, order.Cost);
+                }
+              
+            }
+
+            foreach(var bar in graphSupplierTypesData)
+            {
+              
+                chart2.Series[0].Points.AddXY(bar.Key, bar.Value);
             }
             double Order_Query_Total = orders.Sum(item => item.Cost);
             TotalCostFilteredOrders.Text = "Total Cost : £ " + Order_Query_Total.ToString();
+           
+
+
         }
 
 
@@ -535,7 +533,7 @@ namespace TaskBasedForms
         
         }
 
-    
+       
     }
 
 }

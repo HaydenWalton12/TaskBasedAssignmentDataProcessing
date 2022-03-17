@@ -190,10 +190,12 @@ namespace TaskBasedForms
             // 
             // DatesListBox
             // 
+            this.DatesListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
             this.DatesListBox.FormattingEnabled = true;
+            this.DatesListBox.ItemHeight = 9;
             this.DatesListBox.Location = new System.Drawing.Point(423, 70);
             this.DatesListBox.Name = "DatesListBox";
-            this.DatesListBox.Size = new System.Drawing.Size(121, 173);
+            this.DatesListBox.Size = new System.Drawing.Size(121, 166);
             this.DatesListBox.TabIndex = 9;
             this.DatesListBox.SelectedIndexChanged += new System.EventHandler(this.DatesListBox_SelectedIndexChanged);
             // 
@@ -267,7 +269,7 @@ namespace TaskBasedForms
             this.chart2.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart2.Legends.Add(legend1);
-            this.chart2.Location = new System.Drawing.Point(750, 13);
+            this.chart2.Location = new System.Drawing.Point(736, 10);
             this.chart2.Name = "chart2";
             this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
             series1.ChartArea = "ChartArea1";
@@ -279,6 +281,7 @@ namespace TaskBasedForms
             this.chart2.Size = new System.Drawing.Size(968, 691);
             this.chart2.TabIndex = 18;
             this.chart2.Text = "chart2";
+            this.chart2.Click += new System.EventHandler(this.chart2_Click);
             // 
             // label2
             // 
