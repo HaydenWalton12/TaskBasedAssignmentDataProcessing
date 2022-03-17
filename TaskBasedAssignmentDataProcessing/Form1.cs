@@ -355,6 +355,7 @@ namespace TaskBasedForms
                 
             }
             double Order_Query_Total = orders.Sum(item => item.Cost);
+
             TotalCostFilteredOrders.Text = "Total Cost : £ " + Order_Query_Total.ToString();
            
 
@@ -475,7 +476,6 @@ namespace TaskBasedForms
             {
                 SelectedStoreCodeIndex = -1;
                 StoreCodesList.SelectedIndex = -1;
-
                 StoreCodeSelectLabel.Text = "Store Code : ";
                 SelectionCode -= StoreSelectCode;
             }
