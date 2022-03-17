@@ -350,7 +350,6 @@ namespace TaskBasedForms
 
             foreach(var bar in graphSupplierTypesData)
             {
-              
                 chart2.Series[0].Points.AddXY(bar.Key, bar.Value);
             }
             double Order_Query_Total = orders.Sum(item => item.Cost);
