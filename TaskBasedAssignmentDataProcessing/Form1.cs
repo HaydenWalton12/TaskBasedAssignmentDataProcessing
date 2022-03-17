@@ -314,7 +314,7 @@ namespace TaskBasedForms
         private void UpdateQueryListView(IEnumerable<Order> orders)
         {
             //Stores The Type & Cost
-            Dictionary<string, double> graphSupplierTypesData = new Dictionary<string, double>();
+            Dictionary<string, double> SupplierTypeGraphData = new Dictionary<string, double>();
             OrderSerchResultsListView.Items.Clear();
             foreach (var order in orders)
             {
@@ -337,20 +337,22 @@ namespace TaskBasedForms
             foreach(var order in orders)
             {
                 //Check To See If The Dictionary Already Contains The Supplier Type , If The Key Has Already Been Added, We Enter Into Loop , ANd Add the Order values into the pre-exisiting dictionary
-                if(graphSupplierTypesData.ContainsKey(order.SupplierType))
+                if(SupplierTypeGraphData.ContainsKey(order.SupplierType))
                 {
-                    graphSupplierTypesData[order.SupplierType] = graphSupplierTypesData[order.SupplierType] + order.Cost;
+                    SupplierTypeGraphData[order.SupplierType] = SupplierTypeGraphData[order.SupplierType] + order.Cost;
                 }
                 else
                 {
-                    graphSupplierTypesData.Add(order.SupplierType, order.Cost);
+                    SupplierTypeGraphData.Add(order.SupplierType, order.Cost);
                 }
               
             }
-
-            foreach(var bar in graphSupplierTypesData)
+            //https://help.syncfusion.com/windowsforms/chart/chart-types#pie-chart 
+            //Pie CHarts Only Use One Series, So In Order To Create THe Pie Chart , We have To Add To THe exisiting series "0"
+            foreach (var value in SupplierTypeGraphData)
             {
-                chart2.Series[0].Points.AddXY(bar.Key, bar.Value);
+                chart2.Series[0].Points.AddXY(value.Key, value.Value);
+                
             }
             double Order_Query_Total = orders.Sum(item => item.Cost);
             TotalCostFilteredOrders.Text = "Total Cost : £ " + Order_Query_Total.ToString();
@@ -526,10 +528,15 @@ namespace TaskBasedForms
 
         private void button2_Click(object sender, EventArgs e)
         {
-     
+
+          
+            chart2.Series[0].Points.AddXY(1, 1);
+            chart2.Series[0].Points.AddXY(2, 1);
+         
 
 
-        
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)

@@ -25,6 +25,14 @@ class Date
     public int Year { get; set; }
 }
 
+class GraphData
+{
+    public string GraphField { get; set; }  
+
+    public int  GraphCount { get; set; }  
+
+}
+
 //Used to find data of an order from a store , and all invoice data inquired from a sale
 class Order
 {
