@@ -27,9 +27,9 @@ class Date
 
 class GraphData
 {
-    public string GraphField { get; set; }  
+    public string Field { get; set; }  
 
-    public int  GraphCount { get; set; }  
+    public double Count { get; set; }  
 
 }
 

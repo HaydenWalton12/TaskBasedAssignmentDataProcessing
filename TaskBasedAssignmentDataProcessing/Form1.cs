@@ -217,8 +217,9 @@ namespace TaskBasedForms
                 case 10:
                     order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
                     CheckQuery(order_query);
+                    CreateCharts(order_query);
 
-                   
+
                     break;
                 //Total Of Orders From All Stores At A Specfic Date
                 case 20:
@@ -330,33 +331,9 @@ namespace TaskBasedForms
                 ListViewItem item = new ListViewItem(subitem);
                 OrderSerchResultsListView.Items.Add(item);
 
-          
+
 
             }
-
-            foreach(var order in orders)
-            {
-                //Check To See If The Dictionary Already Contains The Supplier Type , If The Key Has Already Been Added, We Enter Into Loop , ANd Add the Order values into the pre-exisiting dictionary
-                if(SupplierTypeGraphData.ContainsKey(order.SupplierType))
-                {
-                    SupplierTypeGraphData[order.SupplierType] = SupplierTypeGraphData[order.SupplierType] + order.Cost;
-                }
-                else
-                {
-                    SupplierTypeGraphData.Add(order.SupplierType, order.Cost);
-                }
-              
-            }
-            //https://help.syncfusion.com/windowsforms/chart/chart-types#pie-chart 
-            //Pie CHarts Only Use One Series, So In Order To Create THe Pie Chart , We have To Add To THe exisiting series "0"
-            foreach (var value in SupplierTypeGraphData)
-            {
-                chart2.Series[0].Points.AddXY(value.Key, value.Value);
-                
-            }
-            double Order_Query_Total = orders.Sum(item => item.Cost);
-
-            TotalCostFilteredOrders.Text = "Total Cost : £ " + Order_Query_Total.ToString();
            
 
 
@@ -498,6 +475,66 @@ namespace TaskBasedForms
             }
         }
 
+        private void CreateCharts(IEnumerable<Order> chart_data)
+        {
+
+ 
+
+         
+          
+            List<GraphData> ChartData = new List<GraphData>();
+            foreach(var Type in SupplierTypeList.Items)
+            {
+                GraphData data = new GraphData
+                {
+                    Field = Type.ToString(),
+                    Count = 0
+
+                };
+
+                ChartData.Add(data);
+
+                
+            }
+            foreach (var order in chart_data)
+            {
+
+                for (int i = 0; i < ChartData.Count; i++)
+                {
+                    if (ChartData[i].Field == order.SupplierType)
+                    {
+                        ChartData[i].Count += order.Cost;
+                    }
+
+                }
+
+
+            }
+
+            foreach(var data in ChartData)
+            {
+
+                chart2.Series.Add(data.Field);
+       
+  
+            }
+
+            foreach (var data in ChartData)
+            {
+
+          
+                chart2.Series.FindByName(data.Field).Points.AddY(data.Count);
+
+
+
+
+            }
+            double Order_Query_Total = orders.Sum(item => item.Cost);
+
+            TotalCostFilteredOrders.Text = "Total Cost : £ " + Order_Query_Total.ToString();
+
+
+        }
         private void ClearOrderList_Click(object sender, EventArgs e)
         {
             OrderSerchResultsListView.Items.Clear();
@@ -529,17 +566,23 @@ namespace TaskBasedForms
         private void button2_Click(object sender, EventArgs e)
         {
 
-          
-            chart2.Series[0].Points.AddXY(1, 1);
-            chart2.Series[0].Points.AddXY(2, 1);
-         
-
-
-
+            chart2.Series.Add("1");
+            chart2.Series.Add("2");
+            chart2.Series.Add("3");
+            chart2.Series.Add("4");
+            chart2.Series.FindByName("1").Points.AddY(23);
+            chart2.Series.FindByName("2").Points.AddY(243);
+            chart2.Series.FindByName("3").Points.AddY(2);
+            chart2.Series.FindByName("4").Points.AddY(5);
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
