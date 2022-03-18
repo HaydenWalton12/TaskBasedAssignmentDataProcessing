@@ -119,7 +119,7 @@ namespace TaskBasedForms
         //Similar to the old load data method ,segrating data into adding into lists and using .split method ,can find old version on other gitrepos or bb
         public void LoadData(int start, int end)
         {
-
+            string[] arr = new string[100000];
 
             for (int i = start; i < end; i++)
             {
@@ -129,10 +129,14 @@ namespace TaskBasedForms
                 string[] fileNameSplit = fileName.Split('_');
 
                 string[] orderData = File.ReadAllLines(fileNames[i]);
+
                 Date date = new Date { Week = Convert.ToInt32(fileNameSplit[1]), Year = Convert.ToInt32(fileNameSplit[2]) };
-                dates.Add(date);
-
-
+               
+                    arr[i] = date.Week.ToString()  + '_' + date.Year.ToString(); 
+             
+                
+              
+               
                 foreach (var orderInfo in orderData)
                 {
                     string[] orderSplit = orderInfo.Split(',');
@@ -154,6 +158,24 @@ namespace TaskBasedForms
 
 
             }
+            string[] arr1 = arr.Distinct().ToArray();
+            for (int i = 0; i < arr1.Count() - 1; i++)
+            {
+                string[] tempdate = arr1[i].Split('_');
+
+                Date date1 = new Date();
+                date1.Week = date1.Week = Convert.ToInt32(tempdate[0]);
+                date1.Year = date1.Year = Convert.ToInt32(tempdate[1]);
+
+                dates.Add(date1);
+
+            }
+
+
+            List<Date> date_dis = dates.Distinct().ToList();
+            File.WriteAllLines("PP1.txt", arr1);
+
+            File.WriteAllLines("PP.txt", arr);
         }
 
         private void LoadStoreCodeClick(object sender, EventArgs e)
@@ -217,7 +239,7 @@ namespace TaskBasedForms
                 case 10:
                     order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
                     CheckQuery(order_query);
-                    CreateCharts(order_query);
+                    CreateCharts(order_query,3);
 
 
                     break;
@@ -475,66 +497,133 @@ namespace TaskBasedForms
             }
         }
 
-        private void CreateCharts(IEnumerable<Order> chart_data)
+        private void CreateCharts(IEnumerable<Order> chart_data, int data_processing_choice)
         {
-
- 
-
-         
-          
             List<GraphData> ChartData = new List<GraphData>();
-            foreach(var Type in SupplierTypeList.Items)
+            //Based Upon This Input , THis will Decide What Data We Will Process To Which Chart
+            switch (data_processing_choice)
             {
-                GraphData data = new GraphData
-                {
-                    Field = Type.ToString(),
-                    Count = 0
-
-                };
-
-                ChartData.Add(data);
-
-                
-            }
-            foreach (var order in chart_data)
-            {
-
-                for (int i = 0; i < ChartData.Count; i++)
-                {
-                    if (ChartData[i].Field == order.SupplierType)
+                //Process Supplier Type Cost Results For ColumnChart1
+                case 1:
+                    foreach (var Type in SupplierTypeList.Items)
                     {
-                        ChartData[i].Count += order.Cost;
+                        GraphData data = new GraphData
+                        {
+                            Field = Type.ToString(),
+                            Count = 0
+
+                        };
+
+                        ChartData.Add(data);
                     }
 
-                }
+                    //iterates threw all queried data
+                    foreach (var order in chart_data)
+                    {
+                        //Iterates Based Upon The chart Data count
+                        for (int i = 0; i < ChartData.Count; i++)
+                        {
+                            //If the Chartdate indexed field equals an orders suppliertype instance
+                            if (ChartData[i].Field == order.SupplierType)
+                            {
+                                ChartData[i].Count += order.Cost;
+                            }
+                        }
+                    }
+                    foreach (var data in ChartData)
+                    { ColumnChart1.Series.Add(data.Field); }
 
+                    foreach (var data in ChartData)
+                    { ColumnChart1.Series.FindByName(data.Field).Points.AddY(data.Count); }
+                    break;
+                //Process Supplier Type Cost Results For ColumnChart2
+                case 2:
+                    foreach (var Type in SupplierTypeList.Items)
+                    {
+                        GraphData data = new GraphData
+                        {
+                            Field = Type.ToString(),
+                            Count = 0
+
+                        };
+
+                        ChartData.Add(data);
+                    }
+
+                    foreach (var order in chart_data)
+                    {
+
+                        for (int i = 0; i < ChartData.Count; i++)
+                        {
+
+                            if (ChartData[i].Field == order.SupplierType)
+                            {
+                                ChartData[i].Count += order.Cost;
+                            }
+                        }
+                    }
+                    foreach (var data in ChartData)
+                    { ColumnChart1.Series.Add(data.Field); }
+
+                    foreach (var data in ChartData)
+                    { ColumnChart2.Series.FindByName(data.Field).Points.AddY(data.Count); }
+                    break;
+
+                // Process SupplierNameCosts For ColumnChart1
+                case 3:
+
+                    foreach (var Type in DatesListBox.Items)
+                    {
+                        GraphData data = new GraphData
+                        {
+                            Field = Type.ToString(),
+                            Count = 0
+
+                        };
+
+                        ChartData.Add(data);
+                    }
+
+                    foreach (var order in chart_data)
+                    {
+
+                        for (int i = 0; i < ChartData.Count; i++)
+                        {
+                            //Week: " + date.Week.ToString() + " Year: " + date.Year.ToString());
+                            string compare = "Week : " + order.Date.Week.ToString() + " Year : " + order.Date.Year.ToString();
+                            //"Week : 10 Year : 2014"
+                            if (ChartData[i].Field == compare)
+                            {
+                                ChartData[i].Count += order.Cost;
+                            }
+                        }
+                    }
+                    foreach (var data in ChartData)
+                    {
+                        if (ColumnChart1.Series.IsUniqueName(data.Field))
+                        {
+                            ColumnChart1.Series.Add(data.Field);
+                        }
+                    }
+                       
+
+
+                    foreach (var data in ChartData)
+                    { ColumnChart1.Series.FindByName(data.Field).Points.AddY(data.Count); }
+                    break;
 
             }
 
-            foreach(var data in ChartData)
-            {
-
-                chart2.Series.Add(data.Field);
-       
-  
-            }
-
-            foreach (var data in ChartData)
-            {
-
-          
-                chart2.Series.FindByName(data.Field).Points.AddY(data.Count);
-
-
-
-
-            }
-            double Order_Query_Total = orders.Sum(item => item.Cost);
-
-            TotalCostFilteredOrders.Text = "Total Cost : £ " + Order_Query_Total.ToString();
 
 
         }
+
+            //double Order_Query_Total = orders.Sum(item => item.Cost);
+
+            //TotalCostFilteredOrders.Text = "Total Cost : £ " + Order_Query_Total.ToString();
+
+
+    
         private void ClearOrderList_Click(object sender, EventArgs e)
         {
             OrderSerchResultsListView.Items.Clear();
@@ -563,18 +652,19 @@ namespace TaskBasedForms
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void ClearChartButton_Click(object sender, EventArgs e)
         {
 
-            chart2.Series.Add("1");
-            chart2.Series.Add("2");
-            chart2.Series.Add("3");
-            chart2.Series.Add("4");
-            chart2.Series.FindByName("1").Points.AddY(23);
-            chart2.Series.FindByName("2").Points.AddY(243);
-            chart2.Series.FindByName("3").Points.AddY(2);
-            chart2.Series.FindByName("4").Points.AddY(5);
-
+            //chart2.Series.Add("1");
+            //chart2.Series.Add("2");
+            //chart2.Series.Add("3");
+            //chart2.Series.Add("4");
+            //chart2.Series.FindByName("1").Points.AddY(23);
+            //chart2.Series.FindByName("2").Points.AddY(243);
+            //chart2.Series.FindByName("3").Points.AddY(2);
+            //chart2.Series.FindByName("4").Points.AddY(5);
+            //ColumnChart.Series.Clear();
+            ColumnChartTextBox.Text += "1.)\n2.)\n3.)\n4.)";
         }
 
         private void Form1_Load(object sender, EventArgs e)
