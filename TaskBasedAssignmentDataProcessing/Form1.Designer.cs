@@ -32,6 +32,7 @@ namespace TaskBasedForms
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
 
             this.FolderSearchButton = new System.Windows.Forms.Button();
             this.DataPathTextBox = new System.Windows.Forms.TextBox();
@@ -285,6 +286,11 @@ namespace TaskBasedForms
             this.ColumnChart1.ChartAreas.Add(chartArea1);
             this.ColumnChart1.Location = new System.Drawing.Point(953, 12);
             this.ColumnChart1.Name = "ColumnChart1";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.ColumnChart1.Series.Add(series1);
             this.ColumnChart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Light;
             this.ColumnChart1.Size = new System.Drawing.Size(521, 288);
             this.ColumnChart1.TabIndex = 18;

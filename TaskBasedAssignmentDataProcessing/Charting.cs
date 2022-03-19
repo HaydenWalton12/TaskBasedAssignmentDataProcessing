@@ -55,11 +55,10 @@ namespace TaskBasedForms
                             }
                         }
                     }
-                    foreach (var data in ChartData)
-                    { form1.ColumnChart1.Series.Add(data.Field); }
+          
 
                     foreach (var data in ChartData)
-                    { form1.ColumnChart1.Series.FindByName(data.Field).Points.AddY(data.Count); }
+                    { form1.ColumnChart1.Series[0].Points.AddXY(data.Field, data.Count); }
                     break;
                 //Process Supplier Type Cost Results For ColumnChart2
                 case 2:
@@ -87,11 +86,9 @@ namespace TaskBasedForms
                             }
                         }
                     }
+         
                     foreach (var data in ChartData)
-                    { form1.ColumnChart1.Series.Add(data.Field); }
-
-                    foreach (var data in ChartData)
-                    { form1.ColumnChart2.Series.FindByName(data.Field).Points.AddY(data.Count); }
+                    { form1.ColumnChart2.Series[0].Points.AddXY(data.Field, data.Count); }
                     break;
 
                 // Process Dates For ColumnChart1
@@ -118,16 +115,10 @@ namespace TaskBasedForms
                         }
                     }
 
-                    foreach (var data in ChartData)
-                    {
-                        if (form1.ColumnChart1.Series.IsUniqueName(data.Field))
-                        {
-                            form1.ColumnChart1.Series.Add(data.Field);
-                        }
-                    }
+                   
 
                     foreach (var data in ChartData)
-                    { form1.ColumnChart1.Series.FindByName(data.Field).Points.AddY(data.Count); }
+                    { form1.ColumnChart1.Series[0].Points.AddXY(data.Field , data.Count); }
                     break;
                 // Process Dates For ColumnChart2
                 case 4:
@@ -162,7 +153,7 @@ namespace TaskBasedForms
                     }
 
                     foreach (var data in ChartData)
-                    { form1.ColumnChart2.Series.FindByName(data.Field).Points.AddY(data.Count); }
+                    { form1.ColumnChart2.Series[0].Points.AddXY(data.Field, data.Count); }
                     break;
                 // Process SupplierNames For ColumnChart1
                 case 5:
