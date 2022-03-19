@@ -408,13 +408,14 @@ namespace TaskBasedForms
             {
              ShowMessage = true;
            
+            //IF we alreadt Selected an  option, this simply changed the option and doesnt add to the code.
             if (StoreCodeActive == true)
             {
                
              
               
-                StoreCodesList.SelectedIndex = SelectedStoreCodeIndex;
-                         }
+               SelectedStoreCodeIndex = StoreCodesList.SelectedIndex;
+                    }
             else
             {
                     SelectedStoreCodeIndex = StoreCodesList.SelectedIndex;
@@ -428,11 +429,7 @@ namespace TaskBasedForms
                     }
                     StoreCodeActive = true;
             }
-            if (ShowMessage == true)
-            {
-                MessageBox.Show("Already Selected", "Deselect To Change Order Parameter", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-            }
+ 
         }
         private void DatesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
