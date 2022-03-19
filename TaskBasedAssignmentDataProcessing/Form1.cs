@@ -33,7 +33,7 @@ namespace TaskBasedForms
         int SupplierNameCode = 100;
 
         int SelectionCode = 0;
-
+        bool ShowMessage;
         //Will be used in the future as a method of selcting a specfic type of data processing
         //Fullfilling different data processing methods
         int SelectedNum;
@@ -60,6 +60,7 @@ namespace TaskBasedForms
             SupplierTypeActive = false;
             SupplierNameActive = false;
             DateActive = false;
+            ShowMessage = false;
             _Charting = new FormCharting(form1);
         }
 
@@ -404,14 +405,16 @@ namespace TaskBasedForms
 
             }
             private void StoreCodesList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            {
+             ShowMessage = true;
+           
             if (StoreCodeActive == true)
             {
+               
+             
+              
                 StoreCodesList.SelectedIndex = SelectedStoreCodeIndex;
-                MessageBox.Show("Already Selected", "Deselect To Change Order Parameter", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-            }
+                         }
             else
             {
                     SelectedStoreCodeIndex = StoreCodesList.SelectedIndex;
@@ -425,7 +428,11 @@ namespace TaskBasedForms
                     }
                     StoreCodeActive = true;
             }
-       
+            if (ShowMessage == true)
+            {
+                MessageBox.Show("Already Selected", "Deselect To Change Order Parameter", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
         }
         private void DatesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
