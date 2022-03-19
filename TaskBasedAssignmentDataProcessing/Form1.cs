@@ -45,19 +45,22 @@ namespace TaskBasedForms
         List<string> supplier_types = new List<string>();
         List<Date> dates = new List<Date>();    
         List<string> supplier_names = new List<string>();
+       
         public Application _App;
-
+        FormCharting _Charting;
         public string DataDirectoryPath;
         public string StoreCodesFile;
 
         public Form1(Application application)
         {
+            Form1 form1 = this;
             _App = application;
             InitializeComponent();
             StoreCodeActive = false;
             SupplierTypeActive = false;
             SupplierNameActive = false;
             DateActive = false;
+            _Charting = new FormCharting(form1);
         }
 
 
@@ -239,7 +242,7 @@ namespace TaskBasedForms
                 case 10:
                     order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
                     CheckQuery(order_query);
-                    CreateCharts(order_query,3);
+                    _Charting.CreateCharts(order_query,3);
 
 
                     break;
@@ -379,50 +382,63 @@ namespace TaskBasedForms
         {
             SelectedSupplierTypeIndex = SupplierTypeList.SelectedIndex;
             SupplierTypeSelectLabel.Text = "Supplier Type : " + SupplierTypeList.Text;
-            if (SelectedSupplierTypeIndex != -1)
+            if (SupplierTypeActive == false)
             {
 
-                AddToSelectionCode(SupplierNameCode, SupplierNameActive);
+                AddToSelectionCode(SupplierTypeCode);
 
 
             }
-
         }
+
         private void SupplierNameList_SelectedIndexChanged(object sender, EventArgs e)
         {
             SelectedSupplierNameIndex = SupplierNameList.SelectedIndex;
             SupplierNameSelectLabel.Text = "Supplier Name :" + SupplierNameList.Text;
-            if (SelectedSupplierNameIndex != -1)
+            if (SupplierNameActive == false)
             {
 
-                AddToSelectionCode(SupplierNameCode, SupplierNameActive);
+                AddToSelectionCode(SupplierNameCode);
             }
+                SupplierNameActive = true;
 
-        }
-        private void StoreCodesList_SelectedIndexChanged(object sender, EventArgs e)
+            }
+            private void StoreCodesList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SelectedStoreCodeIndex = StoreCodesList.SelectedIndex;
-            StoreCodeSelectLabel.Text = "Store Code : " + StoreCodesList.Text;
 
-            if (SelectedStoreCodeIndex != -1)
+            if (StoreCodeActive == true)
             {
-                AddToSelectionCode(StoreSelectCode, StoreCodeActive);
-
+                StoreCodesList.SelectedIndex = SelectedStoreCodeIndex;
+                MessageBox.Show("Already Selected", "Deselect To Change Order Parameter", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             }
+            else
+            {
+                    SelectedStoreCodeIndex = StoreCodesList.SelectedIndex;
+                    StoreCodeSelectLabel.Text = "Store Code : " + StoreCodesList.Text;
 
+                    if (StoreCodeActive == false)
+                    {
+                        AddToSelectionCode(StoreSelectCode);
+
+
+                    }
+                    StoreCodeActive = true;
+            }
+       
         }
         private void DatesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SelectedDateIndex = DatesListBox.SelectedIndex;
             DateSelectLabel.Text = "Date :" + DatesListBox.Text;
 
-            if (SelectedDateIndex != -1)
+            if (DateActive == false)
             {
-                AddToSelectionCode(DateCode, DateActive);
+                AddToSelectionCode(DateCode);
 
 
             }
+            DateActive = true;
         }
 
         //Deslect of options function
@@ -431,8 +447,6 @@ namespace TaskBasedForms
             if (SupplierTypeList.SelectedIndex == -1)
             {
                 MessageBox.Show("Already Deselected", "Select Something To Deselect", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-
             }
             else
             {
@@ -440,6 +454,7 @@ namespace TaskBasedForms
                 SupplierTypeList.SelectedIndex = -1;
                 SupplierTypeSelectLabel.Text = "Supplier Type : ";
                 SelectionCode -= SupplierTypeCode;
+                SupplierTypeActive = false;
 
             }
 
@@ -460,6 +475,7 @@ namespace TaskBasedForms
                 SupplierNameList.SelectedIndex = -1;
                 SupplierNameSelectLabel.Text = "Supplier Name :";
                 SelectionCode -= SupplierNameCode;
+                SupplierNameActive = false;
             }
 
 
@@ -477,6 +493,8 @@ namespace TaskBasedForms
                 StoreCodesList.SelectedIndex = -1;
                 StoreCodeSelectLabel.Text = "Store Code : ";
                 SelectionCode -= StoreSelectCode;
+                StoreCodeActive = false;
+
             }
 
 
@@ -494,133 +512,10 @@ namespace TaskBasedForms
                 DatesListBox.SelectedIndex = -1;
                 DateSelectLabel.Text = "Date :";
                 SelectionCode -= DateCode;
+                DateActive = false;
             }
         }
-
-        private void CreateCharts(IEnumerable<Order> chart_data, int data_processing_choice)
-        {
-            List<GraphData> ChartData = new List<GraphData>();
-            //Based Upon This Input , THis will Decide What Data We Will Process To Which Chart
-            switch (data_processing_choice)
-            {
-                //Process Supplier Type Cost Results For ColumnChart1
-                case 1:
-                    foreach (var Type in SupplierTypeList.Items)
-                    {
-                        GraphData data = new GraphData
-                        {
-                            Field = Type.ToString(),
-                            Count = 0
-
-                        };
-
-                        ChartData.Add(data);
-                    }
-
-                    //iterates threw all queried data
-                    foreach (var order in chart_data)
-                    {
-                        //Iterates Based Upon The chart Data count
-                        for (int i = 0; i < ChartData.Count; i++)
-                        {
-                            //If the Chartdate indexed field equals an orders suppliertype instance
-                            if (ChartData[i].Field == order.SupplierType)
-                            {
-                                ChartData[i].Count += order.Cost;
-                            }
-                        }
-                    }
-                    foreach (var data in ChartData)
-                    { ColumnChart1.Series.Add(data.Field); }
-
-                    foreach (var data in ChartData)
-                    { ColumnChart1.Series.FindByName(data.Field).Points.AddY(data.Count); }
-                    break;
-                //Process Supplier Type Cost Results For ColumnChart2
-                case 2:
-                    foreach (var Type in SupplierTypeList.Items)
-                    {
-                        GraphData data = new GraphData
-                        {
-                            Field = Type.ToString(),
-                            Count = 0
-
-                        };
-
-                        ChartData.Add(data);
-                    }
-
-                    foreach (var order in chart_data)
-                    {
-
-                        for (int i = 0; i < ChartData.Count; i++)
-                        {
-
-                            if (ChartData[i].Field == order.SupplierType)
-                            {
-                                ChartData[i].Count += order.Cost;
-                            }
-                        }
-                    }
-                    foreach (var data in ChartData)
-                    { ColumnChart1.Series.Add(data.Field); }
-
-                    foreach (var data in ChartData)
-                    { ColumnChart2.Series.FindByName(data.Field).Points.AddY(data.Count); }
-                    break;
-
-                // Process SupplierNameCosts For ColumnChart1
-                case 3:
-
-                    foreach (var Type in DatesListBox.Items)
-                    {
-                        GraphData data = new GraphData
-                        {
-                            Field = Type.ToString(),
-                            Count = 0
-
-                        };
-
-                        ChartData.Add(data);
-                    }
-
-                    foreach (var order in chart_data)
-                    {
-
-                        for (int i = 0; i < ChartData.Count; i++)
-                        {
-                            //Week: " + date.Week.ToString() + " Year: " + date.Year.ToString());
-                            string compare = "Week : " + order.Date.Week.ToString() + " Year : " + order.Date.Year.ToString();
-                            //"Week : 10 Year : 2014"
-                            if (ChartData[i].Field == compare)
-                            {
-                                ChartData[i].Count += order.Cost;
-                            }
-                        }
-                    }
-                    foreach (var data in ChartData)
-                    {
-                        if (ColumnChart1.Series.IsUniqueName(data.Field))
-                        {
-                            ColumnChart1.Series.Add(data.Field);
-                        }
-                    }
-                       
-
-
-                    foreach (var data in ChartData)
-                    { ColumnChart1.Series.FindByName(data.Field).Points.AddY(data.Count); }
-                    break;
-
-            }
-
-
-
-        }
-
-            //double Order_Query_Total = orders.Sum(item => item.Cost);
-
-            //TotalCostFilteredOrders.Text = "Total Cost : £ " + Order_Query_Total.ToString();
+       
 
 
     
@@ -629,27 +524,9 @@ namespace TaskBasedForms
             OrderSerchResultsListView.Items.Clear();
         }
 
-        private void AddToSelectionCode(int num1, bool flag)
-        {
-            flag = true;
-            if (flag == true)
-            {
-                SelectionCode -= num1;
-
-                flag = false;
-            }
-            if (flag == false)
-            {
-                if (SelectionCode < 0)
-                {
-                    SelectionCode += num1;
-                }
-
+        private void AddToSelectionCode(int num1)
+        {   
                 SelectionCode += num1;
-            }
-
-
-
         }
 
         private void ClearChartButton_Click(object sender, EventArgs e)
@@ -667,13 +544,12 @@ namespace TaskBasedForms
             ColumnChartTextBox.Text += "1.)\n2.)\n3.)\n4.)";
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+    
+      
+        private void GraphResults()
         {
 
-        }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
         }
     }
