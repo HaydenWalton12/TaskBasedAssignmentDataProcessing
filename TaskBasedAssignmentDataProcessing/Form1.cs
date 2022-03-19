@@ -33,7 +33,9 @@ namespace TaskBasedForms
         int SupplierNameCode = 100;
 
         int SelectionCode = 0;
-        bool ShowMessage;
+        
+        
+        bool DataLoaded;
         //Will be used in the future as a method of selcting a specfic type of data processing
         //Fullfilling different data processing methods
         int SelectedNum;
@@ -60,7 +62,7 @@ namespace TaskBasedForms
             SupplierTypeActive = false;
             SupplierNameActive = false;
             DateActive = false;
-            ShowMessage = false;
+            DataLoaded = false;
             _Charting = new FormCharting(form1);
         }
 
@@ -82,17 +84,18 @@ namespace TaskBasedForms
         public void LoadDataClick(object sender, EventArgs e)
         {
 
-
+            if(DataLoaded == false)
+            {
             fileNames = Directory.GetFiles(DataDirectoryPath);
             int whole_size = fileNames.Length;
             int half_size = fileNames.Length / 2;
 
 
 
-            Task task1 = new Task(() => { LoadData(0, whole_size); });
+                    Task task1 = new Task(() => { LoadData(0, whole_size); });
 
-            task1.Start();
-            Task.WaitAll(task1);
+                    task1.Start();
+                    Task.WaitAll(task1);
 
             //Gets All Supply Names from each order, the processes them into a distinct list, containing only each instance of a supplier sname , 
             List<string> supplier_names_dupes = new List<string>();
@@ -115,8 +118,17 @@ namespace TaskBasedForms
 
 
    
-            //Lods Selection lists for data processing , data processing of filtering threw orders is done via c# query system
-            LoadList();
+                //Lods Selection lists for data processing , data processing of filtering threw orders is done via c# query system
+                LoadList();
+
+
+            }
+            else
+            {
+                MessageBox.Show("Unable To Load In Data", "Data Already Loaded", MessageBoxButtons.OK);
+            }
+            DataLoaded = true;
+
         }
 
 
@@ -195,10 +207,6 @@ namespace TaskBasedForms
             }
         }
 
-
-        /// <summary>
-        /// Loads Selection Lists To Aquire Filtered Data
-        /// </summary>
         public void LoadList()
         {
             string[] _StoreCodeData = File.ReadAllLines(StoreCodesFile);
@@ -210,9 +218,7 @@ namespace TaskBasedForms
                 //split determined by single unicode character ',' , will split from this considered middle point. E.G Hello =  .split('l') , s1(he) s2(lo)
                 //This splits up the StoreCode data into two , the store code in s1 , then store location in s2
                 string[] storeDataSplit = StoreData.Split(',');
-
                 StoreCodesList.Items.Add(storeDataSplit[0] + " : " + storeDataSplit[1]);
-
                 stores[i] = storeDataSplit[0];
                 i++;
             }
@@ -221,6 +227,7 @@ namespace TaskBasedForms
             {
                 SupplierTypeList.Items.Add(suppliertype.ToString());
             }
+
             foreach (var suppliername in supplier_names.AsParallel())
             {
                 SupplierNameList.Items.Add(suppliername.ToString());
@@ -229,7 +236,6 @@ namespace TaskBasedForms
             {
                 DatesListBox.Items.Add("Week : " + date.Week.ToString() + " Year : " + date.Year.ToString());
             }
-
         }
 
         //CHarting Functionality Will need to be located within this function , since this where data for order results is queried
@@ -243,16 +249,16 @@ namespace TaskBasedForms
                 case 10:
                     order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
                     CheckQuery(order_query);
-                    _Charting.CreateCharts(order_query,3);
-
-
+                    _Charting.CreateCharts(order_query,5);
                     break;
+
                 //Total Of Orders From All Stores At A Specfic Date
                 case 20:
                     order_query = order_query.Where(order => order.Date.Week == dates.ElementAt(SelectedDateIndex).Week);
                     order_query = order_query.Where(order => order.Date.Year == dates.ElementAt(SelectedDateIndex).Year);
                     CheckQuery(order_query);
                     break;
+
                 //Total Of Order/Cost From A Specfic Store At A Specfic Date
                 case 30:
 
@@ -260,10 +266,8 @@ namespace TaskBasedForms
                     order_query = order_query.Where(order => order.Date.Week == dates.ElementAt(SelectedDateIndex).Week);
                     order_query = order_query.Where(order => order.Date.Year == dates.ElementAt(SelectedDateIndex).Year);
                     CheckQuery(order_query);
-
-
-
                     break;
+
                 //Total Of Orders/Cost From A Specfic SupplierType From All Stores
                 case 50:
                     order_query = order_query.Where(order => order.SupplierType == supplier_types.ElementAt(SelectedSupplierTypeIndex));
@@ -294,10 +298,12 @@ namespace TaskBasedForms
                     order_query = order_query.Where(order => order.Date.Year == dates.ElementAt(SelectedDateIndex).Year);
                     CheckQuery(order_query);
                     break;
+
                 //Total Of Orders/Cost From A Specific Supplier Name
                 case 100:
                     order_query = order_query.Where(order => order.SupplierName == supplier_names.ElementAt(SelectedSupplierNameIndex));
                     UpdateQueryListView(order_query);
+                  
                     break;
 
                 //Total Of Orders/Cost From A Specific SupplierName From A Specfic Store
@@ -315,6 +321,7 @@ namespace TaskBasedForms
                     order_query = order_query.Where(order => order.Date.Year == dates.ElementAt(SelectedDateIndex).Year);
                     UpdateQueryListView(order_query);
                     break;
+
                 //Total Orders/Cost From A Specific Store, From A Specific SupplierName & Type Within A Specific Date
                 case 180:
                     order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
@@ -326,26 +333,36 @@ namespace TaskBasedForms
                     break;
 
                 default:
-
                     break;
 
             }
+
             SelectionCode = 0;
+            SelectedSupplierNameIndex = -1;
+            SelectedSupplierTypeIndex = -1;
+            SelectedDateIndex = -1;
+            SelectedStoreCodeIndex = -1;
+            
             StoreCodesList.SelectedIndex = -1;
             SupplierNameList.SelectedIndex = -1;
             SupplierTypeList.SelectedIndex = -1;
             DatesListBox.SelectedIndex = -1;
+            DateActive = false;
+            StoreCodeActive = false;
+            SupplierNameActive = false;
+            SupplierTypeActive = false;
         }
 
         //Updates the query filtering results, and some minor data
         private void UpdateQueryListView(IEnumerable<Order> orders)
         {
+
             //Stores The Type & Cost
             Dictionary<string, double> SupplierTypeGraphData = new Dictionary<string, double>();
             OrderSerchResultsListView.Items.Clear();
+
             foreach (var order in orders)
             {
-
                 string[] subitem = new string[5];
 
                 subitem[0] = order.StoreCode;
@@ -357,12 +374,7 @@ namespace TaskBasedForms
                 ListViewItem item = new ListViewItem(subitem);
                 OrderSerchResultsListView.Items.Add(item);
 
-
-
             }
-           
-
-
         }
 
 
@@ -381,71 +393,87 @@ namespace TaskBasedForms
         //Upon Selecting element , ot stores the element value in in variable , used for seartching "ElemementAt" Queries function
         private void SupplierTypeList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SelectedSupplierTypeIndex = SupplierTypeList.SelectedIndex;
-            SupplierTypeSelectLabel.Text = "Supplier Type : " + SupplierTypeList.Text;
-            if (SupplierTypeActive == false)
+            if (SupplierTypeActive == true)
             {
-
-                AddToSelectionCode(SupplierTypeCode);
-
-
+                SelectedSupplierTypeIndex = SupplierTypeList.SelectedIndex;
+                SupplierTypeSelectLabel.Text = "Supplier Type : " + SupplierTypeList.Text;
             }
+            else
+            {
+                SelectedSupplierTypeIndex = SupplierTypeList.SelectedIndex;
+                SupplierTypeSelectLabel.Text = "Supplier Type : " + SupplierTypeList.Text;
+              
+                if (SupplierTypeActive == false)
+                {
+                    AddToSelectionCode(SupplierTypeCode);
+                }
+            }
+
+            SupplierTypeActive = true;
         }
 
         private void SupplierNameList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SelectedSupplierNameIndex = SupplierNameList.SelectedIndex;
-            SupplierNameSelectLabel.Text = "Supplier Name :" + SupplierNameList.Text;
-            if (SupplierNameActive == false)
+            if (SupplierNameActive == true)
             {
-
-                AddToSelectionCode(SupplierNameCode);
+                SelectedSupplierNameIndex =  SupplierNameList.SelectedIndex ;
+                SupplierNameSelectLabel.Text = "Supplier Name :" + SupplierNameList.Text;
             }
-                SupplierNameActive = true;
-
-            }
-            private void StoreCodesList_SelectedIndexChanged(object sender, EventArgs e)
-            {
-             ShowMessage = true;
-           
-            //IF we alreadt Selected an  option, this simply changed the option and doesnt add to the code.
-            if (StoreCodeActive == true)
-            {
-               
-             
-              
-               SelectedStoreCodeIndex = StoreCodesList.SelectedIndex;
-                    }
             else
             {
+                SelectedSupplierNameIndex = SupplierNameList.SelectedIndex;
+                SupplierNameSelectLabel.Text = "Supplier Name :" + SupplierNameList.Text;
+
+                if (SupplierNameActive == false)
+                {
+                    AddToSelectionCode(SupplierNameCode);
+                }
+            }
+                SupplierNameActive = true;
+            }
+
+            private void StoreCodesList_SelectedIndexChanged(object sender, EventArgs e)
+            {           
+            //If we already Selected an  option, this simply changed the option and doesnt add to the code.
+            if (StoreCodeActive == true)
+            {
+                SelectedStoreCodeIndex = StoreCodesList.SelectedIndex;
+                StoreCodeSelectLabel.Text = "Store Code : " + StoreCodesList.Text;
+            }
+            else
+            {
+
                     SelectedStoreCodeIndex = StoreCodesList.SelectedIndex;
                     StoreCodeSelectLabel.Text = "Store Code : " + StoreCodesList.Text;
-
+                   
                     if (StoreCodeActive == false)
                     {
                         AddToSelectionCode(StoreSelectCode);
-
-
                     }
-                    StoreCodeActive = true;
+                       StoreCodeActive = true;
             }
  
         }
         private void DatesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SelectedDateIndex = DatesListBox.SelectedIndex;
-            DateSelectLabel.Text = "Date :" + DatesListBox.Text;
-
-            if (DateActive == false)
+            if (DateActive == true)
             {
-                AddToSelectionCode(DateCode);
-
-
+                SelectedDateIndex =  DatesListBox.SelectedIndex;
+                DateSelectLabel.Text = "Date :" + DatesListBox.Text;
             }
+            else
+            {
+                if (DateActive == false)
+                {
+                    SelectedDateIndex = DatesListBox.SelectedIndex;
+                    DateSelectLabel.Text = "Date :" + DatesListBox.Text;
+                    AddToSelectionCode(DateCode);
+                }
+            }
+
             DateActive = true;
         }
 
-        //Deslect of options function
         private void DeselectSupplierType_Click(object sender, EventArgs e)
         {
             if (SupplierTypeList.SelectedIndex == -1)
@@ -459,9 +487,7 @@ namespace TaskBasedForms
                 SupplierTypeSelectLabel.Text = "Supplier Type : ";
                 SelectionCode -= SupplierTypeCode;
                 SupplierTypeActive = false;
-
             }
-
         }
 
         private void DeselectSupplierName_Click(object sender, EventArgs e)
@@ -469,20 +495,15 @@ namespace TaskBasedForms
             if (SupplierNameList.SelectedIndex == -1)
             {
                 MessageBox.Show("Already Deselected", "Select Something To Deselect", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-
             }
             else
             {
-
                 SelectedSupplierNameIndex = -1;
                 SupplierNameList.SelectedIndex = -1;
                 SupplierNameSelectLabel.Text = "Supplier Name :";
                 SelectionCode -= SupplierNameCode;
                 SupplierNameActive = false;
             }
-
-
         }
 
         private void DeselectStoreCode_Click(object sender, EventArgs e)
@@ -500,8 +521,6 @@ namespace TaskBasedForms
                 StoreCodeActive = false;
 
             }
-
-
         }
 
         private void DeselectDateList_Click(object sender, EventArgs e)
@@ -532,24 +551,7 @@ namespace TaskBasedForms
         {   
                 SelectionCode += num1;
         }
-
-        private void ClearChartButton_Click(object sender, EventArgs e)
-        {
-
-            //chart2.Series.Add("1");
-            //chart2.Series.Add("2");
-            //chart2.Series.Add("3");
-            //chart2.Series.Add("4");
-            //chart2.Series.FindByName("1").Points.AddY(23);
-            //chart2.Series.FindByName("2").Points.AddY(243);
-            //chart2.Series.FindByName("3").Points.AddY(2);
-            //chart2.Series.FindByName("4").Points.AddY(5);
-            //ColumnChart.Series.Clear();
-            ColumnChartTextBox.Text += "1.)\n2.)\n3.)\n4.)";
-        }
-
-    
-      
+     
         private void GraphResults()
         {
 

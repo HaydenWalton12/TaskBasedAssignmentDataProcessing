@@ -167,7 +167,7 @@ namespace TaskBasedForms
                 // Process SupplierNames For ColumnChart1
                 case 5:
                     //Each Data , Add Into Chart Data (Each Date Holds Unique Position On ColumnChart)
-                    foreach (var Type in form1.DatesListBox.Items)
+                    foreach (var Type in form1.SupplierNameList.Items)
                     {
                         GraphData data = new GraphData
                         {
@@ -181,23 +181,26 @@ namespace TaskBasedForms
                     {
                         for (int i = 0; i < ChartData.Count; i++)
                         {
-                            if (ChartData[i].Field == "Week : " + order.Date.Week.ToString() + " Year : " + order.Date.Year.ToString())
+                            if (ChartData[i].Field == order.SupplierName)
                             {
                                 ChartData[i].Count += order.Cost;
                             }
                         }
                     }
 
-                    foreach (var data in ChartData)
-                    {
-                        if (form1.ColumnChart2.Series.IsUniqueName(data.Field))
-                        {
-                            form1.ColumnChart2.Series.Add(data.Field);
-                        }
-                    }
+                    ////Builds Series
+                    //foreach (var data in ChartData)
+                    //{
+                    //    if (form1.ColumnChart2.Series.IsUniqueName(data.Field))
+                    //    {
+                    //        form1.ColumnChart2.Series.Add(data.Field);
+                    //    }
+                    //}
 
+                    //Populates The Graph
+                    form1.ColumnChart2.ChartAreas[0].AxisX.LabelStyle.Interval = 1;
                     foreach (var data in ChartData)
-                    { form1.ColumnChart2.Series.FindByName(data.Field).Points.AddY(data.Count); }
+                    { form1.ColumnChart2.Series[0].Points.AddXY(data.Field , data.Count); }
                     break;
             }
 

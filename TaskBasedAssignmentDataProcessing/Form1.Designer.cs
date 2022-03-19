@@ -31,6 +31,8 @@ namespace TaskBasedForms
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+
             this.FolderSearchButton = new System.Windows.Forms.Button();
             this.DataPathTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -393,7 +395,6 @@ namespace TaskBasedForms
             this.button2.TabIndex = 28;
             this.button2.Text = "Clear Chart";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.ClearChartButton_Click);
             // 
             // button3
             // 
@@ -439,6 +440,11 @@ namespace TaskBasedForms
             this.ColumnChart2.ChartAreas.Add(chartArea2);
             this.ColumnChart2.Location = new System.Drawing.Point(953, 324);
             this.ColumnChart2.Name = "ColumnChart2";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.ColumnChart2.Series.Add(series2);
             this.ColumnChart2.Size = new System.Drawing.Size(521, 300);
             this.ColumnChart2.TabIndex = 40;
             this.ColumnChart2.Text = "ColumnChart2";
