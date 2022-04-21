@@ -237,11 +237,14 @@ namespace TaskBasedForms
                 DatesListBox.Items.Add("Week : " + date.Week.ToString() + " Year : " + date.Year.ToString());
             }
         }
+        
+
 
         //CHarting Functionality Will need to be located within this function , since this where data for order results is queried
         private void SearchOrderButton_Click(object sender, EventArgs e)
         {
             var order_query = from order in orders select order;
+
             switch (SelectionCode)
             {
 
@@ -249,7 +252,12 @@ namespace TaskBasedForms
                 case 10:
                     order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
                     CheckQuery(order_query);
-                    _Charting.CreateCharts(order_query,5);
+                    _Charting.StoreChart(order_query);
+                    _Charting.SupplierName(order_query);
+                    _Charting.SupplierType(order_query);
+                    _Charting.DateChart(order_query);
+
+
                     break;
 
                 //Total Of Orders From All Stores At A Specfic Date
@@ -257,6 +265,10 @@ namespace TaskBasedForms
                     order_query = order_query.Where(order => order.Date.Week == dates.ElementAt(SelectedDateIndex).Week);
                     order_query = order_query.Where(order => order.Date.Year == dates.ElementAt(SelectedDateIndex).Year);
                     CheckQuery(order_query);
+                    _Charting.StoreChart(order_query);
+                    _Charting.SupplierName(order_query);
+                    _Charting.SupplierType(order_query);
+                    _Charting.DateChart(order_query);
                     break;
 
                 //Total Of Order/Cost From A Specfic Store At A Specfic Date
@@ -558,6 +570,31 @@ namespace TaskBasedForms
 
 
         }
+
+        private void LoadSupplierTypeChart_Click(object sender, EventArgs e)
+        {
+            List<GraphData> ChartData = new List<GraphData>();
+            foreach (var Type in DatesListBox.Items)
+            {
+                string Temp = Type.ToString();
+                //if(Temp.Contains())
+                //{ }
+                GraphData data = new GraphData
+                {
+                   
+
+                    Field = Type.ToString(),
+                    Count = 0
+                };
+                ChartData.Add(data);
+            }
+            StoreChart.ChartAreas[0].AxisX.LabelStyle.Interval = 1;
+            foreach (var data in ChartData)
+            { StoreChart.Series[0].Points.AddXY(data.Field, data.Count); }
+
+        }
+
+
     }
 
 }

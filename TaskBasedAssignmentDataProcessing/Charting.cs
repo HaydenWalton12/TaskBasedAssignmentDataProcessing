@@ -13,196 +13,168 @@ namespace TaskBasedForms
         public FormCharting(Form1 form)
         {
             form1 = form;
-
         }
         
 
         /// <summary>
-        /// 
-        /// 
+        /// Since We Have Two Present Charts That Allow us to simplify and visulise 
+        /// query data , we can have two chart options that allow us to present the same queried data,  however
+        /// can visualise multiple types of data at once
         /// 
         /// </summary>
-        public void CreateCharts(IEnumerable<Order> queried_orders, int data_processing_choice)
+        /// 
+   
+        public void StoreChart(IEnumerable<Order> queried_orders)
         {
             List<GraphData> ChartData = new List<GraphData>();
-            //Based Upon This Input , THis will Decide What Data We Will Process To Which Chart
-            switch (data_processing_choice)
+            foreach (var Type in form1.StoreCodesList.Items)
             {
-                //Process Supplier Type Cost Results For ColumnChart1
-                case 1:
-                    foreach (var Type in form1.SupplierTypeList.Items)
+                GraphData data = new GraphData
+                {
+                    Field = Type.ToString(),
+                    Count = 0
+                };
+                ChartData.Add(data);
+            }
+            foreach (var order in queried_orders)
+            {
+                for (int i = 0; i < ChartData.Count; i++)
+                {
+                    if (ChartData[i].Field == order.StoreCode)
                     {
-                        GraphData data = new GraphData
-                        {
-                            Field = Type.ToString(),
-                            Count = 0
-
-                        };
-
-                        ChartData.Add(data);
+                        ChartData[i].Count += order.Cost;
                     }
-
-                    //iterates threw all queried data
-                    foreach (var order in queried_orders)
-                    {
-                        //Iterates Based Upon The chart Data count
-                        for (int i = 0; i < ChartData.Count; i++)
-                        {
-                            //If the Chartdate indexed field equals an orders suppliertype instance
-                            if (ChartData[i].Field == order.SupplierType)
-                            {
-                                ChartData[i].Count += order.Cost;
-                            }
-                        }
-                    }
-          
-
-                    foreach (var data in ChartData)
-                    { form1.ColumnChart1.Series[0].Points.AddXY(data.Field, data.Count); }
-                    break;
-                //Process Supplier Type Cost Results For ColumnChart2
-                case 2:
-                    foreach (var Type in form1.SupplierTypeList.Items)
-                    {
-                        GraphData data = new GraphData
-                        {
-                            Field = Type.ToString(),
-                            Count = 0
-
-                        };
-
-                        ChartData.Add(data);
-                    }
-
-                    foreach (var order in queried_orders)
-                    {
-
-                        for (int i = 0; i < ChartData.Count; i++)
-                        {
-
-                            if (ChartData[i].Field == order.SupplierType)
-                            {
-                                ChartData[i].Count += order.Cost;
-                            }
-                        }
-                    }
-         
-                    foreach (var data in ChartData)
-                    { form1.ColumnChart2.Series[0].Points.AddXY(data.Field, data.Count); }
-                    break;
-
-                // Process Dates For ColumnChart1
-                case 3:
-                    //Each Data , Add Into Chart Data (Each Date Holds Unique Position On ColumnChart)
-                    foreach (var Type in form1.DatesListBox.Items)
-                    {
-                        GraphData data = new GraphData
-                        {
-                            Field = Type.ToString(),
-                            Count = 0
-                        };
-                        ChartData.Add(data);
-                    }
-
-                    foreach (var order in queried_orders)
-                    {
-                        for (int i = 0; i < ChartData.Count; i++)
-                        {
-                            if (ChartData[i].Field == "Week : " + order.Date.Week.ToString() + " Year : " + order.Date.Year.ToString())
-                            {
-                                ChartData[i].Count += order.Cost;
-                            }
-                        }
-                    }
-
-                   
-
-                    foreach (var data in ChartData)
-                    { form1.ColumnChart1.Series[0].Points.AddXY(data.Field , data.Count); }
-                    break;
-                // Process Dates For ColumnChart2
-                case 4:
-                    //Each Data , Add Into Chart Data (Each Date Holds Unique Position On ColumnChart)
-                    foreach (var Type in form1.DatesListBox.Items)
-                    {
-                        GraphData data = new GraphData
-                        {
-                            Field = Type.ToString(),
-                            Count = 0
-                        };
-                        ChartData.Add(data);
-                    }
-
-                    foreach (var order in queried_orders)
-                    {
-                        for (int i = 0; i < ChartData.Count; i++)
-                        {
-                            if (ChartData[i].Field == "Week : " + order.Date.Week.ToString() + " Year : " + order.Date.Year.ToString())
-                            {
-                                ChartData[i].Count += order.Cost;
-                            }
-                        }
-                    }
-
-                    foreach (var data in ChartData)
-                    {
-                        if (form1.ColumnChart2.Series.IsUniqueName(data.Field))
-                        {
-                            form1.ColumnChart2.Series.Add(data.Field);
-                        }
-                    }
-
-                    foreach (var data in ChartData)
-                    { form1.ColumnChart2.Series[0].Points.AddXY(data.Field, data.Count); }
-                    break;
-                // Process SupplierNames For ColumnChart1
-                case 5:
-                    //Each Data , Add Into Chart Data (Each Date Holds Unique Position On ColumnChart)
-                    foreach (var Type in form1.SupplierNameList.Items)
-                    {
-                        GraphData data = new GraphData
-                        {
-                            Field = Type.ToString(),
-                            Count = 0
-                        };
-                        ChartData.Add(data);
-                    }
-
-                    foreach (var order in queried_orders)
-                    {
-                        for (int i = 0; i < ChartData.Count; i++)
-                        {
-                            if (ChartData[i].Field == order.SupplierName)
-                            {
-                                ChartData[i].Count += order.Cost;
-                            }
-                        }
-                    }
-
-                    ////Builds Series
-                    //foreach (var data in ChartData)
-                    //{
-                    //    if (form1.ColumnChart2.Series.IsUniqueName(data.Field))
-                    //    {
-                    //        form1.ColumnChart2.Series.Add(data.Field);
-                    //    }
-                    //}
-
-                    //Populates The Graph
-                    form1.ColumnChart2.ChartAreas[0].AxisX.LabelStyle.Interval = 1;
-                    foreach (var data in ChartData)
-                    { form1.ColumnChart2.Series[0].Points.AddXY(data.Field , data.Count); }
-                    break;
+                }
             }
 
-            //double Order_Query_Total = orders.Sum(item => item.Cost);
+            form1.StoreChart.ChartAreas[0].AxisX.LabelStyle.Interval = 0.5;
 
-            //TotalCostFilteredOrders.Text = "Total Cost : £ " + Order_Query_Total.ToString();
+            foreach (var data in ChartData)
+            {
+                if (data.Count > 0)
+                {
+                    form1.StoreChart.Series[0].Points.AddXY(data.Field, data.Count);
+                }
+            }
+        }
+
+        public void DateChart(IEnumerable<Order> queried_orders)
+        {
+            List<GraphData> ChartData = new List<GraphData>();
+            foreach (var Type in form1.DatesListBox.Items)
+            {
+                GraphData data = new GraphData
+                {
+                    Field = Type.ToString(),
+                    Count = 0
+                };
+                ChartData.Add(data);
+            }
+
+            foreach (var order in queried_orders)
+            {
+                for (int i = 0; i < ChartData.Count; i++)
+                {
+                    if (ChartData[i].Field == "Week : " + order.Date.Week.ToString() + " Year : " + order.Date.Year.ToString())
+                    {
+                        ChartData[i].Count += order.Cost;
+                    }
+                }
+                
+            }
+      
 
 
+                form1.DateChart.ChartAreas[0].AxisX.LabelStyle.Interval = 0.5;
+
+            foreach (var data in ChartData)
+            {
+                if (data.Count > 0)
+                {
+                    form1.DateChart.Series[0].Points.AddXY(data.Field, data.Count);
+                }
+                }
 
         }
 
+        public void SupplierType(IEnumerable<Order> queried_orders)
+        {
+            List<GraphData> ChartData = new List<GraphData>();
+
+            foreach (var Type in form1.SupplierTypeList.Items)
+            {
+                GraphData data = new GraphData
+                {
+                    Field = Type.ToString(),
+                    Count = 0
+
+                };
+
+                ChartData.Add(data);
+            }
+
+            //iterates threw all queried data
+            foreach (var order in queried_orders)
+            {
+                //Iterates Based Upon The chart Data count
+                for (int i = 0; i < ChartData.Count; i++)
+                {
+                    //If the Chartdate indexed field equals an orders suppliertype instance
+                    if (ChartData[i].Field == order.SupplierType)
+                    {
+                        ChartData[i].Count += order.Cost;
+                    }
+                }
+            }
+     
+            form1.SupplierTypeChart.ChartAreas[0].AxisX.LabelStyle.Interval = 1;
+
+            foreach (var data in ChartData)
+            {
+                if (data.Count > 0)
+                {
+                    form1.SupplierTypeChart.Series[0].Points.AddXY(data.Field, data.Count);
+                }
+                }
+        }
+
+        public void SupplierName(IEnumerable<Order> queried_orders)
+        {
+            List<GraphData> ChartData = new List<GraphData>();
+
+            foreach (var Type in form1.SupplierNameList.Items)
+            {
+                GraphData data = new GraphData
+                {
+                    Field = Type.ToString(),
+                    Count = 0
+                };
+                ChartData.Add(data);
+            }
+         
+            foreach (var order in queried_orders)
+            {
+                for (int i = 0; i < ChartData.Count; i++)
+                {
+                    if (ChartData[i].Field == order.SupplierName)
+                    {
+                        ChartData[i].Count += order.Cost;
+                    }
+                }
+            }
+        
+            //Populates The Graph
+            //Allows Each Label To Interval Correctly
+            form1.SupplierNameChart.ChartAreas[0].AxisX.LabelStyle.Interval = 0.5;
+            foreach (var data in ChartData)
+            {
+                if (data.Count > 0)
+                {
+                    form1.SupplierNameChart.Series[0].Points.AddXY(data.Field, data.Count);
+                }
+            }
+
+        }
 
     }
 

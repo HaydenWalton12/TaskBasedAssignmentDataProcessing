@@ -30,10 +30,13 @@ namespace TaskBasedForms
         public void InitializeComponent()
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.FolderSearchButton = new System.Windows.Forms.Button();
             this.DataPathTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -56,7 +59,6 @@ namespace TaskBasedForms
             this.DeselectSupplierName = new System.Windows.Forms.Button();
             this.DeselectSupplierType = new System.Windows.Forms.Button();
             this.DeselectDateList = new System.Windows.Forms.Button();
-            this.ColumnChart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label2 = new System.Windows.Forms.Label();
             this.SupplierNameSelectLabel = new System.Windows.Forms.Label();
             this.StoreCodeSelectLabel = new System.Windows.Forms.Label();
@@ -67,24 +69,21 @@ namespace TaskBasedForms
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.ClearOrderList = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ColumnChartLabel = new System.Windows.Forms.Label();
             this.ColumnChartTextBox = new System.Windows.Forms.Label();
-            this.ColumnChart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.ResultsListBox1 = new System.Windows.Forms.ListBox();
-            this.ResultsListBox2 = new System.Windows.Forms.ListBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.OrderColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            ((System.ComponentModel.ISupportInitialize)(this.ColumnChart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ColumnChart2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.DateChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.StoreChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.SupplierTypeChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.SupplierNameChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.DateChart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StoreChart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SupplierTypeChart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SupplierNameChart)).BeginInit();
             this.SuspendLayout();
             // 
             // FolderSearchButton
@@ -147,7 +146,7 @@ namespace TaskBasedForms
             // SupplierTypeList
             // 
             this.SupplierTypeList.FormattingEnabled = true;
-            this.SupplierTypeList.Location = new System.Drawing.Point(288, 79);
+            this.SupplierTypeList.Location = new System.Drawing.Point(280, 79);
             this.SupplierTypeList.Name = "SupplierTypeList";
             this.SupplierTypeList.Size = new System.Drawing.Size(121, 173);
             this.SupplierTypeList.TabIndex = 6;
@@ -279,23 +278,6 @@ namespace TaskBasedForms
             this.DeselectDateList.UseVisualStyleBackColor = true;
             this.DeselectDateList.Click += new System.EventHandler(this.DeselectDateList_Click);
             // 
-            // ColumnChart1
-            // 
-            this.ColumnChart1.BorderlineColor = System.Drawing.Color.Black;
-            chartArea1.Name = "ChartArea1";
-            this.ColumnChart1.ChartAreas.Add(chartArea1);
-            this.ColumnChart1.Location = new System.Drawing.Point(953, 12);
-            this.ColumnChart1.Name = "ColumnChart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.ColumnChart1.Series.Add(series1);
-            this.ColumnChart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Light;
-            this.ColumnChart1.Size = new System.Drawing.Size(521, 288);
-            this.ColumnChart1.TabIndex = 18;
-            this.ColumnChart1.Text = "Column Chart";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -392,16 +374,6 @@ namespace TaskBasedForms
             this.ClearOrderList.UseVisualStyleBackColor = true;
             this.ClearOrderList.Click += new System.EventHandler(this.ClearOrderList_Click);
             // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.button2.Location = new System.Drawing.Point(1495, 272);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(237, 26);
-            this.button2.TabIndex = 28;
-            this.button2.Text = "Clear Chart";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -412,25 +384,6 @@ namespace TaskBasedForms
             this.button3.Text = "Save Filtered Order Results";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pictureBox1.Location = new System.Drawing.Point(1495, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(237, 246);
-            this.pictureBox1.TabIndex = 37;
-            this.pictureBox1.TabStop = false;
-            // 
-            // ColumnChartLabel
-            // 
-            this.ColumnChartLabel.AutoSize = true;
-            this.ColumnChartLabel.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ColumnChartLabel.Location = new System.Drawing.Point(1578, 13);
-            this.ColumnChartLabel.Name = "ColumnChartLabel";
-            this.ColumnChartLabel.Size = new System.Drawing.Size(70, 13);
-            this.ColumnChartLabel.TabIndex = 38;
-            this.ColumnChartLabel.Text = "Column Chart";
-            // 
             // ColumnChartTextBox
             // 
             this.ColumnChartTextBox.AutoSize = true;
@@ -439,21 +392,6 @@ namespace TaskBasedForms
             this.ColumnChartTextBox.Name = "ColumnChartTextBox";
             this.ColumnChartTextBox.Size = new System.Drawing.Size(0, 13);
             this.ColumnChartTextBox.TabIndex = 39;
-            // 
-            // ColumnChart2
-            // 
-            chartArea2.Name = "ChartArea1";
-            this.ColumnChart2.ChartAreas.Add(chartArea2);
-            this.ColumnChart2.Location = new System.Drawing.Point(953, 324);
-            this.ColumnChart2.Name = "ColumnChart2";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.ColumnChart2.Series.Add(series2);
-            this.ColumnChart2.Size = new System.Drawing.Size(521, 300);
-            this.ColumnChart2.TabIndex = 40;
-            this.ColumnChart2.Text = "ColumnChart2";
             // 
             // label13
             // 
@@ -464,88 +402,119 @@ namespace TaskBasedForms
             this.label13.Size = new System.Drawing.Size(0, 13);
             this.label13.TabIndex = 44;
             // 
-            // label14
+            // DateChart
             // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label14.Location = new System.Drawing.Point(1578, 328);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(70, 13);
-            this.label14.TabIndex = 43;
-            this.label14.Text = "Column Chart";
+            chartArea1.Name = "ChartArea1";
+            this.DateChart.ChartAreas.Add(chartArea1);
+            this.DateChart.Location = new System.Drawing.Point(830, 44);
+            this.DateChart.Name = "DateChart";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.DateChart.Series.Add(series1);
+            this.DateChart.Size = new System.Drawing.Size(432, 234);
+            this.DateChart.TabIndex = 40;
+            this.DateChart.Text = "DateChart";
             // 
-            // pictureBox2
+            // StoreChart
             // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pictureBox2.Location = new System.Drawing.Point(1495, 325);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(237, 246);
-            this.pictureBox2.TabIndex = 42;
-            this.pictureBox2.TabStop = false;
+            this.StoreChart.BorderlineColor = System.Drawing.Color.Black;
+            chartArea2.Name = "ChartArea1";
+            this.StoreChart.ChartAreas.Add(chartArea2);
+            this.StoreChart.Location = new System.Drawing.Point(561, 362);
+            this.StoreChart.Name = "StoreChart";
+            this.StoreChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Light;
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.StoreChart.Series.Add(series2);
+            this.StoreChart.Size = new System.Drawing.Size(701, 234);
+            this.StoreChart.TabIndex = 18;
+            this.StoreChart.Text = "Store Chart";
             // 
-            // button4
+            // label3
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.button4.Location = new System.Drawing.Point(1495, 587);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(237, 26);
-            this.button4.TabIndex = 41;
-            this.button4.Text = "Clear Chart";
-            this.button4.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label3.Location = new System.Drawing.Point(1029, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 20);
+            this.label3.TabIndex = 45;
+            this.label3.Text = "Date";
             // 
-            // ResultsListBox1
+            // label4
             // 
-            this.ResultsListBox1.FormattingEnabled = true;
-            this.ResultsListBox1.Location = new System.Drawing.Point(1518, 33);
-            this.ResultsListBox1.Name = "ResultsListBox1";
-            this.ResultsListBox1.Size = new System.Drawing.Size(199, 212);
-            this.ResultsListBox1.TabIndex = 46;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label4.Location = new System.Drawing.Point(1029, 318);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 20);
+            this.label4.TabIndex = 46;
+            this.label4.Text = "Store";
             // 
-            // ResultsListBox2
+            // SupplierTypeChart
             // 
-            this.ResultsListBox2.FormattingEnabled = true;
-            this.ResultsListBox2.Location = new System.Drawing.Point(1518, 344);
-            this.ResultsListBox2.Name = "ResultsListBox2";
-            this.ResultsListBox2.Size = new System.Drawing.Size(199, 212);
-            this.ResultsListBox2.TabIndex = 47;
+            chartArea3.Name = "ChartArea1";
+            this.SupplierTypeChart.ChartAreas.Add(chartArea3);
+            this.SupplierTypeChart.Location = new System.Drawing.Point(1287, 362);
+            this.SupplierTypeChart.Name = "SupplierTypeChart";
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.SupplierTypeChart.Series.Add(series3);
+            this.SupplierTypeChart.Size = new System.Drawing.Size(432, 234);
+            this.SupplierTypeChart.TabIndex = 47;
+            this.SupplierTypeChart.Text = "SupplierTypeChart";
             // 
-            // listView1
+            // SupplierNameChart
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.OrderColumn});
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(551, 324);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(389, 169);
-            this.listView1.TabIndex = 48;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            chartArea4.Name = "ChartArea1";
+            this.SupplierNameChart.ChartAreas.Add(chartArea4);
+            this.SupplierNameChart.Location = new System.Drawing.Point(1300, 44);
+            this.SupplierNameChart.Name = "SupplierNameChart";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.SupplierNameChart.Series.Add(series4);
+            this.SupplierNameChart.Size = new System.Drawing.Size(432, 234);
+            this.SupplierNameChart.TabIndex = 48;
+            this.SupplierNameChart.Text = "SupplierNameChart";
             // 
-            // OrderColumn
+            // label5
             // 
-            this.OrderColumn.Text = "Order";
-            this.OrderColumn.Width = 110;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label5.Location = new System.Drawing.Point(1465, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(111, 20);
+            this.label5.TabIndex = 49;
+            this.label5.Text = "Supplier Type";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label6.Location = new System.Drawing.Point(1457, 309);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(119, 20);
+            this.label6.TabIndex = 50;
+            this.label6.Text = "Supplier Name";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1744, 749);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.ResultsListBox2);
-            this.Controls.Add(this.ResultsListBox1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.SupplierNameChart);
+            this.Controls.Add(this.SupplierTypeChart);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.ColumnChart2);
+            this.Controls.Add(this.DateChart);
             this.Controls.Add(this.ColumnChartTextBox);
-            this.Controls.Add(this.ColumnChartLabel);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.ClearOrderList);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -556,7 +525,7 @@ namespace TaskBasedForms
             this.Controls.Add(this.StoreCodeSelectLabel);
             this.Controls.Add(this.SupplierNameSelectLabel);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.ColumnChart1);
+            this.Controls.Add(this.StoreChart);
             this.Controls.Add(this.DeselectDateList);
             this.Controls.Add(this.DeselectSupplierType);
             this.Controls.Add(this.DeselectSupplierName);
@@ -575,10 +544,10 @@ namespace TaskBasedForms
             this.Controls.Add(this.FolderSearchButton);
             this.Name = "Form1";
             this.Text = "DataProcessingForm";
-            ((System.ComponentModel.ISupportInitialize)(this.ColumnChart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ColumnChart2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateChart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StoreChart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SupplierTypeChart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SupplierNameChart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -611,7 +580,6 @@ namespace TaskBasedForms
         public System.Windows.Forms.Button DeselectSupplierName;
         public System.Windows.Forms.Button DeselectSupplierType;
         public System.Windows.Forms.Button DeselectDateList;
-        public System.Windows.Forms.DataVisualization.Charting.Chart ColumnChart1;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label SupplierNameSelectLabel;
         public System.Windows.Forms.Label StoreCodeSelectLabel;
@@ -622,20 +590,17 @@ namespace TaskBasedForms
         public System.Windows.Forms.Label label9;
         public System.Windows.Forms.Label label10;
         public System.Windows.Forms.Button ClearOrderList;
-        public System.Windows.Forms.Button button2;
         public System.Windows.Forms.Button button3;
-        public System.Windows.Forms.PictureBox pictureBox1;
-        public System.Windows.Forms.Label ColumnChartLabel;
         public System.Windows.Forms.Label ColumnChartTextBox;
-        public System.Windows.Forms.DataVisualization.Charting.Chart ColumnChart2;
         public System.Windows.Forms.Label label13;
-        public System.Windows.Forms.Label label14;
-        public System.Windows.Forms.PictureBox pictureBox2;
-        public System.Windows.Forms.Button button4;
-        public System.Windows.Forms.ListBox ResultsListBox1;
-        public System.Windows.Forms.ListBox ResultsListBox2;
-        public System.Windows.Forms.ListView listView1;
-        public System.Windows.Forms.ColumnHeader OrderColumn;
+        public System.Windows.Forms.DataVisualization.Charting.Chart DateChart;
+        public System.Windows.Forms.DataVisualization.Charting.Chart StoreChart;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.DataVisualization.Charting.Chart SupplierTypeChart;
+        public System.Windows.Forms.DataVisualization.Charting.Chart SupplierNameChart;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label label6;
     }
 }
 
