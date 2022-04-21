@@ -85,7 +85,7 @@ namespace TaskBasedForms
       
 
 
-                form1.DateChart.ChartAreas[0].AxisX.LabelStyle.Interval = 0.5;
+                
 
             foreach (var data in ChartData)
             {
@@ -149,6 +149,7 @@ namespace TaskBasedForms
                     Field = Type.ToString(),
                     Count = 0
                 };
+
                 ChartData.Add(data);
             }
          
