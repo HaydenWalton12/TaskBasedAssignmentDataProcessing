@@ -234,7 +234,7 @@ namespace TaskBasedForms
             }
             foreach (var date in dates.AsParallel())
             {
-                DatesListBox.Items.Add("Week : " + date.Week.ToString() + " Year : " + date.Year.ToString());
+                DateList.Items.Add("Week : " + date.Week.ToString() + " Year : " + date.Year.ToString());
             }
         }
         
@@ -346,7 +346,7 @@ namespace TaskBasedForms
                 //Total Of Orders/Cost From A Specific Supplier Name
                 case 100:
                     order_query = order_query.Where(order => order.SupplierName == supplier_names.ElementAt(SelectedSupplierNameIndex));
-                    UpdateQueryListView(order_query);
+                    CheckQuery(order_query);
                     _Charting.StoreChart(order_query);
                     _Charting.SupplierName(order_query);
                     _Charting.SupplierType(order_query);
@@ -357,7 +357,7 @@ namespace TaskBasedForms
                 case 110:
                     order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
                     order_query = order_query.Where(order => order.SupplierName == supplier_names.ElementAt(SelectedSupplierNameIndex));
-                    UpdateQueryListView(order_query);
+                    CheckQuery(order_query);
                     _Charting.StoreChart(order_query);
                     _Charting.SupplierName(order_query);
                     _Charting.SupplierType(order_query);
@@ -371,7 +371,7 @@ namespace TaskBasedForms
                     order_query = order_query.Where(order => order.SupplierName == supplier_names.ElementAt(SelectedSupplierNameIndex));
                     order_query = order_query.Where(order => order.Date.Week == dates.ElementAt(SelectedDateIndex).Week);
                     order_query = order_query.Where(order => order.Date.Year == dates.ElementAt(SelectedDateIndex).Year);
-                    UpdateQueryListView(order_query);
+                    CheckQuery(order_query);
                     _Charting.StoreChart(order_query);
                     _Charting.SupplierName(order_query);
                     _Charting.SupplierType(order_query);
@@ -386,7 +386,7 @@ namespace TaskBasedForms
                     order_query = order_query.Where(order => order.SupplierName == supplier_names.ElementAt(SelectedSupplierNameIndex));
                     order_query = order_query.Where(order => order.Date.Week == dates.ElementAt(SelectedDateIndex).Week);
                     order_query = order_query.Where(order => order.Date.Year == dates.ElementAt(SelectedDateIndex).Year);
-                    UpdateQueryListView(order_query);
+                    CheckQuery(order_query);
                     _Charting.StoreChart(order_query);
                     _Charting.SupplierName(order_query);
                     _Charting.SupplierType(order_query);
@@ -408,7 +408,7 @@ namespace TaskBasedForms
             StoreCodesList.SelectedIndex = -1;
             SupplierNameList.SelectedIndex = -1;
             SupplierTypeList.SelectedIndex = -1;
-            DatesListBox.SelectedIndex = -1;
+            DateList.SelectedIndex = -1;
             DateActive = false;
             StoreCodeActive = false;
             SupplierNameActive = false;
@@ -420,13 +420,84 @@ namespace TaskBasedForms
         {
 
             //Stores The Type & Cost
-            Dictionary<string, double> SupplierTypeGraphData = new Dictionary<string, double>();
-            OrderSerchResultsListView.Items.Clear();
+          
+            OrderSerchResultsListView1.Items.Clear();
+            OrderSerchResultsListView2.Items.Clear();
 
-            
 
 
-            foreach (var order in orders)
+            int ordersize = orders.Count();
+            int orderhalfsize = ordersize / 2;
+            List<string[]> orderchunk1 = new List<string[]>();
+            List<string[]> orderchunk2 = new List<string[]>();
+            IEnumerable<Order> splitOrder1 = orders.Take(orderhalfsize);
+            orders = orders.Skip(orderhalfsize);
+            IEnumerable<Order> splitOrder2 = orders.Take(orderhalfsize - 1);
+
+            Task task1 = new Task(() => { LoadData1(splitOrder1); });
+            Task task2 = new Task(() => { LoadData2(splitOrder2); });
+            task1.Start();
+       
+            task2.Start();
+            task2.Wait();
+            //foreach (var order in orders)
+            //{
+            //    string[] subitem = new string[5];
+
+            //    subitem[0] = order.StoreCode;
+            //    subitem[1] = order.SupplierName;
+            //    subitem[2] = order.SupplierType;
+            //    subitem[3] = order.Date.Week.ToString() + " , " + order.Date.Year.ToString();
+            //    subitem[4] = "£ " + order.Cost.ToString();
+
+            //    ListViewItem item = new ListViewItem(subitem);
+
+            //    OrderSerchResultsListView1.Items.Add(item);
+            //}
+
+
+
+            //foreach (var item in orderchunk1)
+            //{
+
+            //    if (item != null)
+            //    {
+            //        OrderSerchResultsListView1.Items.Add(item[0]);
+            //    }
+            //}
+            //foreach (var item in orderchunk2)
+            //{
+            //    if (item != null)
+            //    {
+            //        OrderSerchResultsListView2.Items.Add(item[0]);
+            //    }
+            //}
+        }
+
+        private void LoadData1(IEnumerable<Order> data)
+        {
+            foreach (var order in data)
+            { 
+                string[] subitem = new string[5];
+
+            subitem[0] = order.StoreCode;
+            subitem[1] = order.SupplierName;
+            subitem[2] = order.SupplierType;
+            subitem[3] = order.Date.Week.ToString() + " , " + order.Date.Year.ToString();
+            subitem[4] = "£ " + order.Cost.ToString();
+
+            ListViewItem item = new ListViewItem(subitem);
+
+            Invoke(new Action(() =>
+            {
+                OrderSerchResultsListView1.Items.Add(item);
+            }));
+        }
+
+        }
+        private void LoadData2(IEnumerable<Order> data)
+        {
+            foreach (var order in data)
             {
                 string[] subitem = new string[5];
 
@@ -437,12 +508,16 @@ namespace TaskBasedForms
                 subitem[4] = "£ " + order.Cost.ToString();
 
                 ListViewItem item = new ListViewItem(subitem);
-                OrderSerchResultsListView.Items.Add(item);
+
+                Invoke(new Action(() =>
+                {
+                    OrderSerchResultsListView2.Items.Add(item);
+                }));
+
+
 
             }
-        }
-
-
+           }
         private void CheckQuery(IEnumerable<Order> queried_orders)
         {
             //Count<TSource> - TSource Is the Type of Elements you want to get from the source, the source being order_query , the type being Order
@@ -519,19 +594,19 @@ namespace TaskBasedForms
             }
  
         }
-        private void DatesListBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void DateList_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (DateActive == true)
             {
-                SelectedDateIndex =  DatesListBox.SelectedIndex;
-                DateSelectLabel.Text = "Date :" + DatesListBox.Text;
+                SelectedDateIndex =  DateList.SelectedIndex;
+                DateSelectLabel.Text = "Date :" + DateList.Text;
             }
             else
             {
                 if (DateActive == false)
                 {
-                    SelectedDateIndex = DatesListBox.SelectedIndex;
-                    DateSelectLabel.Text = "Date :" + DatesListBox.Text;
+                    SelectedDateIndex = DateList.SelectedIndex;
+                    DateSelectLabel.Text = "Date :" + DateList.Text;
                     AddToSelectionCode(DateCode);
                 }
             }
@@ -590,14 +665,14 @@ namespace TaskBasedForms
 
         private void DeselectDateList_Click(object sender, EventArgs e)
         {
-            if (DatesListBox.SelectedIndex == -1)
+            if (DateList.SelectedIndex == -1)
             {
                 MessageBox.Show("Already Deselected", "Select Something To Deselect", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
                 SelectedDateIndex = -1;
-                DatesListBox.SelectedIndex = -1;
+                DateList.SelectedIndex = -1;
                 DateSelectLabel.Text = "Date :";
                 SelectionCode -= DateCode;
                 DateActive = false;
@@ -609,7 +684,7 @@ namespace TaskBasedForms
     
         private void ClearOrderList_Click(object sender, EventArgs e)
         {
-            OrderSerchResultsListView.Items.Clear();
+            OrderSerchResultsListView1.Items.Clear();
         }
 
         private void AddToSelectionCode(int num1)
@@ -627,7 +702,7 @@ namespace TaskBasedForms
         private void LoadSupplierTypeChart_Click(object sender, EventArgs e)
         {
             List<GraphData> ChartData = new List<GraphData>();
-            foreach (var Type in DatesListBox.Items)
+            foreach (var Type in DateList.Items)
             {
                 string Temp = Type.ToString();
                 //if(Temp.Contains())
@@ -645,10 +720,7 @@ namespace TaskBasedForms
             foreach (var data in ChartData)
             { StoreChart.Series[0].Points.AddXY(data.Field, data.Count); }
 
-        }
-
-        
+        }  
     }
-
 }
 

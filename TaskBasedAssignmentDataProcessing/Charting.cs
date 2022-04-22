@@ -63,7 +63,7 @@ namespace TaskBasedForms
         public void DateChart(IEnumerable<Order> queried_orders)
         {
             List<GraphData> ChartData = new List<GraphData>();
-            foreach (var Type in form1.DatesListBox.Items)
+            foreach (var Type in form1.DateList.Items)
             {
                 GraphData data = new GraphData
                 {
