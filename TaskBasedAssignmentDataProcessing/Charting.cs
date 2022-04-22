@@ -27,6 +27,8 @@ namespace TaskBasedForms
         public void StoreChart(IEnumerable<Order> queried_orders)
         {
             List<GraphData> ChartData = new List<GraphData>();
+            
+      
             foreach (var Type in form1.StoreCodesList.Items)
             {
                 GraphData data = new GraphData
@@ -47,7 +49,7 @@ namespace TaskBasedForms
                 }
             }
 
-            form1.StoreChart.ChartAreas[0].AxisX.LabelStyle.Interval = 0.5;
+            form1.StoreChart.ChartAreas[0].AxisX.LabelStyle.Interval = 1;
 
             foreach (var data in ChartData)
             {
@@ -82,11 +84,11 @@ namespace TaskBasedForms
                 }
                 
             }
-      
 
 
-                
 
+
+            form1.DateChart.ChartAreas[0].AxisX.LabelStyle.Interval = 1;
             foreach (var data in ChartData)
             {
                 if (data.Count > 0)

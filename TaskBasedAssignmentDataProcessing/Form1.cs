@@ -245,6 +245,13 @@ namespace TaskBasedForms
         {
             var order_query = from order in orders select order;
 
+             DateChart.Series[0].Points.Clear();
+            StoreChart.Series[0].Points.Clear();
+            SupplierNameChart.Series[0].Points.Clear();
+            SupplierTypeChart.Series[0].Points.Clear();
+
+
+
             switch (SelectionCode)
             {
 
@@ -278,12 +285,22 @@ namespace TaskBasedForms
                     order_query = order_query.Where(order => order.Date.Week == dates.ElementAt(SelectedDateIndex).Week);
                     order_query = order_query.Where(order => order.Date.Year == dates.ElementAt(SelectedDateIndex).Year);
                     CheckQuery(order_query);
+                    _Charting.StoreChart(order_query);
+                    _Charting.SupplierName(order_query);
+                    _Charting.SupplierType(order_query);
+                    _Charting.DateChart(order_query);
+
                     break;
 
                 //Total Of Orders/Cost From A Specfic SupplierType From All Stores
                 case 50:
                     order_query = order_query.Where(order => order.SupplierType == supplier_types.ElementAt(SelectedSupplierTypeIndex));
                     CheckQuery(order_query);
+                    _Charting.StoreChart(order_query);
+                    _Charting.SupplierName(order_query);
+                    _Charting.SupplierType(order_query);
+                    _Charting.DateChart(order_query);
+
                     break;
 
                 //Total Of Orders/Cost From A Specfic SupplierType From A Specfic Store
@@ -291,6 +308,11 @@ namespace TaskBasedForms
                     order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
                     order_query = order_query.Where(order => order.SupplierType == supplier_types.ElementAt(SelectedSupplierTypeIndex));
                     CheckQuery(order_query);
+                    _Charting.StoreChart(order_query);
+                    _Charting.SupplierName(order_query);
+                    _Charting.SupplierType(order_query);
+                    _Charting.DateChart(order_query);
+
                     break;
 
                 //Total Of Orders/Cost From A Specific SupplierType From A Specific Date
@@ -300,6 +322,11 @@ namespace TaskBasedForms
                     order_query = order_query.Where(order => order.Date.Week == dates.ElementAt(SelectedDateIndex).Week);
                     order_query = order_query.Where(order => order.Date.Year == dates.ElementAt(SelectedDateIndex).Year);
                     CheckQuery(order_query);
+                    _Charting.StoreChart(order_query);
+                    _Charting.SupplierName(order_query);
+                    _Charting.SupplierType(order_query);
+                    _Charting.DateChart(order_query);
+
                     break;
 
                 //Total Of Orders/Cost From A Specific SupplierType From A Specific Store At A Specific Date
@@ -309,13 +336,21 @@ namespace TaskBasedForms
                     order_query = order_query.Where(order => order.Date.Week == dates.ElementAt(SelectedDateIndex).Week);
                     order_query = order_query.Where(order => order.Date.Year == dates.ElementAt(SelectedDateIndex).Year);
                     CheckQuery(order_query);
+                    _Charting.StoreChart(order_query);
+                    _Charting.SupplierName(order_query);
+                    _Charting.SupplierType(order_query);
+                    _Charting.DateChart(order_query);
+
                     break;
 
                 //Total Of Orders/Cost From A Specific Supplier Name
                 case 100:
                     order_query = order_query.Where(order => order.SupplierName == supplier_names.ElementAt(SelectedSupplierNameIndex));
                     UpdateQueryListView(order_query);
-                  
+                    _Charting.StoreChart(order_query);
+                    _Charting.SupplierName(order_query);
+                    _Charting.SupplierType(order_query);
+                    _Charting.DateChart(order_query);
                     break;
 
                 //Total Of Orders/Cost From A Specific SupplierName From A Specfic Store
@@ -323,6 +358,11 @@ namespace TaskBasedForms
                     order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
                     order_query = order_query.Where(order => order.SupplierName == supplier_names.ElementAt(SelectedSupplierNameIndex));
                     UpdateQueryListView(order_query);
+                    _Charting.StoreChart(order_query);
+                    _Charting.SupplierName(order_query);
+                    _Charting.SupplierType(order_query);
+                    _Charting.DateChart(order_query);
+
                     break;
 
                 //Total Of Orders/Cost From A Specific SupplierName From A Specfic Store At A Specific Date
@@ -332,6 +372,11 @@ namespace TaskBasedForms
                     order_query = order_query.Where(order => order.Date.Week == dates.ElementAt(SelectedDateIndex).Week);
                     order_query = order_query.Where(order => order.Date.Year == dates.ElementAt(SelectedDateIndex).Year);
                     UpdateQueryListView(order_query);
+                    _Charting.StoreChart(order_query);
+                    _Charting.SupplierName(order_query);
+                    _Charting.SupplierType(order_query);
+                    _Charting.DateChart(order_query);
+
                     break;
 
                 //Total Orders/Cost From A Specific Store, From A Specific SupplierName & Type Within A Specific Date
@@ -342,6 +387,11 @@ namespace TaskBasedForms
                     order_query = order_query.Where(order => order.Date.Week == dates.ElementAt(SelectedDateIndex).Week);
                     order_query = order_query.Where(order => order.Date.Year == dates.ElementAt(SelectedDateIndex).Year);
                     UpdateQueryListView(order_query);
+                    _Charting.StoreChart(order_query);
+                    _Charting.SupplierName(order_query);
+                    _Charting.SupplierType(order_query);
+                    _Charting.DateChart(order_query);
+
                     break;
 
                 default:
@@ -349,20 +399,20 @@ namespace TaskBasedForms
 
             }
 
-            //SelectionCode = 0;
-            //SelectedSupplierNameIndex = -1;
-            //SelectedSupplierTypeIndex = -1;
-            //SelectedDateIndex = -1;
-            //SelectedStoreCodeIndex = -1;
+            SelectionCode = 0;
+            SelectedSupplierNameIndex = -1;
+            SelectedSupplierTypeIndex = -1;
+            SelectedDateIndex = -1;
+            SelectedStoreCodeIndex = -1;
             
-            //StoreCodesList.SelectedIndex = -1;
-            //SupplierNameList.SelectedIndex = -1;
-            //SupplierTypeList.SelectedIndex = -1;
-            //DatesListBox.SelectedIndex = -1;
-            //DateActive = false;
-            //StoreCodeActive = false;
-            //SupplierNameActive = false;
-            //SupplierTypeActive = false;
+            StoreCodesList.SelectedIndex = -1;
+            SupplierNameList.SelectedIndex = -1;
+            SupplierTypeList.SelectedIndex = -1;
+            DatesListBox.SelectedIndex = -1;
+            DateActive = false;
+            StoreCodeActive = false;
+            SupplierNameActive = false;
+            SupplierTypeActive = false;
         }
 
         //Updates the query filtering results, and some minor data
@@ -371,7 +421,8 @@ namespace TaskBasedForms
 
             //Stores The Type & Cost
             Dictionary<string, double> SupplierTypeGraphData = new Dictionary<string, double>();
-            
+            OrderSerchResultsListView.Items.Clear();
+
             
 
 
@@ -386,14 +437,7 @@ namespace TaskBasedForms
                 subitem[4] = "£ " + order.Cost.ToString();
 
                 ListViewItem item = new ListViewItem(subitem);
-
-                if(OrderSerchResultsListView.InvokeRequired)
-                {
-                    //OrderSerchResultsListView.Invoke(new MethodInvoker(delegate { OrderSerchResultsListView.Items.Clear(); }));
-                    OrderSerchResultsListView.Invoke(new MethodInvoker(delegate{ OrderSerchResultsListView.Items.Add(item); }));
-           
-
-                }
+                OrderSerchResultsListView.Items.Add(item);
 
             }
         }
@@ -408,16 +452,7 @@ namespace TaskBasedForms
             }
             else
             {
-                int count = orders.Count();
-                int half_count = count / 2;
-
-                IEnumerable<Order> split_order_1 = queried_orders.Take(half_count);
-                queried_orders =  queried_orders.Skip(half_count);
-                IEnumerable<Order> split_order_2 = queried_orders.Take(half_count);
-                Task task1 = new Task(() => { UpdateQueryListView(split_order_1); });
-                Task task2 = new Task(() => { UpdateQueryListView(split_order_2); });
-                task1.Start();
-                task2.Start();
+                UpdateQueryListView(queried_orders);
             }
         }
         //Upon Selecting element , ot stores the element value in in variable , used for seartching "ElemementAt" Queries function
@@ -612,7 +647,7 @@ namespace TaskBasedForms
 
         }
 
-
+        
     }
 
 }
