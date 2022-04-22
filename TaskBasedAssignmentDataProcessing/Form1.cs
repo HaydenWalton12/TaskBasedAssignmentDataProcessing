@@ -432,6 +432,7 @@ namespace TaskBasedForms
             List<string[]> orderchunk2 = new List<string[]>();
             IEnumerable<Order> splitOrder1 = orders.Take(orderhalfsize);
             orders = orders.Skip(orderhalfsize);
+
             IEnumerable<Order> splitOrder2 = orders.Take(orderhalfsize - 1);
 
             Task task1 = new Task(() => { LoadData1(splitOrder1); });
