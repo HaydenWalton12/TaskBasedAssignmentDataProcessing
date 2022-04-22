@@ -349,20 +349,20 @@ namespace TaskBasedForms
 
             }
 
-            SelectionCode = 0;
-            SelectedSupplierNameIndex = -1;
-            SelectedSupplierTypeIndex = -1;
-            SelectedDateIndex = -1;
-            SelectedStoreCodeIndex = -1;
+            //SelectionCode = 0;
+            //SelectedSupplierNameIndex = -1;
+            //SelectedSupplierTypeIndex = -1;
+            //SelectedDateIndex = -1;
+            //SelectedStoreCodeIndex = -1;
             
-            StoreCodesList.SelectedIndex = -1;
-            SupplierNameList.SelectedIndex = -1;
-            SupplierTypeList.SelectedIndex = -1;
-            DatesListBox.SelectedIndex = -1;
-            DateActive = false;
-            StoreCodeActive = false;
-            SupplierNameActive = false;
-            SupplierTypeActive = false;
+            //StoreCodesList.SelectedIndex = -1;
+            //SupplierNameList.SelectedIndex = -1;
+            //SupplierTypeList.SelectedIndex = -1;
+            //DatesListBox.SelectedIndex = -1;
+            //DateActive = false;
+            //StoreCodeActive = false;
+            //SupplierNameActive = false;
+            //SupplierTypeActive = false;
         }
 
         //Updates the query filtering results, and some minor data
@@ -371,7 +371,9 @@ namespace TaskBasedForms
 
             //Stores The Type & Cost
             Dictionary<string, double> SupplierTypeGraphData = new Dictionary<string, double>();
-            OrderSerchResultsListView.Items.Clear();
+            
+            
+
 
             foreach (var order in orders)
             {
@@ -384,7 +386,14 @@ namespace TaskBasedForms
                 subitem[4] = "£ " + order.Cost.ToString();
 
                 ListViewItem item = new ListViewItem(subitem);
-                OrderSerchResultsListView.Items.Add(item);
+
+                if(OrderSerchResultsListView.InvokeRequired)
+                {
+                    //OrderSerchResultsListView.Invoke(new MethodInvoker(delegate { OrderSerchResultsListView.Items.Clear(); }));
+                    OrderSerchResultsListView.Invoke(new MethodInvoker(delegate{ OrderSerchResultsListView.Items.Add(item); }));
+           
+
+                }
 
             }
         }
@@ -399,7 +408,16 @@ namespace TaskBasedForms
             }
             else
             {
-                UpdateQueryListView(queried_orders);
+                int count = orders.Count();
+                int half_count = count / 2;
+
+                IEnumerable<Order> split_order_1 = queried_orders.Take(half_count);
+                queried_orders =  queried_orders.Skip(half_count);
+                IEnumerable<Order> split_order_2 = queried_orders.Take(half_count);
+                Task task1 = new Task(() => { UpdateQueryListView(split_order_1); });
+                Task task2 = new Task(() => { UpdateQueryListView(split_order_2); });
+                task1.Start();
+                task2.Start();
             }
         }
         //Upon Selecting element , ot stores the element value in in variable , used for seartching "ElemementAt" Queries function
