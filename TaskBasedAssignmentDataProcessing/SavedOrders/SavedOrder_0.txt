@@ -1,0 +1,1309 @@
+Order 0
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Knorr
+Cost - 5.24
+
+Order 1
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - John West
+Cost - 60.31
+
+Order 2
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Walkers
+Cost - 87.92
+
+Order 3
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - John West
+Cost - 35.35
+
+Order 4
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Knorr
+Cost - 25.25
+
+Order 5
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - John West
+Cost - 20.71
+
+Order 6
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Heinz
+Cost - 3.89
+
+Order 7
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Andrew
+Cost - 18.66
+
+Order 8
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Heinz
+Cost - 80.47
+
+Order 9
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Cathedral City
+Cost - 6.8
+
+Order 10
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Knorr
+Cost - 1.78
+
+Order 11
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Cathedral City
+Cost - 121.08
+
+Order 12
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Hartleys
+Cost - 21.97
+
+Order 13
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Kelloggs
+Cost - 132.77
+
+Order 14
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Kelloggs
+Cost - 104.61
+
+Order 15
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Colmans
+Cost - 0.22
+
+Order 16
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Walkers
+Cost - 17.17
+
+Order 17
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Tropicana
+Cost - 30.06
+
+Order 18
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Kelloggs
+Cost - 74.17
+
+Order 19
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - John West
+Cost - 122.69
+
+Order 20
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Andrew
+Cost - 19.79
+
+Order 21
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - John West
+Cost - 79.46
+
+Order 22
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Walkers
+Cost - 40.03
+
+Order 23
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Rowse
+Cost - 28.39
+
+Order 24
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Hartleys
+Cost - 57
+
+Order 25
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Heinz
+Cost - 19.07
+
+Order 26
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Colmans
+Cost - 8
+
+Order 27
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Tropicana
+Cost - 40.42
+
+Order 28
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Hartleys
+Cost - 29.49
+
+Order 29
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Hartleys
+Cost - 20.7
+
+Order 30
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Kelloggs
+Cost - 71.83
+
+Order 31
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - John West
+Cost - 7.8
+
+Order 32
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Heinz
+Cost - 41.82
+
+Order 33
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Heinz
+Cost - 33.26
+
+Order 34
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Gu
+Cost - 1.44
+
+Order 35
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Walkers
+Cost - 25.06
+
+Order 36
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Gu
+Cost - 43.48
+
+Order 37
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Rowse
+Cost - 0.02
+
+Order 38
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Tropicana
+Cost - 21.43
+
+Order 39
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Tropicana
+Cost - 50.25
+
+Order 40
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Cathedral City
+Cost - 44.21
+
+Order 41
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - John West
+Cost - 56.8
+
+Order 42
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Heinz
+Cost - 106.77
+
+Order 43
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Walkers
+Cost - 11.24
+
+Order 44
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Knorr
+Cost - 78.84
+
+Order 45
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Colmans
+Cost - 18.33
+
+Order 46
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Walkers
+Cost - 87.46
+
+Order 47
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - John West
+Cost - 54.78
+
+Order 48
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Kelloggs
+Cost - 20.14
+
+Order 49
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Knorr
+Cost - 124.1
+
+Order 50
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Andrew
+Cost - 16.81
+
+Order 51
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Andrew
+Cost - 38.1
+
+Order 52
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Gu
+Cost - 14.94
+
+Order 53
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Kelloggs
+Cost - 26.79
+
+Order 54
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Andrew
+Cost - 94.18
+
+Order 55
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Kelloggs
+Cost - 23.15
+
+Order 56
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Heinz
+Cost - 123.23
+
+Order 57
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Hartleys
+Cost - 71.85
+
+Order 58
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Rowse
+Cost - 32.66
+
+Order 59
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Walkers
+Cost - 28.41
+
+Order 60
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Heinz
+Cost - 28.09
+
+Order 61
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Rowse
+Cost - 37.94
+
+Order 62
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Gu
+Cost - 14.12
+
+Order 63
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Gu
+Cost - 74.7
+
+Order 64
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Kelloggs
+Cost - 30.75
+
+Order 65
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - John West
+Cost - 71.07
+
+Order 66
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Andrew
+Cost - 15.11
+
+Order 67
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - John West
+Cost - 35.9
+
+Order 68
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Colmans
+Cost - 1.34
+
+Order 69
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Cathedral City
+Cost - 2.24
+
+Order 70
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Heinz
+Cost - 12.7
+
+Order 71
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Knorr
+Cost - 51.2
+
+Order 72
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Heinz
+Cost - 45.27
+
+Order 73
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Rowse
+Cost - 65.25
+
+Order 74
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - John West
+Cost - 49.98
+
+Order 75
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Colmans
+Cost - 53.07
+
+Order 76
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Cathedral City
+Cost - 6.46
+
+Order 77
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Tropicana
+Cost - 79.13
+
+Order 78
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - John West
+Cost - 10.57
+
+Order 79
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Tropicana
+Cost - 46.4
+
+Order 80
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Heinz
+Cost - 14.16
+
+Order 81
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Hartleys
+Cost - 128.25
+
+Order 82
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Hartleys
+Cost - 7.22
+
+Order 83
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Hartleys
+Cost - 23.49
+
+Order 84
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Gu
+Cost - 97.04
+
+Order 85
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Hartleys
+Cost - 34.62
+
+Order 86
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Walkers
+Cost - 8.47
+
+Order 87
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Cathedral City
+Cost - 45.58
+
+Order 88
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Hartleys
+Cost - 19.05
+
+Order 89
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Heinz
+Cost - 16.14
+
+Order 90
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Colmans
+Cost - 3.06
+
+Order 91
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Knorr
+Cost - 39.25
+
+Order 92
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Andrew
+Cost - 34.16
+
+Order 93
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Rowse
+Cost - 58.42
+
+Order 94
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Gu
+Cost - 22.02
+
+Order 95
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Walkers
+Cost - 2.77
+
+Order 96
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Colmans
+Cost - 43.58
+
+Order 97
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Heinz
+Cost - 91.19
+
+Order 98
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Gu
+Cost - 69.74
+
+Order 99
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Gu
+Cost - 87.04
+
+Order 100
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Tropicana
+Cost - 79.21
+
+Order 101
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Heinz
+Cost - 24.19
+
+Order 102
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Kelloggs
+Cost - 25.69
+
+Order 103
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Andrew
+Cost - 22.46
+
+Order 104
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Tropicana
+Cost - 14.77
+
+Order 105
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Tropicana
+Cost - 83.54
+
+Order 106
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Tropicana
+Cost - 7.96
+
+Order 107
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Andrew
+Cost - 31.84
+
+Order 108
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - John West
+Cost - 23.9
+
+Order 109
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Gu
+Cost - 15.73
+
+Order 110
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - John West
+Cost - 110.99
+
+Order 111
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Colmans
+Cost - 13.64
+
+Order 112
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Andrew
+Cost - 12.58
+
+Order 113
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Tropicana
+Cost - 17.29
+
+Order 114
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Walkers
+Cost - 76.75
+
+Order 115
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Tropicana
+Cost - 63.23
+
+Order 116
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Tropicana
+Cost - 74.93
+
+Order 117
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Colmans
+Cost - 38.63
+
+Order 118
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Walkers
+Cost - 40.14
+
+Order 119
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Heinz
+Cost - 1.19
+
+Order 120
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Gu
+Cost - 80.07
+
+Order 121
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Andrew
+Cost - 13.99
+
+Order 122
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Gu
+Cost - 22.34
+
+Order 123
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Colmans
+Cost - 33.97
+
+Order 124
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Hartleys
+Cost - 102.91
+
+Order 125
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Hartleys
+Cost - 14.01
+
+Order 126
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Heinz
+Cost - 44.61
+
+Order 127
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Andrew
+Cost - 67.61
+
+Order 128
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Andrew
+Cost - 13.11
+
+Order 129
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Knorr
+Cost - 55
+
+Order 130
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - John West
+Cost - 2.13
+
+Order 131
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Rowse
+Cost - 10.92
+
+Order 132
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Cathedral City
+Cost - 7.52
+
+Order 133
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Heinz
+Cost - 69.34
+
+Order 134
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Hartleys
+Cost - 18.03
+
+Order 135
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Heinz
+Cost - 13.8
+
+Order 136
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Walkers
+Cost - 28.2
+
+Order 137
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - John West
+Cost - 66.89
+
+Order 138
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - John West
+Cost - 18.18
+
+Order 139
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Rowse
+Cost - 2.54
+
+Order 140
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Cathedral City
+Cost - 3.91
+
+Order 141
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Gu
+Cost - 38.26
+
+Order 142
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - John West
+Cost - 33.25
+
+Order 143
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Walkers
+Cost - 2.17
+
+Order 144
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Knorr
+Cost - 59.63
+
+Order 145
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Knorr
+Cost - 2.27
+
+Order 146
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Hartleys
+Cost - 34.92
+
+Order 147
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Andrew
+Cost - 24.96
+
+Order 148
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Gu
+Cost - 50.86
+
+Order 149
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Walkers
+Cost - 7.02
+
+Order 150
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Cathedral City
+Cost - 2.13
+
+Order 151
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Gu
+Cost - 1.03
+
+Order 152
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Rowse
+Cost - 23.83
+
+Order 153
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Kelloggs
+Cost - 38.52
+
+Order 154
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Gu
+Cost - 81.04
+
+Order 155
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Tropicana
+Cost - 27.49
+
+Order 156
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Gu
+Cost - 75.26
+
+Order 157
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Walkers
+Cost - 43.16
+
+Order 158
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Gu
+Cost - 79.42
+
+Order 159
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Heinz
+Cost - 72.04
+
+Order 160
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Kelloggs
+Cost - 115.81
+
+Order 161
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Gu
+Cost - 40.26
+
+Order 162
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Rowse
+Cost - 2.54
+
+Order 163
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - John West
+Cost - 33.6
+
+Order 164
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Knorr
+Cost - 18.14
+
+Order 165
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Kelloggs
+Cost - 39.47
+
+Order 166
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Tropicana
+Cost - 39.62
+
+Order 167
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Walkers
+Cost - 27.08
+
+Order 168
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - John West
+Cost - 36.22
+
+Order 169
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Rowse
+Cost - 2.77
+
+Order 170
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Knorr
+Cost - 3.33
+
+Order 171
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - John West
+Cost - 25.2
+
+Order 172
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Heinz
+Cost - 14.47
+
+Order 173
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Knorr
+Cost - 20.88
+
+Order 174
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Walkers
+Cost - 31.03
+
+Order 175
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Rowse
+Cost - 1.56
+
+Order 176
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Andrew
+Cost - 28.68
+
+Order 177
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Cathedral City
+Cost - 45.84
+
+Order 178
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Hartleys
+Cost - 5.04
+
+Order 179
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Kelloggs
+Cost - 127.95
+
+Order 180
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Gu
+Cost - 52.45
+
+Order 181
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Andrew
+Cost - 18.71
+
+Order 182
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Knorr
+Cost - 21.74
+
+Order 183
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Gu
+Cost - 41.91
+
+Order 184
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Gu
+Cost - 21.41
+
+Order 185
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Heinz
+Cost - 45.09
+
+Order 186
+StoreCode :BIR3
+Date - Week13 Year - 2013
+Supplier Type - Groceries
+Supplier Name - Cathedral City
+Cost - 18.54
+

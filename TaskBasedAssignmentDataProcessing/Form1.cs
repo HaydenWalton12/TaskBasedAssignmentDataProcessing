@@ -20,7 +20,7 @@ namespace TaskBasedForms
         int SelectedSupplierNameIndex;
         int SelectedSupplierTypeIndex;
         int SelectedDateIndex;
-
+        int FileNameSaveInt = 0;
         bool StoreCodeActive;
         bool SupplierTypeActive;
         bool SupplierNameActive;
@@ -47,7 +47,7 @@ namespace TaskBasedForms
         List<string> supplier_types = new List<string>();
         List<Date> dates = new List<Date>();    
         List<string> supplier_names = new List<string>();
-       
+        List<Order> queried_orders = new List<Order>();
         public Application _App;
         FormCharting _Charting;
         public string DataDirectoryPath;
@@ -243,28 +243,43 @@ namespace TaskBasedForms
         //CHarting Functionality Will need to be located within this function , since this where data for order results is queried
         private void SearchOrderButton_Click(object sender, EventArgs e)
         {
+
+
             var order_query = from order in orders select order;
 
-             DateChart.Series[0].Points.Clear();
+
+            DateChart.Series[0].Points.Clear();
             StoreChart.Series[0].Points.Clear();
             SupplierNameChart.Series[0].Points.Clear();
             SupplierTypeChart.Series[0].Points.Clear();
 
-
+            OrderSerchResultsListView1.Items.Clear();
+            StoreChartResultList.Items.Clear();
+            DateChartResultList.Items.Clear();
+            SupplierTypeChartResultList.Items.Clear();
+            SupplierTypeChartResultList.Items.Clear();
+            queried_orders.Clear();
 
             switch (SelectionCode)
             {
 
                 //Total Of Orders/Cost From A Single Store
                 case 10:
+
+                    List<GraphData> _StoreChartResults = new List<GraphData>();
+                    List<GraphData> _SupplierTypeChartResults = new List<GraphData>();
+                    List<GraphData> _SupplierNameChartResults = new List<GraphData>();
+                    List<GraphData> _DateChartResults = new List<GraphData>();
+
                     order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
+             
                     CheckQuery(order_query);
                     _Charting.StoreChart(order_query);
                     _Charting.SupplierName(order_query);
                     _Charting.SupplierType(order_query);
                     _Charting.DateChart(order_query);
 
-
+                    queried_orders = order_query.ToList();
                     break;
 
                 //Total Of Orders From All Stores At A Specfic Date
@@ -276,6 +291,8 @@ namespace TaskBasedForms
                     _Charting.SupplierName(order_query);
                     _Charting.SupplierType(order_query);
                     _Charting.DateChart(order_query);
+
+                    queried_orders = order_query.ToList();
                     break;
 
                 //Total Of Order/Cost From A Specfic Store At A Specfic Date
@@ -289,7 +306,7 @@ namespace TaskBasedForms
                     _Charting.SupplierName(order_query);
                     _Charting.SupplierType(order_query);
                     _Charting.DateChart(order_query);
-
+                    queried_orders = order_query.ToList();
                     break;
 
                 //Total Of Orders/Cost From A Specfic SupplierType From All Stores
@@ -300,7 +317,7 @@ namespace TaskBasedForms
                     _Charting.SupplierName(order_query);
                     _Charting.SupplierType(order_query);
                     _Charting.DateChart(order_query);
-
+                    queried_orders = order_query.ToList();
                     break;
 
                 //Total Of Orders/Cost From A Specfic SupplierType From A Specfic Store
@@ -312,7 +329,7 @@ namespace TaskBasedForms
                     _Charting.SupplierName(order_query);
                     _Charting.SupplierType(order_query);
                     _Charting.DateChart(order_query);
-
+                    queried_orders = order_query.ToList();
                     break;
 
                 //Total Of Orders/Cost From A Specific SupplierType From A Specific Date
@@ -326,7 +343,7 @@ namespace TaskBasedForms
                     _Charting.SupplierName(order_query);
                     _Charting.SupplierType(order_query);
                     _Charting.DateChart(order_query);
-
+                    queried_orders = order_query.ToList();
                     break;
 
                 //Total Of Orders/Cost From A Specific SupplierType From A Specific Store At A Specific Date
@@ -340,7 +357,7 @@ namespace TaskBasedForms
                     _Charting.SupplierName(order_query);
                     _Charting.SupplierType(order_query);
                     _Charting.DateChart(order_query);
-
+                    queried_orders = order_query.ToList();
                     break;
 
                 //Total Of Orders/Cost From A Specific Supplier Name
@@ -351,6 +368,7 @@ namespace TaskBasedForms
                     _Charting.SupplierName(order_query);
                     _Charting.SupplierType(order_query);
                     _Charting.DateChart(order_query);
+                    queried_orders = order_query.ToList();
                     break;
 
                 //Total Of Orders/Cost From A Specific SupplierName From A Specfic Store
@@ -362,7 +380,7 @@ namespace TaskBasedForms
                     _Charting.SupplierName(order_query);
                     _Charting.SupplierType(order_query);
                     _Charting.DateChart(order_query);
-
+                    queried_orders = order_query.ToList();
                     break;
 
                 //Total Of Orders/Cost From A Specific SupplierName From A Specfic Store At A Specific Date
@@ -376,7 +394,19 @@ namespace TaskBasedForms
                     _Charting.SupplierName(order_query);
                     _Charting.SupplierType(order_query);
                     _Charting.DateChart(order_query);
-
+                    queried_orders = order_query.ToList();
+                    break;
+                //Total Orders/Cost From A Specfic Store , From a Specfic SupplierName & Specific Type (This one makes no sense but ohwell)
+                case 160:
+                    order_query = order_query.Where(order => order.StoreCode == stores.ElementAt(SelectedStoreCodeIndex));
+                    order_query = order_query.Where(order => order.SupplierType == supplier_types.ElementAt(SelectedSupplierTypeIndex));
+                    order_query = order_query.Where(order => order.SupplierName == supplier_names.ElementAt(SelectedSupplierNameIndex));
+                    CheckQuery(order_query);
+                    _Charting.StoreChart(order_query);
+                    _Charting.SupplierName(order_query);
+                    _Charting.SupplierType(order_query);
+                    _Charting.DateChart(order_query);
+                    queried_orders = order_query.ToList();
                     break;
 
                 //Total Orders/Cost From A Specific Store, From A Specific SupplierName & Type Within A Specific Date
@@ -391,7 +421,7 @@ namespace TaskBasedForms
                     _Charting.SupplierName(order_query);
                     _Charting.SupplierType(order_query);
                     _Charting.DateChart(order_query);
-
+                    queried_orders = order_query.ToList();
                     break;
 
                 default:
@@ -422,25 +452,71 @@ namespace TaskBasedForms
             //Stores The Type & Cost
           
             OrderSerchResultsListView1.Items.Clear();
-            OrderSerchResultsListView2.Items.Clear();
-
-
-
+      
             int ordersize = orders.Count();
             int orderhalfsize = ordersize / 2;
-            List<string[]> orderchunk1 = new List<string[]>();
-            List<string[]> orderchunk2 = new List<string[]>();
+
             IEnumerable<Order> splitOrder1 = orders.Take(orderhalfsize);
             orders = orders.Skip(orderhalfsize);
 
             IEnumerable<Order> splitOrder2 = orders.Take(orderhalfsize - 1);
-
-            Task task1 = new Task(() => { LoadData1(splitOrder1); });
-            Task task2 = new Task(() => { LoadData2(splitOrder2); });
+            List<ListViewItem> items1 = new List<ListViewItem>(); 
+            List<ListViewItem> items2 = new List<ListViewItem>(); 
+            Task task1 = new Task(() => { items1 = LoadData1(splitOrder1); });
+            Task task2 = new Task(() => { items2 = LoadData2(splitOrder2); });
+          
             task1.Start();
-       
             task2.Start();
             task2.Wait();
+
+            //foreach (var item in items1)
+            //{
+
+            //        OrderSerchResultsListView1.Items.Add(item);
+
+            //}
+            //foreach (var item in items2)
+            //{
+
+            //    OrderSerchResultsListView2.Items.Add(item);
+
+            //}
+            //int orderquarter = ordersize / 4;
+            //int k = 1;
+            //int j = 2;
+            //int f = 3;
+            //for (int i = 0; i < orderquarter; i++)
+            //{
+            //    //OrderSerchResultsListView1.Items.Add(items1[i]);
+            //    //if (i < orderhalfsize - 1)
+            //    //{
+            //    //    OrderSerchResultsListView2.Items.Add(items2[i]);
+            //    //}
+
+            //    OrderSerchResultsListView1.Items.Add(items1[i]);
+            //    OrderSerchResultsListView1.Items.Add(items1[k]);
+            //    OrderSerchResultsListView1.Items.Add(items1[j]);
+            //    OrderSerchResultsListView1.Items.Add(items1[f]);
+
+            //    if (k < items2.Count || i < items2.Count - 1)
+            //    {
+            //        OrderSerchResultsListView2.Items.Add(items2[i]);
+            //        OrderSerchResultsListView1.Items.Add(items2[k]);
+            //    }
+            //    i = i + 3;
+            //    k =  k + 4;
+            //    j = j + 4;
+            //    f = f + 4;
+
+            //}
+            OrderSerchResultsListView1.Items.AddRange(items1.ToArray());
+            OrderSerchResultsListView1.Items.AddRange(items2.ToArray());
+            //Task task3 = new Task(() => {  LoadList1(items1); });
+            //Task task4 = new Task(() => { LoadList2(items2); });
+
+            //task3.Start();
+            //task4.Start();
+            //task4.Wait();
             //foreach (var order in orders)
             //{
             //    string[] subitem = new string[5];
@@ -474,11 +550,37 @@ namespace TaskBasedForms
             //    }
             //}
         }
+        //private void LoadList1(List<ListViewItem> data)
+        //{
+        //    foreach(var item in data)
+        //    {
+        //        Invoke(new Action(() =>
+        //     {
+        //        OrderSerchResultsListView1.Items.Add(item);
+        //      }));
+        //    }
+           
 
-        private void LoadData1(IEnumerable<Order> data)
+        //}
+        //private void LoadList2(List<ListViewItem> data)
+        //{
+        //    foreach (var item in data)
+        //    {
+        //        Invoke(new Action(() =>
+        //        {
+        //            OrderSerchResultsListView2.Items.Add(item);
+        //        }));
+        //    }
+
+
+        //}
+        private List<ListViewItem> LoadData1(IEnumerable<Order> data)
         {
+            List<ListViewItem> listViewItems = new List<ListViewItem>();
+         
             foreach (var order in data)
-            { 
+            {
+             
                 string[] subitem = new string[5];
 
             subitem[0] = order.StoreCode;
@@ -487,19 +589,20 @@ namespace TaskBasedForms
             subitem[3] = order.Date.Week.ToString() + " , " + order.Date.Year.ToString();
             subitem[4] = "£ " + order.Cost.ToString();
 
-            ListViewItem item = new ListViewItem(subitem);
+                ListViewItem item = new ListViewItem(subitem);
 
-            Invoke(new Action(() =>
-            {
-                OrderSerchResultsListView1.Items.Add(item);
-            }));
+                listViewItems.Add(item);
+               
+            }
+            return listViewItems;
         }
-
-        }
-        private void LoadData2(IEnumerable<Order> data)
+        private List<ListViewItem> LoadData2(IEnumerable<Order> data)
         {
+            List<ListViewItem> listViewItems = new List<ListViewItem>();
+            int i = 0;
             foreach (var order in data)
             {
+         
                 string[] subitem = new string[5];
 
                 subitem[0] = order.StoreCode;
@@ -509,16 +612,11 @@ namespace TaskBasedForms
                 subitem[4] = "£ " + order.Cost.ToString();
 
                 ListViewItem item = new ListViewItem(subitem);
-
-                Invoke(new Action(() =>
-                {
-                    OrderSerchResultsListView2.Items.Add(item);
-                }));
-
-
-
+                listViewItems.Add(item);
             }
-           }
+            return listViewItems;
+
+        }
         private void CheckQuery(IEnumerable<Order> queried_orders)
         {
             //Count<TSource> - TSource Is the Type of Elements you want to get from the source, the source being order_query , the type being Order
@@ -721,7 +819,33 @@ namespace TaskBasedForms
             foreach (var data in ChartData)
             { StoreChart.Series[0].Points.AddXY(data.Field, data.Count); }
 
-        }  
+        }
+
+        private void SaveOrderButton_Click(object sender, EventArgs e)
+        {
+       
+            string workingDirectory = Environment.CurrentDirectory;
+            string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
+            //string Folder = System.IO.Directory.GetCurrentDirectory();
+            Directory.GetDirectories(projectDirectory);
+     
+            string FileName = "SavedOrder_" + FileNameSaveInt.ToString()+".txt";
+          
+            string[] orderContents = new string[queried_orders.Count()];
+            for(int i = 0; i < queried_orders.Count(); i++)
+            {
+                orderContents[i] = "Order " + i.ToString() + "\nStoreCode :" +queried_orders[i].StoreCode + 
+                "\nDate - Week" + queried_orders[i].Date.Week.ToString() + " Year - " +queried_orders[i].Date.Year.ToString() +
+                "\nSupplier Type - " + queried_orders[i].SupplierType.ToString() +
+                "\nSupplier Name - " + queried_orders[i].SupplierName.ToString() +
+                "\nCost - " + queried_orders[i].Cost.ToString() + "\n";    
+            }
+            string filepath = projectDirectory + "\\TaskBasedAssignmentDataProcessing\\SavedOrders\\" + FileName;
+            File.WriteAllLines(filepath, orderContents);
+
+
+            FileNameSaveInt++;
+        }
     }
 }
 

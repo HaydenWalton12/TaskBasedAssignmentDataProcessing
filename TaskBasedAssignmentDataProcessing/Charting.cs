@@ -14,7 +14,7 @@ namespace TaskBasedForms
         {
             form1 = form;
         }
-        
+
 
         /// <summary>
         /// Since We Have Two Present Charts That Allow us to simplify and visulise 
@@ -23,17 +23,20 @@ namespace TaskBasedForms
         /// 
         /// </summary>
         /// 
-   
+
         public void StoreChart(IEnumerable<Order> queried_orders)
         {
             List<GraphData> ChartData = new List<GraphData>();
-            
-      
+            List<GraphData> ChartResult = new List<GraphData>();
+
+
             foreach (var Type in form1.StoreCodesList.Items)
             {
+                string[] temp = Type.ToString().Split(' ');
+
                 GraphData data = new GraphData
                 {
-                    Field = Type.ToString(),
+                    Field = temp[0],
                     Count = 0
                 };
                 ChartData.Add(data);
@@ -56,13 +59,31 @@ namespace TaskBasedForms
                 if (data.Count > 0)
                 {
                     form1.StoreChart.Series[0].Points.AddXY(data.Field, data.Count);
+
+                    GraphData item = new GraphData
+                    {
+                        Field = data.Field,
+                        Count = data.Count
+                    };
+
+                    ChartResult.Add(item);
                 }
             }
+            foreach(var data in ChartResult)
+            {
+                form1.StoreChartResultList.Items.Add(data.Field + " : " + data.Count.ToString());
+            }
+     
+
+
+
         }
 
-        public void DateChart(IEnumerable<Order> queried_orders)
+        public  void DateChart(IEnumerable<Order> queried_orders)
         {
             List<GraphData> ChartData = new List<GraphData>();
+            List<GraphData> ChartResult = new List<GraphData>();
+
             foreach (var Type in form1.DateList.Items)
             {
                 GraphData data = new GraphData
@@ -94,14 +115,29 @@ namespace TaskBasedForms
                 if (data.Count > 0)
                 {
                     form1.DateChart.Series[0].Points.AddXY(data.Field, data.Count);
+                    GraphData item = new GraphData
+                    {
+                        Field = data.Field,
+                        Count = data.Count
+                    };
+
+                    ChartResult.Add(item);
                 }
                 }
+
+
+            foreach (var data in ChartResult)
+            {
+                form1.DateChartResultList.Items.Add(data.Field + " : " + data.Count.ToString());
+            }
+            
 
         }
 
         public void SupplierType(IEnumerable<Order> queried_orders)
         {
             List<GraphData> ChartData = new List<GraphData>();
+            List<GraphData> ChartResult = new List<GraphData>();
 
             foreach (var Type in form1.SupplierTypeList.Items)
             {
@@ -136,13 +172,26 @@ namespace TaskBasedForms
                 if (data.Count > 0)
                 {
                     form1.SupplierTypeChart.Series[0].Points.AddXY(data.Field, data.Count);
+                    GraphData item = new GraphData
+                    {
+                        Field = data.Field,
+                        Count = data.Count
+                    };
+
+                    ChartResult.Add(item);
                 }
                 }
+           
+            foreach (var data in ChartResult)
+            {
+                form1.SupplierTypeChartResultList.Items.Add(data.Field + " : " + data.Count.ToString());
+            }
         }
 
         public void SupplierName(IEnumerable<Order> queried_orders)
         {
             List<GraphData> ChartData = new List<GraphData>();
+            List<GraphData> ChartResult = new List<GraphData>();
 
             foreach (var Type in form1.SupplierNameList.Items)
             {
@@ -162,6 +211,7 @@ namespace TaskBasedForms
                     if (ChartData[i].Field == order.SupplierName)
                     {
                         ChartData[i].Count += order.Cost;
+
                     }
                 }
             }
@@ -174,9 +224,20 @@ namespace TaskBasedForms
                 if (data.Count > 0)
                 {
                     form1.SupplierNameChart.Series[0].Points.AddXY(data.Field, data.Count);
+                    GraphData item = new GraphData
+                    {
+                        Field = data.Field,
+                        Count = data.Count
+                    };
+
+                    ChartResult.Add(item);
                 }
             }
-
+   
+            foreach (var data in ChartResult)
+            {
+                form1.SupplierNameChartResultList.Items.Add(data.Field + " : " + data.Count.ToString());
+            }
         }
 
     }
