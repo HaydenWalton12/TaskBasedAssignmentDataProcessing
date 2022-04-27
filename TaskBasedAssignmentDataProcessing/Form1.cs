@@ -61,6 +61,12 @@ namespace TaskBasedForms
         public string DataDirectoryPath;
         public string StoreCodesFile;
 
+        //Bools Used To Determine If Query Filter Is Active
+        bool SupplierTypeActive = false;
+        bool DateActive = false;
+        bool StoreCodeActive = false;
+        bool SupplierNameActive = false;
+
         public Form1(Application application)
         {
             Form1 form1 = this;
@@ -246,7 +252,7 @@ namespace TaskBasedForms
             SupplierTypeChart.Series[0].Points.Clear();
 
             //Clear Previous ChartList Results
-            OrderserchResultsListView1.Items.Clear();
+            OrderSearchResultsListView.Items.Clear();
             StoreChartResultList.Items.Clear();
             DateChartResultList.Items.Clear();
             SupplierTypeChartResultList.Items.Clear();
@@ -482,6 +488,10 @@ namespace TaskBasedForms
             SupplierTypeList.SelectedIndex = -1;
             DateList.SelectedIndex = -1;
 
+            SupplierTypeActive = false;
+            DateActive = false;
+            StoreCodeActive = false;
+            SupplierNameActive = false;
         }
 
         //UpDates the query filtering results, and some minor data
@@ -489,18 +499,26 @@ namespace TaskBasedForms
         {
 
             //Stores The Type & Cost
-          
-            OrderserchResultsListView1.Items.Clear();
+            
+            //Clear Previous Results
+            OrderSearchResultsListView.Items.Clear();
       
-            int Ordersize = Orders.Count();
-            int orderhalfsize = Ordersize / 2;
+            //Gets size 
+            int order_size = Orders.Count();
+            int order_half_size = order_size / 2;
 
-            IEnumerable<Order> splitOrder1 = Orders.Take(orderhalfsize);
-            Orders = Orders.Skip(orderhalfsize);
+            //Takes First Half Of Order Data
+            IEnumerable<Order> splitOrder1 = Orders.Take(order_half_size);
+            //Skip Previous First Half Of Data Taken , Allows Us To Take Next Half Of Data
+            Orders = Orders.Skip(order_half_size);
+            //Take Next Half Of Data
+            IEnumerable<Order> splitOrder2 = Orders.Take(order_half_size - 1);
 
-            IEnumerable<Order> splitOrder2 = Orders.Take(orderhalfsize - 1);
+            //Stores ListViewItems
             List<ListViewItem> items1 = new List<ListViewItem>(); 
             List<ListViewItem> items2 = new List<ListViewItem>(); 
+
+            //Load Queried Data From Query Filters , Process Them Into Individual ListViewItems ,Store Into ListViewItem Lists
             Task task1 = new Task(() => { items1 = LoadData1(splitOrder1); });
             Task task2 = new Task(() => { items2 = LoadData2(splitOrder2); });
           
@@ -508,10 +526,14 @@ namespace TaskBasedForms
             task2.Start();
             task2.Wait();
 
+            //Using .AddRange , We Add The ListViewItem List Values Into The OrderSearchResultsView 
+            OrderSearchResultsListView.Items.AddRange(items1.ToArray());
+            OrderSearchResultsListView.Items.AddRange(items2.ToArray());
+
             //foreach (var item in items1)
             //{
 
-            //        OrderserchResultsListView1.Items.Add(item);
+            //        OrderSearchResultsListView.Items.Add(item);
 
             //}
             //foreach (var item in items2)
@@ -526,21 +548,21 @@ namespace TaskBasedForms
             //int f = 3;
             //for (int i = 0; i < orderquarter; i++)
             //{
-            //    //OrderserchResultsListView1.Items.Add(items1[i]);
+            //    //OrderSearchResultsListView.Items.Add(items1[i]);
             //    //if (i < orderhalfsize - 1)
             //    //{
             //    //    OrderserchResultsListView2.Items.Add(items2[i]);
             //    //}
 
-            //    OrderserchResultsListView1.Items.Add(items1[i]);
-            //    OrderserchResultsListView1.Items.Add(items1[k]);
-            //    OrderserchResultsListView1.Items.Add(items1[j]);
-            //    OrderserchResultsListView1.Items.Add(items1[f]);
+            //    OrderSearchResultsListView.Items.Add(items1[i]);
+            //    OrderSearchResultsListView.Items.Add(items1[k]);
+            //    OrderSearchResultsListView.Items.Add(items1[j]);
+            //    OrderSearchResultsListView.Items.Add(items1[f]);
 
             //    if (k < items2.Count || i < items2.Count - 1)
             //    {
             //        OrderserchResultsListView2.Items.Add(items2[i]);
-            //        OrderserchResultsListView1.Items.Add(items2[k]);
+            //        OrderSearchResultsListView.Items.Add(items2[k]);
             //    }
             //    i = i + 3;
             //    k =  k + 4;
@@ -548,8 +570,6 @@ namespace TaskBasedForms
             //    f = f + 4;
 
             //}
-            OrderserchResultsListView1.Items.AddRange(items1.ToArray());
-            OrderserchResultsListView1.Items.AddRange(items2.ToArray());
             //Task task3 = new Task(() => {  LoadList1(items1); });
             //Task task4 = new Task(() => { LoadList2(items2); });
 
@@ -568,7 +588,7 @@ namespace TaskBasedForms
 
             //    ListViewItem item = new ListViewItem(subitem);
 
-            //    OrderserchResultsListView1.Items.Add(item);
+            //    OrderSearchResultsListView.Items.Add(item);
             //}
 
 
@@ -578,7 +598,7 @@ namespace TaskBasedForms
 
             //    if (item != null)
             //    {
-            //        OrderserchResultsListView1.Items.Add(item[0]);
+            //        OrderSearchResultsListView.Items.Add(item[0]);
             //    }
             //}
             //foreach (var item in orderchunk2)
@@ -595,7 +615,7 @@ namespace TaskBasedForms
         //    {
         //        Invoke(new Action(() =>
         //     {
-        //        OrderserchResultsListView1.Items.Add(item);
+        //        OrderSearchResultsListView.Items.Add(item);
         //      }));
         //    }
            
@@ -613,6 +633,8 @@ namespace TaskBasedForms
 
 
         //}
+
+
         private List<ListViewItem> LoadData1(IEnumerable<Order> data)
         {
             List<ListViewItem> listViewItems = new List<ListViewItem>();
@@ -822,7 +844,7 @@ namespace TaskBasedForms
     
         private void ClearOrderList_Click(object sender, EventArgs e)
         {
-            OrderserchResultsListView1.Items.Clear();
+            OrderSearchResultsListView.Items.Clear();
         }
 
         private void AddToSelectionCode(int num1)

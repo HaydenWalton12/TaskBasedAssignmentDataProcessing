@@ -43,7 +43,7 @@ namespace TaskBasedForms
             this.StoreCodeTextBox = new System.Windows.Forms.TextBox();
             this.LoadDataButton = new System.Windows.Forms.Button();
             this.StoreCodesList = new System.Windows.Forms.ListBox();
-            this.OrderserchResultsListView1 = new System.Windows.Forms.ListView();
+            this.OrderSearchResultsListView = new System.Windows.Forms.ListView();
             this.StoreCode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SupplierType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SupplierName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -156,23 +156,23 @@ namespace TaskBasedForms
             this.StoreCodesList.TabIndex = 5;
             this.StoreCodesList.SelectedIndexChanged += new System.EventHandler(this.StoreCodesList_SelectedIndexChanged);
             // 
-            // OrderserchResultsListView1
+            // OrderSearchResultsListView
             // 
-            this.OrderserchResultsListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.OrderSearchResultsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.StoreCode,
             this.SupplierType,
             this.SupplierName,
             this.Date,
             this.Cost});
-            this.OrderserchResultsListView1.FullRowSelect = true;
-            this.OrderserchResultsListView1.GridLines = true;
-            this.OrderserchResultsListView1.HideSelection = false;
-            this.OrderserchResultsListView1.Location = new System.Drawing.Point(1025, 14);
-            this.OrderserchResultsListView1.Name = "OrderserchResultsListView1";
-            this.OrderserchResultsListView1.Size = new System.Drawing.Size(799, 364);
-            this.OrderserchResultsListView1.TabIndex = 7;
-            this.OrderserchResultsListView1.UseCompatibleStateImageBehavior = false;
-            this.OrderserchResultsListView1.View = System.Windows.Forms.View.Details;
+            this.OrderSearchResultsListView.FullRowSelect = true;
+            this.OrderSearchResultsListView.GridLines = true;
+            this.OrderSearchResultsListView.HideSelection = false;
+            this.OrderSearchResultsListView.Location = new System.Drawing.Point(1025, 14);
+            this.OrderSearchResultsListView.Name = "OrderSearchResultsListView";
+            this.OrderSearchResultsListView.Size = new System.Drawing.Size(799, 364);
+            this.OrderSearchResultsListView.TabIndex = 7;
+            this.OrderSearchResultsListView.UseCompatibleStateImageBehavior = false;
+            this.OrderSearchResultsListView.View = System.Windows.Forms.View.Details;
             // 
             // StoreCode
             // 
@@ -634,7 +634,7 @@ namespace TaskBasedForms
             this.Controls.Add(this.DeselectStoreCode);
             this.Controls.Add(this.TotalCostFilteredOrders);
             this.Controls.Add(this.SearchOrderButton);
-            this.Controls.Add(this.OrderserchResultsListView1);
+            this.Controls.Add(this.OrderSearchResultsListView);
             this.Controls.Add(this.StoreCodesList);
             this.Controls.Add(this.LoadDataButton);
             this.Controls.Add(this.StoreCodeTextBox);
@@ -666,7 +666,7 @@ namespace TaskBasedForms
         public System.Windows.Forms.TextBox StoreCodeTextBox;
         public System.Windows.Forms.Button LoadDataButton;
         public System.Windows.Forms.ListBox StoreCodesList;
-        public System.Windows.Forms.ListView OrderserchResultsListView1;
+        public System.Windows.Forms.ListView OrderSearchResultsListView;
         public System.Windows.Forms.Button SearchOrderButton;
         public System.Windows.Forms.ColumnHeader SupplierType;
         public System.ComponentModel.BackgroundWorker backgroundWorker1;
