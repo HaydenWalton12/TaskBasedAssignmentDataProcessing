@@ -1,5 +1,7 @@
 ﻿// Learn more about F# at http://fsharp.org
 
+//Greatly Helped Me During Development - https://dungpa.github.io/fsharp-cheatsheet/
+
 //open - Similar to #using , where it opens a specfic module or namespace where we can then access elements of the namespace without a full reference
 //to the name each reference
 open System
@@ -17,6 +19,7 @@ type Date( Week : string , Year : string) =
 
 //Order Struct - Similar to the C# Solution , we use class (this case we use a struct) to store all data affliated with order data we are reading to
 //write into this type
+//Assisted With - https://docs.microsoft.com/en-us/dotnet/fsharp/language-reference/fsharp-types
 type Order(StoreCode : string , Date : Date , SupplierName : string , SupplierType : string , Cost : double) = 
     member x.StoreCode = StoreCode
     member x.SupplierName = SupplierName
@@ -49,87 +52,112 @@ let mutable ProjectDirectory = Directory.GetParent(WorkingDirectory).Parent.Pare
 let mutable StoreCodesFile = ""
 let mutable DataDirectoryPath = ""
 
+//Used Within SavingQueryData Function To Store The Strings Into List FOr Loading 
+let mutable OrderText = ""
+
 //Stores Total Amount Of Loaded Orders
 let mutable Orders = List<Order>()
+
+//Stores Total Queried Resuts Based On Search Filters Applied
+let mutable QueriedResults = List<Order>()
+
+//Stores All Current Orders Removed From Queried Results
+let mutable OrdersRemoved = List<Order>()
 
 //Used For Application Loop , By Default False , If True Application Ends
 let mutable QuitApplication = false
 
-let mutable OrdersInTxt = List<string>()
-
-let mutable OrderData = [|"" ; ""|]
-
-let mutable text = ""
-let mutable SupplierName = ""
 
 
+
+//Used To Store Query Options For Filtering Order Data
 let mutable StoreQuery = ""
 let mutable DateQuery = ""
 let mutable SupplierTypeQuery = ""
 let mutable SupplierNameQuery = ""
+
+//Stores Menu Choice
 let mutable QueryMenuChoice = ""
+
+//Stores Path For File Saving
 let mutable FilePath = ""
+
+//Stores Conditions To Access Help Menu
 let mutable ViewHelpGuideString = "";
 let mutable ViewHelpGuideBool = false;
-let mutable QueriedResults = List<Order>()
-let mutable OrdersRemoved = List<Order>()
 
 
 
+//With The Given Filtered Queried Results, This Function Allows Us To Store Our Results Into TxT Files
 let SaveQueryData() =
-    Console.WriteLine("Saving Data")
-
+    
+    Console.WriteLine("Saving Data...")
+    
+    //Create Local FileName , Use FileNameSaveInt As The Incrementing Factor To Creating New FilePath Each Instance
+    //Of Function Execution
     let FileName = "SavedOrder_" + FileNameSaveInt.ToString() + ".txt"
-    Console.WriteLine("Saving Data")
+    
+    //Increment Perorder Stored In TXT
     let i = 0
-    let OrderContents = [|"" ; ""|]
-
+ 
+    let order_for_txt = List<string>()
+    
+    //For Each Queried Result , Create String Storing Each Order Data , Add To List , List Will Store All Order
+    //Strings That Will Be Used To Write Data Into File Path
     for orders in QueriedResults do
-        text <- "Order" + i.ToString() + "\nStoreCode : " + orders.StoreCode +
+        OrderText <- "Order" + i.ToString() + "\nStoreCode : " + orders.StoreCode +
         "\nDate - Week -" + orders.Date.Week.ToString() + " Year - " + orders.Date.Year.ToString() +
         "\nSupplier Type - " + orders.SupplierType.ToString() +
         "\nSupplier Name - " + orders.SupplierName.ToString() +
         "\nCost - " + orders.Cost.ToString()
-        
-        OrdersInTxt.Add(text)
-        
-    FilePath <-  ProjectDirectory + "\\SavedOrders\\" + FileName  
-    
-    let OrderInTxtArray = OrdersInTxt.ToArray()
-    File.WriteAllLines(FilePath , OrderInTxtArray)
-    System.Diagnostics.Process.Start("explorer.exe" , FilePath)
-    FileNameSaveInt <- + 1;
+       
+        i = i + 1
 
+        order_for_txt.Add(OrderText) 
+        
+    //Sets File Path , Will Store Data Into This File Location
+    FilePath <-  ProjectDirectory + "\\SavedOrders\\" + FileName
+    //Writes Data
+    File.WriteAllLines(FilePath , order_for_txt)
+
+    //Opens File Once Data Is Fully Writen For Visual Confirmation Of Data Written Into TXT
+    System.Diagnostics.Process.Start("explorer.exe" , FilePath)
+
+    //Solution Found - https://stackoverflow.com/questions/15212133/increment-value-in-f
+    FileNameSaveInt <- FileNameSaveInt + 1;
+
+//Gets The Total Sum of QueriedOrders
+//Solution Found From - https://stackoverflow.com/questions/824934/the-sum-of-a-specific-property-of-all-items-in-a-list
+//Further Assisted By - https://docs.microsoft.com/en-us/dotnet/fsharp/language-reference/query-expressions
 let GetTotalCost(queriedresults : List<Order>) = 
-    let CostOrder = queriedresults.ToArray()
+    
+    let orders_sum_cost = queriedresults.ToArray()
     
     let query =
-        CostOrder
+        orders_sum_cost
         |> Seq.sumBy(fun o -> o.Cost)
   
     TotalCost <- query
 
+//Queries Data Based From Entered StoreQuery Choice - 
+//The Logic For This Function Applies For Each Other Query Filter Function
 let StoreQueryFilter(queriedresults : List<Order>) = 
   
+  //This If Will Only Be True, If This Is First Query Filter Applied To An Query Instance ,If Not , We Use Alternate Else If Below
   if queriedresults.Count = 0 then
      for order in Orders do 
             if order.StoreCode = StoreQuery then
                queriedresults.Add(order) 
-
+  //Said Prior , If This Isnt The First Instance Of Query Filtering For Current Instance , We Filter Threw
+  //Current Queried Results, We Check For Each Current Queried Order That Doesnt Match Up With Query Parameter Given
+  //If Condition True , We Add Current Order To "OrdersRemoved" List
   else if queriedresults.Count > 0 then
       for order in queriedresults do 
           if order.StoreCode <> StoreQuery then
               OrdersRemoved.Add(order) 
-
+  //We Iterate Threw Orders Removed List (Populated Above) , To Remove Each Order From Queried Results, Updating Current Queried Instance
   for order in OrdersRemoved do 
      queriedresults.Remove(order)
-
-let OpenSavedOrdersLocation() =
-    System.Diagnostics.Process.Start("explorer.exe" , ProjectDirectory + "\SavedOrders")
-
-let OpenOrderInformationLocation() =
-    System.Diagnostics.Process.Start("explorer.exe" , ProjectDirectory + "\OrderInformation")
-
 let DateQueryFilter(queriedresults : List<Order>) = 
     
     let dateSplit = DateQuery.Split(',')
@@ -146,7 +174,6 @@ let DateQueryFilter(queriedresults : List<Order>) =
 
     for order in OrdersRemoved do 
        queriedresults.Remove(order)
-
 let SupplierNameFilter(queriedresults : List<Order>) = 
 
     if queriedresults.Count = 0 then
@@ -161,7 +188,6 @@ let SupplierNameFilter(queriedresults : List<Order>) =
 
     for order in OrdersRemoved do 
        queriedresults.Remove(order)
-
 let SupplierTypeFilter(queriedresults : List<Order>) = 
   
     if queriedresults.Count = 0 then
@@ -177,11 +203,18 @@ let SupplierTypeFilter(queriedresults : List<Order>) =
     for order in OrdersRemoved do 
        queriedresults.Remove(order)
 
+//Opens Specficied Location Given Within Directory 
+//Solution From - https://stackoverflow.com/questions/1132422/open-a-folder-using-process-start
+let OpenSavedOrdersLocation() =
+    System.Diagnostics.Process.Start("explorer.exe" , ProjectDirectory + "\SavedOrders")
+
+let OpenOrderInformationLocation() =
+    System.Diagnostics.Process.Start("explorer.exe" , ProjectDirectory + "\OrderInformation")
 
 
-
+//Help Guide - Self Explanatory 
 let HelpGuide() = 
-    if ViewHelpGuideBool = true then
+    while ViewHelpGuideBool = true do
         Console.WriteLine("| HELP MENU |")
         Console.WriteLine("How Does It Work - Once All Order Data Has Loaded We Can Process Data.\nVia Entering Integer From 1 - 9 , We Can Execute Command.Commands Type Is Illustrated By Number Accompanied With Text Is Assigned To.\nEnter An Integer , Press Enter To Proceed.\n")
         Console.WriteLine("")
@@ -193,7 +226,11 @@ let HelpGuide() =
            ViewHelpGuideBool <- false
         else if ViewHelpGuideString = "No" then
            ViewHelpGuideBool <- true
+        else if ViewHelpGuideString <> "No" || ViewHelpGuideString <> "Yes" then   
+            Console.WriteLine("Unknown Command  - Try Again")
+            ViewHelpGuideBool <- true
 
+//Main Menu - Proccesses Application And User Response
 let QueryMenu() = 
 // Print user options
     Console.WriteLine("\n| MAIN MENU |")
@@ -223,20 +260,23 @@ let QueryMenu() =
     Console.WriteLine("9) Help Guide")
     Console.WriteLine("10) Quit Application")
     Console.WriteLine("")
+
+    //Query Choice Via User Input
     QueryMenuChoice <- Console.ReadLine()
 
+    //Process User Input Accordingly
     if QueryMenuChoice = "1" then
        Console.WriteLine("Enter Store Code To Query With: E.G BIR1")
        StoreQuery <- Console.ReadLine()
        StoreQueryFilter(QueriedResults)
        GetTotalCost(QueriedResults)
 
-       
     else if QueryMenuChoice = "2" then
        Console.WriteLine("Enter Date Choice To Query With: E.G 12,2013 <- EXACTLY THIS FORMAT")
        DateQuery <- Console.ReadLine()
        DateQueryFilter(QueriedResults)
        GetTotalCost(QueriedResults)
+
     else if QueryMenuChoice = "3" then
        Console.WriteLine("Enter Supplier Name Choice To Query With: E.G Colgate")
        SupplierNameQuery <- Console.ReadLine()
@@ -248,6 +288,7 @@ let QueryMenu() =
        SupplierTypeQuery <- Console.ReadLine()
        SupplierTypeFilter(QueriedResults)
        GetTotalCost(QueriedResults)
+
     //Will Clear The Current Query Instance   
     else if QueryMenuChoice = "5" then
        Console.WriteLine("Are You Sure You Want To Reset Query Options ?")
@@ -259,24 +300,34 @@ let QueryMenu() =
           SupplierTypeQuery <- ""
           DateQuery  <- ""
           StoreQuery <- ""
+          TotalCost <- 0.0
        Console.WriteLine("Query Restarted")
+
     else if QueryMenuChoice = "6" then
       SaveQueryData()
+    
     else if QueryMenuChoice = "7" then
        OpenSavedOrdersLocation()
        Console.WriteLine("")
+    
     else if QueryMenuChoice = "8" then
        OpenOrderInformationLocation()
        Console.WriteLine("")
+    
     else if QueryMenuChoice = "9" then
        ViewHelpGuideBool <- true
        HelpGuide()
+    
     else if QueryMenuChoice = "10" then
         QuitApplication <- true
+    
+    else if QueryMenuChoice <> "1" || QueryMenuChoice<> "2" || QueryMenuChoice<> "3"  || QueryMenuChoice<> "4"  || QueryMenuChoice<> "5"  || QueryMenuChoice<> "6"  || QueryMenuChoice<> "8"  || QueryMenuChoice<> "9"  || QueryMenuChoice<> "10"then
+        Console.WriteLine("Unknown Command Try Again")
 
+//With Given Accumliated "Order Data" , Get And Load The Components That Create The Order "Code , SupplierType/Name & Date" , We
+//Use These Components To Query To Find Specfic Data , Here We Get Each Unique Component , Store In A Local List , Then Write Data To TXT File
+//This Txt 
 let LoadLists() = 
-
-
     let supplier_name_dupe = List<string>()
     let supplier_type_dupe = List<string>()
     let date_dupe = List<string>()
@@ -286,19 +337,23 @@ let LoadLists() =
         supplier_type_dupe.Add(order.SupplierType)
         date_dupe.Add("Week - " + order.Date.Week + " Year - " + order.Date.Year )
     
+    //Using .Distinct , We Can Remove All Duplicated Data ,Creating A Unique List For Each 
     let unique_supplier_name_list = supplier_name_dupe.Distinct().ToList()
     let unqiue_supplier_type_list = supplier_type_dupe.Distinct().ToList()
     let unique_date_list = date_dupe.Distinct().ToList()
     
+    //String Array Storing All StoreCode Files - By Reading All Lines From StoreCodeFile
     let store_code = File.ReadAllLines(StoreCodesFile)
     let unique_store_code_list = List<string>()
 
+    //Same Thing We Do Above Except There Is No Duplicate Data
     for storecode in store_code.AsParallel() do
         let store_code_split = storecode.Split(',')
         unique_store_code_list.Add(store_code_split.[0] + " : " + store_code_split.[1])
 
     //Write Unique List Results Into TXT Files , Allows For Cleaner Searching & Storing Of Unique
-    //Data To Assist With Querying
+    //Data To Assist With Finding Querying Data
+
     FilePath <-  ProjectDirectory + "\\OrderInformation\\" + "StoreCodeList.txt"     
     File.WriteAllLines(FilePath , unique_store_code_list)
 
@@ -332,23 +387,34 @@ let main =
     Console.WriteLine("")
 
     //Load Order System Works Comparatively To The C# Load Data System - That Said We Take The Same Logic & Essentially Translate It
-    //
+    //For Each File Name In Read File Names , We Read All Lines (Containing The Order Data) From That Current File
+    //Instance
     for filename in FileNames do
 
+        //Gets FileName , Removes Directories To Give Just FileName
         let FileNameExt = Path.GetFileName(filename)
-        let FileName = Path.GetFileNameWithoutExtension(filename)
-        let FileNameSplit = FileName.Split('_')
-        let OrderData  = File.ReadAllLines(filename)
-     
-        for orderdata in OrderData do
-            let order_split = orderdata.Split(',')
-            let store_code  = FileNameSplit.[0]
-            let date = new Date(FileNameSplit.[1], FileNameSplit.[2])
+        //Removes FileName Extension ".csv"
+        let file_name = Path.GetFileNameWithoutExtension(filename)
+        //Splits FileName , Containing Data And StoreCode, Used Reference Orders Correctly
+        let file_name_split = file_name.Split('_')
+        //Reads All Order Data From File from current foreach instance, we then next store this order data in foreach below
+        let order_data  = File.ReadAllLines(filename)
+    
+
+        //From The Current File Instance , Loads All Order Data , We Then Use This ForEach To Fill In Local Data , This
+        //Data Then Gets Added To A List That Stores All Orders From All Files , Store Each Order Using Order
+        //Struct 
+        for order in order_data do
+            let order_split = order.Split(',')
+            let store_code  = file_name_split.[0]
+            let date = new Date(file_name_split.[1], file_name_split.[2])
             let supplier_name = order_split.[0]
             let supplier_type = order_split.[1]
             let cost = Convert.ToDouble(order_split.[2])
-            let order = new Order(store_code , date , supplier_name , supplier_type , cost)
-            Orders.Add(order)
+            let new_order = new Order(store_code , date , supplier_name , supplier_type , cost)
+
+            //Adds Current Loaded Order Into Main Order List
+            Orders.Add(new_order)
     
     //Generates Order Lists , Lists Will Be Used To Get Unique Order Data For Storing As Reference To What TO Search
     LoadLists()
@@ -365,13 +431,3 @@ let main =
         QueryMenu()
     Console.WriteLine("Goodbye :)")
     
-
-
-
-
-
-
-
-//QUERY DATA - https://docs.microsoft.com/en-us/dotnet/fsharp/language-reference/query-expressions
-
-
