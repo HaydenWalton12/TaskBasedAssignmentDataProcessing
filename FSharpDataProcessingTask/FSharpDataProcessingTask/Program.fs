@@ -6,10 +6,7 @@ open System
 open System.IO
 open System.Linq
 open System.Diagnostics
-open System.Threading.Tasks
-
 open System.Collections.Generic
-open System.Collections.Concurrent
 //type - used to declare a class , struct , record , basically a location where we store multiple variables , to declare these "variables"
 //we use the "member" keyword, 
 //member - Use to declare a property or method in object type
@@ -37,26 +34,34 @@ type Order(StoreCode : string , Date : Date , SupplierName : string , SupplierTy
 
 let mutable TotalCost = 0.0
 
+//When We Store Query Results - This Mutable Variable Will Increment By One , So When We Store Query We Can Have A New Individual File
+//It Doesnt Overide Last Instance And Store Current Query Results In New File (E.G SavedOrders_1.txt , SavedOrders_2.txt)
+let mutable FileNameSaveInt = 0
+
+//Directory Variables - Used To Correctly Locate The Project Directories , To Store And Open Files & Folder
+//Solution Found From - https://stackoverflow.com/questions/816566/how-do-you-get-the-current-project-directory-from-c-sharp-code-when-creating-a-c
+
 let mutable WorkingDirectory = Environment.CurrentDirectory
 let mutable ProjectDirectory = Directory.GetParent(WorkingDirectory).Parent.Parent.FullName
-let mutable FileNameSaveInt = 0
-let mutable DataDirectoryPath = ""
-let mutable OrdersInTxt = List<string>()
+
+
+//Used To Store Directory Paths To Load Order Data
 let mutable StoreCodesFile = ""
+let mutable DataDirectoryPath = ""
+
+//Stores Total Amount Of Loaded Orders
 let mutable Orders = List<Order>()
-let mutable FileNameExt = ""
-let mutable FileName = ""
-let mutable FileNameSplit = [|"" ; ""|]
-let mutable OrderSplit = [|"" ; ""|]
+
+//Used For Application Loop , By Default False , If True Application Ends
+let mutable QuitApplication = false
+
+let mutable OrdersInTxt = List<string>()
+
 let mutable OrderData = [|"" ; ""|]
-let mutable date = Date("" , "")
+
 let mutable text = ""
 let mutable SupplierName = ""
-let mutable StoreCode = ""
-let mutable SupplierType = ""
-let mutable Cost = 0.0
-let mutable Order = new Order("" , date , "" , " " , 0.0)
-let mutable QuitApplication = false
+
 
 let mutable StoreQuery = ""
 let mutable DateQuery = ""
@@ -119,8 +124,11 @@ let StoreQueryFilter(queriedresults : List<Order>) =
   for order in OrdersRemoved do 
      queriedresults.Remove(order)
 
-let OlderFolderLocation() =
+let OpenSavedOrdersLocation() =
     System.Diagnostics.Process.Start("explorer.exe" , ProjectDirectory + "\SavedOrders")
+
+let OpenOrderInformationLocation() =
+    System.Diagnostics.Process.Start("explorer.exe" , ProjectDirectory + "\OrderInformation")
 
 let DateQueryFilter(queriedresults : List<Order>) = 
     
@@ -209,10 +217,11 @@ let QueryMenu() =
     Console.WriteLine("5) Reset Queried Data")
     Console.WriteLine("6) Save Queried Data")
     Console.WriteLine("7) Open Results Folder")
+    Console.WriteLine("8) Open Order Information")
     Console.WriteLine("")
     Console.WriteLine("Application Related Options")
-    Console.WriteLine("8) Help Guide")
-    Console.WriteLine("9) Quit Application")
+    Console.WriteLine("9) Help Guide")
+    Console.WriteLine("10) Quit Application")
     Console.WriteLine("")
     QueryMenuChoice <- Console.ReadLine()
 
@@ -254,54 +263,104 @@ let QueryMenu() =
     else if QueryMenuChoice = "6" then
       SaveQueryData()
     else if QueryMenuChoice = "7" then
-       OlderFolderLocation()
+       OpenSavedOrdersLocation()
        Console.WriteLine("")
-       ViewHelpGuideBool <- true
-       HelpGuide()
     else if QueryMenuChoice = "8" then
+       OpenOrderInformationLocation()
+       Console.WriteLine("")
+    else if QueryMenuChoice = "9" then
        ViewHelpGuideBool <- true
        HelpGuide()
-    else if QueryMenuChoice = "9" then
+    else if QueryMenuChoice = "10" then
         QuitApplication <- true
+
+let LoadLists() = 
+
+
+    let supplier_name_dupe = List<string>()
+    let supplier_type_dupe = List<string>()
+    let date_dupe = List<string>()
+
+    for order in Orders.AsParallel() do
+        supplier_name_dupe.Add(order.SupplierName)
+        supplier_type_dupe.Add(order.SupplierType)
+        date_dupe.Add("Week - " + order.Date.Week + " Year - " + order.Date.Year )
+    
+    let unique_supplier_name_list = supplier_name_dupe.Distinct().ToList()
+    let unqiue_supplier_type_list = supplier_type_dupe.Distinct().ToList()
+    let unique_date_list = date_dupe.Distinct().ToList()
+    
+    let store_code = File.ReadAllLines(StoreCodesFile)
+    let unique_store_code_list = List<string>()
+
+    for storecode in store_code.AsParallel() do
+        let store_code_split = storecode.Split(',')
+        unique_store_code_list.Add(store_code_split.[0] + " : " + store_code_split.[1])
+
+    //Write Unique List Results Into TXT Files , Allows For Cleaner Searching & Storing Of Unique
+    //Data To Assist With Querying
+    FilePath <-  ProjectDirectory + "\\OrderInformation\\" + "StoreCodeList.txt"     
+    File.WriteAllLines(FilePath , unique_store_code_list)
+
+    FilePath <-  ProjectDirectory + "\\OrderInformation\\" + "SupplierNameList.txt"  
+    File.WriteAllLines(FilePath , unique_supplier_name_list)
+
+    FilePath <-  ProjectDirectory + "\\OrderInformation\\" + "SupplierTypeList.txt"  
+    File.WriteAllLines(FilePath , unqiue_supplier_type_list)
+
+    FilePath <-  ProjectDirectory + "\\OrderInformation\\" + "DateList.txt"  
+    File.WriteAllLines(FilePath , unique_date_list)
+
+
 
 let main =
     
+    //Read Path For StoreCode File Path
     Console.WriteLine("Input Directory That Contains Store Codes")
     StoreCodesFile <- Console.ReadLine()
+    Console.WriteLine("")
 
+    //Read Path For Data Location
     Console.WriteLine("Input Directory That Contains Store Data")
     DataDirectoryPath <- Console.ReadLine()
 
-    //FileName Is String List , To Store Directory Files , We Convert ToArray
+    //FileName Is String Array To Store Directory Files
     let FileNames =  Directory.GetFiles(DataDirectoryPath)
-
-    Console.WriteLine("Loading Data")
-
-    //Declare New StopWatch Variable To Track Time
-    let stopwatch : Stopwatch = new Stopwatch()
     
-    //Start StopWatch
-    stopwatch.Start()
-    
+    Console.WriteLine("")
+    Console.WriteLine("Loading Data...")
+    Console.WriteLine("")
+
+    //Load Order System Works Comparatively To The C# Load Data System - That Said We Take The Same Logic & Essentially Translate It
+    //
     for filename in FileNames do
-        FileNameExt   <- Path.GetFileName(filename)
-        FileName      <- Path.GetFileNameWithoutExtension(filename)
-        FileNameSplit <- FileName.Split('_')
-        OrderData     <- File.ReadAllLines(filename)
+
+        let FileNameExt = Path.GetFileName(filename)
+        let FileName = Path.GetFileNameWithoutExtension(filename)
+        let FileNameSplit = FileName.Split('_')
+        let OrderData  = File.ReadAllLines(filename)
      
         for orderdata in OrderData do
-            OrderSplit <- orderdata.Split(',')
-            StoreCode  <- FileNameSplit.[0]
-            date <- new Date(FileNameSplit.[1], FileNameSplit.[2])
-            SupplierName <- OrderSplit.[0]
-            SupplierType <- OrderSplit.[1]
-            Cost <- Convert.ToDouble(OrderSplit.[2])
-            Order <- new Order(StoreCode , date , SupplierName , SupplierType , Cost)
-            Orders.Add(Order)
-    stopwatch.Stop()
-
-    Console.WriteLine("Finished Loading " + Convert.ToString(Orders.Count) + " files in " + Convert.ToString(Convert.ToDouble(stopwatch.ElapsedMilliseconds)/1000.0) + " seconds." + "\n")
+            let order_split = orderdata.Split(',')
+            let store_code  = FileNameSplit.[0]
+            let date = new Date(FileNameSplit.[1], FileNameSplit.[2])
+            let supplier_name = order_split.[0]
+            let supplier_type = order_split.[1]
+            let cost = Convert.ToDouble(order_split.[2])
+            let order = new Order(store_code , date , supplier_name , supplier_type , cost)
+            Orders.Add(order)
     
+    //Generates Order Lists , Lists Will Be Used To Get Unique Order Data For Storing As Reference To What TO Search
+    LoadLists()
+
+    Console.WriteLine("All Order Data Has Loaded : Proceed To The Application")
+
+    //Alot Of Data Is Processed Then Stored , GarbageCollector Will Free Up Unused Memory Once Used By Application To Process Data
+    //The Only Memory Being Left Being Consumed Will Be "Order" Data. An Example Of Data That Will Be Cleared Is The Dupe Data From
+    //Load Lists Function , Since The Data Is Local And Is No Longer Needed, That Data Memory Used To Store Local Data Is Freed
+    GC.Collect()
+
+    //Application Loop
     while QuitApplication = false do
         QueryMenu()
     Console.WriteLine("Goodbye :)")
