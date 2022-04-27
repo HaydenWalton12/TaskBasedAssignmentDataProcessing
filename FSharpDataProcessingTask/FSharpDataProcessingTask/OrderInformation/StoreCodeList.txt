@@ -1,100 +1,100 @@
-ABE1 : Aberdeen 1
-ABE2 : Aberdeen 2
-ARM1 : Armagh
-BAN1 : Bangor
-BAT1 : Bath 1
-BAT2 : Bath 2
-BEL1 : Belfast 1
-BEL2 : Belfast 2
-BIR1 : Birmingham 1
-BIR2 : Birmingham 2
-BIR3 : Birmingham 3
-BRA1 : Bradford
-HOV1 : Brighton and Hove
-BRI1 : Bristol
-CAM1 : Cambridge
-CAN1 : Canterbury
-CAR1 : Cardiff 1
-CAR2 : Cardiff 2
-CAR3 : Cardiff 3
-CAR4 : Carlisle
-CHE1 : Chester
-CHI1 : Chichester
-LON1 : City of London 1
-LON2 : City of London 2
-LON3 : City of London 3
-LON4 : City of London 4
-COV1 : Coventry 1
-COV2 : Coventry 2
-DER1 : Derby 1
-DER2 : Derby 2
-DUN1 : Dundee 1
-DUN2 : Dundee 2
-DUR1 : Durham
-EDI1 : Edinburgh 1
-EDI2 : Edinburgh 2
-EDI3 : Edinburgh 3
-EDI4 : Edinburgh 4
-ELY1 : Ely
-EXE1 : Exeter
-GLA1 : Glasgow 1
-GLA2 : Glasgow 2
-GLO1 : Gloucester
-HER1 : Hereford
-INV1 : Inverness
-HUL1 : Kingston upon Hull
-LAN1 : Lancaster
-LEE1 : Leeds
-LEI1 : Leicester
-LIC1 : Lichfield 1
-LIC2 : Lichfield 2
-LIN1 : Lincoln 1
-LIN2 : Lincoln 2
-LIS1 : Lisburn
-LIV1 : Liverpool 1
-LIV2 : Liverpool 2
-LIV3 : Liverpool 3
-LON5 : Londonderry
-MAN1 : Manchester 1
-MAN2 : Manchester 2
-MAN3 : Manchester 3
-TYN1 : Newcastle upon Tyne 1
-TYN2 : Newcastle upon Tyne 2
-NEW1 : Newport
-NEW2 : Newry
-NOR1 : Norwich
-NOT1 : Nottingham 1
-NOT2 : Nottingham 2
-OXF1 : Oxford 1
-OXF2 : Oxford 2
-PET1 : Peterborough
-PLY1 : Plymouth
-POR1 : Portsmouth
-PRE1 : Preston 1
-PRE2 : Preston 2
-RIP1 : Ripon
-SAL1 : Salford
-SAL2 : Salisbury
-SHE1 : Sheffield 1
-SHE2 : Sheffield 2
-SOU1 : Southampton 1
-SOU2 : Southampton 2
-ALB1 : St Albans
-DAV1 : St Davids
-STA1 : Stafford
-STI1 : Stirling
-STO1 : Stoke-on-Trent 1
-STO2 : Stoke-on-Trent 2
-SUN1 : Sunderland
-SWA1 : Swansea
-TRU1 : Truro
-WAK1 : Wakefield
-WEL1 : Wells 1
-WEL2 : Wells 2
-WES1 : Westminster 1
-WES2 : Westminster 2
-WIN1 : Winchester
-WOL1 : Wolverhampton 1
-WOL2 : Wolverhampton 2
-WOR1 : Worcester
-YOR1 : York
+ABE1
+ABE2
+ARM1
+BAN1
+BAT1
+BAT2
+BEL1
+BEL2
+BIR1
+BIR2
+BIR3
+BRA1
+HOV1
+BRI1
+CAM1
+CAN1
+CAR1
+CAR2
+CAR3
+CAR4
+CHE1
+CHI1
+LON1
+LON2
+LON3
+LON4
+COV1
+COV2
+DER1
+DER2
+DUN1
+DUN2
+DUR1
+EDI1
+EDI2
+EDI3
+EDI4
+ELY1
+EXE1
+GLA1
+GLA2
+GLO1
+HER1
+INV1
+HUL1
+LAN1
+LEE1
+LEI1
+LIC1
+LIC2
+LIN1
+LIN2
+LIS1
+LIV1
+LIV2
+LIV3
+LON5
+MAN1
+MAN2
+MAN3
+TYN1
+TYN2
+NEW1
+NEW2
+NOR1
+NOT1
+NOT2
+OXF1
+OXF2
+PET1
+PLY1
+POR1
+PRE1
+PRE2
+RIP1
+SAL1
+SAL2
+SHE1
+SHE2
+SOU1
+SOU2
+ALB1
+DAV1
+STA1
+STI1
+STO1
+STO2
+SUN1
+SWA1
+TRU1
+WAK1
+WEL1
+WEL2
+WES1
+WES2
+WIN1
+WOL1
+WOL2
+WOR1
+YOR1

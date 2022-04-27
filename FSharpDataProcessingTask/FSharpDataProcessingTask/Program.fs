@@ -76,6 +76,12 @@ let mutable DateQuery = ""
 let mutable SupplierTypeQuery = ""
 let mutable SupplierNameQuery = ""
 
+//Stores Lists For Checking For Correct QueryData
+let mutable StoreCodeList = List<string>()
+let mutable SupplierNameList = List<string>()
+let mutable SupplierTypeList = List<string>()
+let mutable DateList = List<string>()
+
 //Stores Menu Choice
 let mutable QueryMenuChoice = ""
 
@@ -129,9 +135,9 @@ let SaveQueryData() =
 //Gets The Total Sum of QueriedOrders
 //Solution Found From - https://stackoverflow.com/questions/824934/the-sum-of-a-specific-property-of-all-items-in-a-list
 //Further Assisted By - https://docs.microsoft.com/en-us/dotnet/fsharp/language-reference/query-expressions
-let GetTotalCost(queriedresults : List<Order>) = 
+let GetTotalCost(queried_results : List<Order>) = 
     
-    let orders_sum_cost = queriedresults.ToArray()
+    let orders_sum_cost = queried_results.ToArray()
     
     let query =
         orders_sum_cost
@@ -141,68 +147,82 @@ let GetTotalCost(queriedresults : List<Order>) =
 
 //Queries Data Based From Entered StoreQuery Choice - 
 //The Logic For This Function Applies For Each Other Query Filter Function
-let StoreQueryFilter(queriedresults : List<Order>) = 
-  
-  //This If Will Only Be True, If This Is First Query Filter Applied To An Query Instance ,If Not , We Use Alternate Else If Below
-  if queriedresults.Count = 0 then
-     for order in Orders do 
-            if order.StoreCode = StoreQuery then
-               queriedresults.Add(order) 
-  //Said Prior , If This Isnt The First Instance Of Query Filtering For Current Instance , We Filter Threw
-  //Current Queried Results, We Check For Each Current Queried Order That Doesnt Match Up With Query Parameter Given
-  //If Condition True , We Add Current Order To "OrdersRemoved" List
-  else if queriedresults.Count > 0 then
-      for order in queriedresults do 
-          if order.StoreCode <> StoreQuery then
-              OrdersRemoved.Add(order) 
-  //We Iterate Threw Orders Removed List (Populated Above) , To Remove Each Order From Queried Results, Updating Current Queried Instance
-  for order in OrdersRemoved do 
-     queriedresults.Remove(order)
-let DateQueryFilter(queriedresults : List<Order>) = 
-    
-    let dateSplit = DateQuery.Split(',')
+let StoreQueryFilter(queried_results : List<Order>) = 
+  if  StoreCodeList.Contains(StoreQuery) then
+      //This If Will Only Be True, If This Is First Query Filter Applied To An Query Instance ,If Not , We Use Alternate Else If Below
+      if queried_results.Count = 0 then
+         for order in Orders do 
+                if order.StoreCode = StoreQuery then
+                   queried_results.Add(order) 
+      //Said Prior , If This Isnt The First Instance Of Query Filtering For Current Instance , We Filter Threw
+      //Current Queried Results, We Check For Each Current Queried Order That Doesnt Match Up With Query Parameter Given
+      //If Condition True , We Add Current Order To "OrdersRemoved" List
+      else if queried_results.Count > 0 then
+          for order in queried_results do 
+              if order.StoreCode <> StoreQuery then
+                  OrdersRemoved.Add(order) 
+      //We Iterate Threw Orders Removed List (Populated Above) , To Remove Each Order From Queried Results, Updating Current Queried Instance
+      for order in OrdersRemoved do 
+         queried_results.Remove(order)
+  else 
+    Console.WriteLine("Invalid Query Search - Check StoreCode List For Correct Codes")
+    StoreQuery <- "Previous Query Invalid"
 
-    if queriedresults.Count = 0 then
-        for order in Orders do  
-            if order.Date.Week = dateSplit.[0] && order.Date.Year = dateSplit.[1] then
-                  queriedresults.Add(order)    
 
-    else if queriedresults.Count > 0 then
-        for order in queriedresults do  
-            if order.Date.Week <> dateSplit.[0] && order.Date.Year <> dateSplit.[1] then
-                OrdersRemoved.Add(order) 
+let DateQueryFilter(queried_results : List<Order>) = 
+    if  DateList.Contains(DateQuery) then 
+        let dateSplit = DateQuery.Split(',')
 
-    for order in OrdersRemoved do 
-       queriedresults.Remove(order)
-let SupplierNameFilter(queriedresults : List<Order>) = 
+        if queried_results.Count = 0 then
+            for order in Orders do  
+                if order.Date.Week = dateSplit.[0] && order.Date.Year = dateSplit.[1] then
+                      queried_results.Add(order)    
 
-    if queriedresults.Count = 0 then
+        else if queried_results.Count > 0 then
+            for order in queried_results do  
+                if order.Date.Week <> dateSplit.[0] && order.Date.Year <> dateSplit.[1] then
+                    OrdersRemoved.Add(order) 
+
+        for order in OrdersRemoved do 
+           queried_results.Remove(order)
+    else 
+      Console.WriteLine("Invalid Query Search - Check DateList List For Correct Dates")
+      DateQuery <- "Previous Query Invalid"
+
+let SupplierNameFilter(queried_results : List<Order>) = 
+   if  SupplierNameList.Contains(SupplierNameQuery) then 
+    if queried_results.Count = 0 then
         for order in Orders do 
              if order.SupplierName = SupplierNameQuery then
-                  queriedresults.Add(order)    
+                  queried_results.Add(order)    
 
-    else if queriedresults.Count > 0 then
-        for order in queriedresults do 
+    else if queried_results.Count > 0 then
+        for order in queried_results do 
             if order.SupplierName <> SupplierNameQuery then
                 OrdersRemoved.Add(order) 
 
     for order in OrdersRemoved do 
-       queriedresults.Remove(order)
-let SupplierTypeFilter(queriedresults : List<Order>) = 
-  
-    if queriedresults.Count = 0 then
-     for order in Orders do  
-             if order.SupplierType = SupplierTypeQuery then
-                  queriedresults.Add(order)
-
-    else if queriedresults.Count > 0 then
+       queried_results.Remove(order)
+   else 
+      Console.WriteLine("Invalid Query Search - Check SupplierName List For Correct SupplierName List")
+      SupplierNameQuery <- "Previous Query Invalid"
+let SupplierTypeFilter(queried_results : List<Order>) = 
+    if  SupplierTypeList.Contains(SupplierTypeQuery) then 
+        if queried_results.Count = 0 then
          for order in Orders do  
-                if order.SupplierType <> SupplierTypeQuery then
-                OrdersRemoved.Add(order) 
+                 if order.SupplierType = SupplierTypeQuery then
+                      queried_results.Add(order)
 
-    for order in OrdersRemoved do 
-       queriedresults.Remove(order)
+        else if queried_results.Count > 0 then
+             for order in Orders do  
+                    if order.SupplierType <> SupplierTypeQuery then
+                    OrdersRemoved.Add(order) 
 
+        for order in OrdersRemoved do 
+           queried_results.Remove(order)
+    else 
+       Console.WriteLine("Invalid Query Search - Check SupplierType List For Correct SupplierType List")
+       SupplierTypeQuery <- "Previous Query Invalid"
 //Opens Specficied Location Given Within Directory 
 //Solution From - https://stackoverflow.com/questions/1132422/open-a-folder-using-process-start
 let OpenSavedOrdersLocation() =
@@ -338,35 +358,39 @@ let LoadLists() =
         date_dupe.Add("Week - " + order.Date.Week + " Year - " + order.Date.Year )
     
     //Using .Distinct , We Can Remove All Duplicated Data ,Creating A Unique List For Each 
-    let unique_supplier_name_list = supplier_name_dupe.Distinct().ToList()
-    let unqiue_supplier_type_list = supplier_type_dupe.Distinct().ToList()
-    let unique_date_list = date_dupe.Distinct().ToList()
+    SupplierNameList <- supplier_name_dupe.Distinct().ToList()
+    SupplierTypeList <-  supplier_type_dupe.Distinct().ToList()
+    DateList <- date_dupe.Distinct().ToList()
     
     //String Array Storing All StoreCode Files - By Reading All Lines From StoreCodeFile
     let store_code = File.ReadAllLines(StoreCodesFile)
-    let unique_store_code_list = List<string>()
+
 
     //Same Thing We Do Above Except There Is No Duplicate Data
     for storecode in store_code.AsParallel() do
         let store_code_split = storecode.Split(',')
-        unique_store_code_list.Add(store_code_split.[0] + " : " + store_code_split.[1])
+        StoreCodeList.Add(store_code_split.[0])
 
     //Write Unique List Results Into TXT Files , Allows For Cleaner Searching & Storing Of Unique
     //Data To Assist With Finding Querying Data
 
     FilePath <-  ProjectDirectory + "\\OrderInformation\\" + "StoreCodeList.txt"     
-    File.WriteAllLines(FilePath , unique_store_code_list)
+    File.WriteAllLines(FilePath , StoreCodeList)
 
     FilePath <-  ProjectDirectory + "\\OrderInformation\\" + "SupplierNameList.txt"  
-    File.WriteAllLines(FilePath , unique_supplier_name_list)
+    File.WriteAllLines(FilePath , SupplierNameList)
 
     FilePath <-  ProjectDirectory + "\\OrderInformation\\" + "SupplierTypeList.txt"  
-    File.WriteAllLines(FilePath , unqiue_supplier_type_list)
+    File.WriteAllLines(FilePath , SupplierTypeList)
 
     FilePath <-  ProjectDirectory + "\\OrderInformation\\" + "DateList.txt"  
-    File.WriteAllLines(FilePath , unique_date_list)
+    File.WriteAllLines(FilePath , DateList)
 
+    let date_replace = List<string>()
 
+    for order in Orders.AsParallel() do
+          date_replace.Add(order.Date.Week + "," + order.Date.Year )
+    DateList <- date_replace.Distinct().ToList()
 
 let main =
     
