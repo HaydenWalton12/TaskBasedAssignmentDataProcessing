@@ -1,0 +1,3366 @@
+Order0
+StoreCode : HOV1
+Date - Week -10 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 70.83
+Order0
+StoreCode : HOV1
+Date - Week -10 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 54.92
+Order0
+StoreCode : HOV1
+Date - Week -10 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 13.09
+Order0
+StoreCode : HOV1
+Date - Week -10 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 55.49
+Order0
+StoreCode : HOV1
+Date - Week -10 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 29.65
+Order0
+StoreCode : HOV1
+Date - Week -10 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 110.57
+Order0
+StoreCode : HOV1
+Date - Week -10 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 119.18
+Order0
+StoreCode : HOV1
+Date - Week -10 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 113.34
+Order0
+StoreCode : HOV1
+Date - Week -10 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 56.71
+Order0
+StoreCode : HOV1
+Date - Week -10 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 57.75
+Order0
+StoreCode : HOV1
+Date - Week -10 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 68.11
+Order0
+StoreCode : HOV1
+Date - Week -10 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 16.16
+Order0
+StoreCode : HOV1
+Date - Week -10 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 26.18
+Order0
+StoreCode : HOV1
+Date - Week -11 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 3.63
+Order0
+StoreCode : HOV1
+Date - Week -11 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 13.58
+Order0
+StoreCode : HOV1
+Date - Week -11 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 29.37
+Order0
+StoreCode : HOV1
+Date - Week -11 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 34.68
+Order0
+StoreCode : HOV1
+Date - Week -11 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 11.03
+Order0
+StoreCode : HOV1
+Date - Week -11 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 12.99
+Order0
+StoreCode : HOV1
+Date - Week -12 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 40.98
+Order0
+StoreCode : HOV1
+Date - Week -12 Year - 2014
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 18.83
+Order0
+StoreCode : HOV1
+Date - Week -12 Year - 2014
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 38.71
+Order0
+StoreCode : HOV1
+Date - Week -12 Year - 2014
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 23.28
+Order0
+StoreCode : HOV1
+Date - Week -12 Year - 2014
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 10.05
+Order0
+StoreCode : HOV1
+Date - Week -12 Year - 2014
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 31.55
+Order0
+StoreCode : HOV1
+Date - Week -12 Year - 2014
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 32.08
+Order0
+StoreCode : HOV1
+Date - Week -12 Year - 2014
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 80.93
+Order0
+StoreCode : HOV1
+Date - Week -12 Year - 2014
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 8.51
+Order0
+StoreCode : HOV1
+Date - Week -12 Year - 2014
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 3.66
+Order0
+StoreCode : HOV1
+Date - Week -12 Year - 2014
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 111.33
+Order0
+StoreCode : HOV1
+Date - Week -12 Year - 2014
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 31.6
+Order0
+StoreCode : HOV1
+Date - Week -12 Year - 2014
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 5.89
+Order0
+StoreCode : HOV1
+Date - Week -12 Year - 2014
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 16.99
+Order0
+StoreCode : HOV1
+Date - Week -12 Year - 2014
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 46.64
+Order0
+StoreCode : HOV1
+Date - Week -13 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 15.05
+Order0
+StoreCode : HOV1
+Date - Week -13 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 9.87
+Order0
+StoreCode : HOV1
+Date - Week -13 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 20.12
+Order0
+StoreCode : HOV1
+Date - Week -13 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 70.32
+Order0
+StoreCode : HOV1
+Date - Week -13 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 63.97
+Order0
+StoreCode : HOV1
+Date - Week -13 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 3.52
+Order0
+StoreCode : HOV1
+Date - Week -13 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 13.35
+Order0
+StoreCode : HOV1
+Date - Week -13 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 6.61
+Order0
+StoreCode : HOV1
+Date - Week -14 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 84.81
+Order0
+StoreCode : HOV1
+Date - Week -15 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 8.46
+Order0
+StoreCode : HOV1
+Date - Week -15 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 36.14
+Order0
+StoreCode : HOV1
+Date - Week -15 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 0.07
+Order0
+StoreCode : HOV1
+Date - Week -15 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 32.1
+Order0
+StoreCode : HOV1
+Date - Week -15 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 10.21
+Order0
+StoreCode : HOV1
+Date - Week -15 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 5.47
+Order0
+StoreCode : HOV1
+Date - Week -15 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 9.52
+Order0
+StoreCode : HOV1
+Date - Week -15 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 65.59
+Order0
+StoreCode : HOV1
+Date - Week -15 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 23.15
+Order0
+StoreCode : HOV1
+Date - Week -15 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 0.4
+Order0
+StoreCode : HOV1
+Date - Week -15 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 47.26
+Order0
+StoreCode : HOV1
+Date - Week -15 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 58.58
+Order0
+StoreCode : HOV1
+Date - Week -15 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 0.45
+Order0
+StoreCode : HOV1
+Date - Week -15 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 73.15
+Order0
+StoreCode : HOV1
+Date - Week -15 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 24.41
+Order0
+StoreCode : HOV1
+Date - Week -15 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 58.2
+Order0
+StoreCode : HOV1
+Date - Week -15 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 3.94
+Order0
+StoreCode : HOV1
+Date - Week -15 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 13.17
+Order0
+StoreCode : HOV1
+Date - Week -15 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 15.44
+Order0
+StoreCode : HOV1
+Date - Week -15 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 11.74
+Order0
+StoreCode : HOV1
+Date - Week -15 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 6.22
+Order0
+StoreCode : HOV1
+Date - Week -15 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 4.57
+Order0
+StoreCode : HOV1
+Date - Week -15 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 48.08
+Order0
+StoreCode : HOV1
+Date - Week -16 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 7.84
+Order0
+StoreCode : HOV1
+Date - Week -16 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 8.93
+Order0
+StoreCode : HOV1
+Date - Week -16 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 12.09
+Order0
+StoreCode : HOV1
+Date - Week -16 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 78.16
+Order0
+StoreCode : HOV1
+Date - Week -16 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 8.83
+Order0
+StoreCode : HOV1
+Date - Week -16 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 13.7
+Order0
+StoreCode : HOV1
+Date - Week -17 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 17.04
+Order0
+StoreCode : HOV1
+Date - Week -17 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 14.22
+Order0
+StoreCode : HOV1
+Date - Week -17 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 76.67
+Order0
+StoreCode : HOV1
+Date - Week -17 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 1.78
+Order0
+StoreCode : HOV1
+Date - Week -17 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 25.86
+Order0
+StoreCode : HOV1
+Date - Week -17 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 39.35
+Order0
+StoreCode : HOV1
+Date - Week -17 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 11.03
+Order0
+StoreCode : HOV1
+Date - Week -17 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 62.29
+Order0
+StoreCode : HOV1
+Date - Week -17 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 104.98
+Order0
+StoreCode : HOV1
+Date - Week -17 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 23.03
+Order0
+StoreCode : HOV1
+Date - Week -17 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 27.37
+Order0
+StoreCode : HOV1
+Date - Week -17 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 41.9
+Order0
+StoreCode : HOV1
+Date - Week -17 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 20.28
+Order0
+StoreCode : HOV1
+Date - Week -17 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 27.08
+Order0
+StoreCode : HOV1
+Date - Week -17 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 9.19
+Order0
+StoreCode : HOV1
+Date - Week -17 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 92.88
+Order0
+StoreCode : HOV1
+Date - Week -18 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 4.65
+Order0
+StoreCode : HOV1
+Date - Week -18 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 28.52
+Order0
+StoreCode : HOV1
+Date - Week -18 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 0.5
+Order0
+StoreCode : HOV1
+Date - Week -18 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 82.24
+Order0
+StoreCode : HOV1
+Date - Week -18 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 3.91
+Order0
+StoreCode : HOV1
+Date - Week -18 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 9.91
+Order0
+StoreCode : HOV1
+Date - Week -18 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 1.6
+Order0
+StoreCode : HOV1
+Date - Week -18 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 46.45
+Order0
+StoreCode : HOV1
+Date - Week -18 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 48.42
+Order0
+StoreCode : HOV1
+Date - Week -19 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 17.73
+Order0
+StoreCode : HOV1
+Date - Week -19 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 37.31
+Order0
+StoreCode : HOV1
+Date - Week -19 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 116.65
+Order0
+StoreCode : HOV1
+Date - Week -19 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 25.81
+Order0
+StoreCode : HOV1
+Date - Week -19 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 61.32
+Order0
+StoreCode : HOV1
+Date - Week -19 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 62.88
+Order0
+StoreCode : HOV1
+Date - Week -1 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 9.22
+Order0
+StoreCode : HOV1
+Date - Week -1 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 127.52
+Order0
+StoreCode : HOV1
+Date - Week -1 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 19.46
+Order0
+StoreCode : HOV1
+Date - Week -1 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 9.01
+Order0
+StoreCode : HOV1
+Date - Week -1 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 1.68
+Order0
+StoreCode : HOV1
+Date - Week -1 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 2.93
+Order0
+StoreCode : HOV1
+Date - Week -1 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 17.07
+Order0
+StoreCode : HOV1
+Date - Week -1 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 6.6
+Order0
+StoreCode : HOV1
+Date - Week -1 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 9.01
+Order0
+StoreCode : HOV1
+Date - Week -1 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 27.46
+Order0
+StoreCode : HOV1
+Date - Week -1 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 30.98
+Order0
+StoreCode : HOV1
+Date - Week -1 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 81.81
+Order0
+StoreCode : HOV1
+Date - Week -1 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 33.91
+Order0
+StoreCode : HOV1
+Date - Week -1 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 27.93
+Order0
+StoreCode : HOV1
+Date - Week -20 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 96.35
+Order0
+StoreCode : HOV1
+Date - Week -20 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 30.34
+Order0
+StoreCode : HOV1
+Date - Week -20 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 60
+Order0
+StoreCode : HOV1
+Date - Week -21 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 79.57
+Order0
+StoreCode : HOV1
+Date - Week -21 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 73.76
+Order0
+StoreCode : HOV1
+Date - Week -21 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 19.19
+Order0
+StoreCode : HOV1
+Date - Week -21 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 13.4
+Order0
+StoreCode : HOV1
+Date - Week -21 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 8.66
+Order0
+StoreCode : HOV1
+Date - Week -21 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 99.9
+Order0
+StoreCode : HOV1
+Date - Week -21 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 9.26
+Order0
+StoreCode : HOV1
+Date - Week -21 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 84.5
+Order0
+StoreCode : HOV1
+Date - Week -21 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 1.97
+Order0
+StoreCode : HOV1
+Date - Week -21 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 8.54
+Order0
+StoreCode : HOV1
+Date - Week -21 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 13.59
+Order0
+StoreCode : HOV1
+Date - Week -21 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 25.16
+Order0
+StoreCode : HOV1
+Date - Week -21 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 94.82
+Order0
+StoreCode : HOV1
+Date - Week -21 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 58.58
+Order0
+StoreCode : HOV1
+Date - Week -21 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 9.88
+Order0
+StoreCode : HOV1
+Date - Week -21 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 49.85
+Order0
+StoreCode : HOV1
+Date - Week -22 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 0.93
+Order0
+StoreCode : HOV1
+Date - Week -22 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 131.12
+Order0
+StoreCode : HOV1
+Date - Week -23 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 81.54
+Order0
+StoreCode : HOV1
+Date - Week -23 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 23.86
+Order0
+StoreCode : HOV1
+Date - Week -23 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 4.78
+Order0
+StoreCode : HOV1
+Date - Week -23 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 8.02
+Order0
+StoreCode : HOV1
+Date - Week -23 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 34.38
+Order0
+StoreCode : HOV1
+Date - Week -23 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 99.18
+Order0
+StoreCode : HOV1
+Date - Week -23 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 64.61
+Order0
+StoreCode : HOV1
+Date - Week -24 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 65.85
+Order0
+StoreCode : HOV1
+Date - Week -24 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 69.33
+Order0
+StoreCode : HOV1
+Date - Week -24 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 89.74
+Order0
+StoreCode : HOV1
+Date - Week -24 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 10.14
+Order0
+StoreCode : HOV1
+Date - Week -24 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 72.08
+Order0
+StoreCode : HOV1
+Date - Week -24 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 81.06
+Order0
+StoreCode : HOV1
+Date - Week -24 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 5.97
+Order0
+StoreCode : HOV1
+Date - Week -24 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 15.73
+Order0
+StoreCode : HOV1
+Date - Week -24 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 28.69
+Order0
+StoreCode : HOV1
+Date - Week -24 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 65.37
+Order0
+StoreCode : HOV1
+Date - Week -24 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 57.33
+Order0
+StoreCode : HOV1
+Date - Week -24 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 10.04
+Order0
+StoreCode : HOV1
+Date - Week -24 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 37.26
+Order0
+StoreCode : HOV1
+Date - Week -24 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 2.68
+Order0
+StoreCode : HOV1
+Date - Week -24 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 91.29
+Order0
+StoreCode : HOV1
+Date - Week -24 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 35.16
+Order0
+StoreCode : HOV1
+Date - Week -24 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 4.26
+Order0
+StoreCode : HOV1
+Date - Week -24 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 8.78
+Order0
+StoreCode : HOV1
+Date - Week -25 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 0.54
+Order0
+StoreCode : HOV1
+Date - Week -25 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 0.58
+Order0
+StoreCode : HOV1
+Date - Week -25 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 12.16
+Order0
+StoreCode : HOV1
+Date - Week -25 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 54.11
+Order0
+StoreCode : HOV1
+Date - Week -25 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 92.43
+Order0
+StoreCode : HOV1
+Date - Week -25 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 67.66
+Order0
+StoreCode : HOV1
+Date - Week -25 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 0.93
+Order0
+StoreCode : HOV1
+Date - Week -25 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 65.41
+Order0
+StoreCode : HOV1
+Date - Week -25 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 22.69
+Order0
+StoreCode : HOV1
+Date - Week -25 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 57.23
+Order0
+StoreCode : HOV1
+Date - Week -26 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 49.07
+Order0
+StoreCode : HOV1
+Date - Week -26 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 38.4
+Order0
+StoreCode : HOV1
+Date - Week -26 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 115.07
+Order0
+StoreCode : HOV1
+Date - Week -26 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 0.96
+Order0
+StoreCode : HOV1
+Date - Week -26 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 29.02
+Order0
+StoreCode : HOV1
+Date - Week -26 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 55.43
+Order0
+StoreCode : HOV1
+Date - Week -26 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 41.46
+Order0
+StoreCode : HOV1
+Date - Week -26 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 0.23
+Order0
+StoreCode : HOV1
+Date - Week -26 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 5.97
+Order0
+StoreCode : HOV1
+Date - Week -26 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 52.37
+Order0
+StoreCode : HOV1
+Date - Week -26 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 65.24
+Order0
+StoreCode : HOV1
+Date - Week -26 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 13.14
+Order0
+StoreCode : HOV1
+Date - Week -26 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 23.15
+Order0
+StoreCode : HOV1
+Date - Week -26 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 99.97
+Order0
+StoreCode : HOV1
+Date - Week -26 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 2.82
+Order0
+StoreCode : HOV1
+Date - Week -26 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 12.17
+Order0
+StoreCode : HOV1
+Date - Week -26 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 25.28
+Order0
+StoreCode : HOV1
+Date - Week -26 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 2.32
+Order0
+StoreCode : HOV1
+Date - Week -26 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 30.07
+Order0
+StoreCode : HOV1
+Date - Week -27 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 47.6
+Order0
+StoreCode : HOV1
+Date - Week -27 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 27.44
+Order0
+StoreCode : HOV1
+Date - Week -27 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 2.7
+Order0
+StoreCode : HOV1
+Date - Week -27 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 64.31
+Order0
+StoreCode : HOV1
+Date - Week -27 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 123.64
+Order0
+StoreCode : HOV1
+Date - Week -27 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 15.83
+Order0
+StoreCode : HOV1
+Date - Week -27 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 4.47
+Order0
+StoreCode : HOV1
+Date - Week -27 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 13.51
+Order0
+StoreCode : HOV1
+Date - Week -27 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 95.59
+Order0
+StoreCode : HOV1
+Date - Week -27 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 6.99
+Order0
+StoreCode : HOV1
+Date - Week -27 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 78.16
+Order0
+StoreCode : HOV1
+Date - Week -27 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 1.17
+Order0
+StoreCode : HOV1
+Date - Week -27 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 11.53
+Order0
+StoreCode : HOV1
+Date - Week -28 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 27.64
+Order0
+StoreCode : HOV1
+Date - Week -28 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 7.99
+Order0
+StoreCode : HOV1
+Date - Week -29 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 47.68
+Order0
+StoreCode : HOV1
+Date - Week -29 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 88.8
+Order0
+StoreCode : HOV1
+Date - Week -29 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 22.52
+Order0
+StoreCode : HOV1
+Date - Week -29 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 36.54
+Order0
+StoreCode : HOV1
+Date - Week -29 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 29.24
+Order0
+StoreCode : HOV1
+Date - Week -29 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 13.48
+Order0
+StoreCode : HOV1
+Date - Week -29 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 33.5
+Order0
+StoreCode : HOV1
+Date - Week -29 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 102.39
+Order0
+StoreCode : HOV1
+Date - Week -29 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 19.56
+Order0
+StoreCode : HOV1
+Date - Week -29 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 12.08
+Order0
+StoreCode : HOV1
+Date - Week -29 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 7.43
+Order0
+StoreCode : HOV1
+Date - Week -29 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 6.96
+Order0
+StoreCode : HOV1
+Date - Week -29 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 62.14
+Order0
+StoreCode : HOV1
+Date - Week -29 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 16.18
+Order0
+StoreCode : HOV1
+Date - Week -29 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 8.75
+Order0
+StoreCode : HOV1
+Date - Week -29 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 54.05
+Order0
+StoreCode : HOV1
+Date - Week -29 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 99.66
+Order0
+StoreCode : HOV1
+Date - Week -29 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 15.86
+Order0
+StoreCode : HOV1
+Date - Week -2 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 32.34
+Order0
+StoreCode : HOV1
+Date - Week -2 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 144.96
+Order0
+StoreCode : HOV1
+Date - Week -2 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 19.84
+Order0
+StoreCode : HOV1
+Date - Week -30 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 9.28
+Order0
+StoreCode : HOV1
+Date - Week -30 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 95.15
+Order0
+StoreCode : HOV1
+Date - Week -30 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 68.71
+Order0
+StoreCode : HOV1
+Date - Week -30 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 81.2
+Order0
+StoreCode : HOV1
+Date - Week -30 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 67.62
+Order0
+StoreCode : HOV1
+Date - Week -30 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 8.02
+Order0
+StoreCode : HOV1
+Date - Week -30 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 61.08
+Order0
+StoreCode : HOV1
+Date - Week -30 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 47.18
+Order0
+StoreCode : HOV1
+Date - Week -30 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 19.66
+Order0
+StoreCode : HOV1
+Date - Week -30 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 30.61
+Order0
+StoreCode : HOV1
+Date - Week -30 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 7.05
+Order0
+StoreCode : HOV1
+Date - Week -30 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 4.1
+Order0
+StoreCode : HOV1
+Date - Week -30 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 32.99
+Order0
+StoreCode : HOV1
+Date - Week -30 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 27.13
+Order0
+StoreCode : HOV1
+Date - Week -30 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 12.48
+Order0
+StoreCode : HOV1
+Date - Week -30 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 22.83
+Order0
+StoreCode : HOV1
+Date - Week -30 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 2.53
+Order0
+StoreCode : HOV1
+Date - Week -30 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 3.66
+Order0
+StoreCode : HOV1
+Date - Week -30 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 2.37
+Order0
+StoreCode : HOV1
+Date - Week -30 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 58.78
+Order0
+StoreCode : HOV1
+Date - Week -31 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 52.54
+Order0
+StoreCode : HOV1
+Date - Week -31 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 4.94
+Order0
+StoreCode : HOV1
+Date - Week -32 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 42.37
+Order0
+StoreCode : HOV1
+Date - Week -32 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 32.44
+Order0
+StoreCode : HOV1
+Date - Week -32 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 5.37
+Order0
+StoreCode : HOV1
+Date - Week -32 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 30.6
+Order0
+StoreCode : HOV1
+Date - Week -32 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 141.52
+Order0
+StoreCode : HOV1
+Date - Week -32 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 98.14
+Order0
+StoreCode : HOV1
+Date - Week -32 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 1.14
+Order0
+StoreCode : HOV1
+Date - Week -32 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 15.69
+Order0
+StoreCode : HOV1
+Date - Week -32 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 3.18
+Order0
+StoreCode : HOV1
+Date - Week -32 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 11.48
+Order0
+StoreCode : HOV1
+Date - Week -32 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 37.43
+Order0
+StoreCode : HOV1
+Date - Week -32 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 14.61
+Order0
+StoreCode : HOV1
+Date - Week -33 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 16.49
+Order0
+StoreCode : HOV1
+Date - Week -33 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 8.31
+Order0
+StoreCode : HOV1
+Date - Week -33 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 58.83
+Order0
+StoreCode : HOV1
+Date - Week -33 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 1.57
+Order0
+StoreCode : HOV1
+Date - Week -34 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 51.65
+Order0
+StoreCode : HOV1
+Date - Week -34 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 12.08
+Order0
+StoreCode : HOV1
+Date - Week -35 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 2.48
+Order0
+StoreCode : HOV1
+Date - Week -35 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 51
+Order0
+StoreCode : HOV1
+Date - Week -35 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 19.09
+Order0
+StoreCode : HOV1
+Date - Week -35 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 1.89
+Order0
+StoreCode : HOV1
+Date - Week -35 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 46.91
+Order0
+StoreCode : HOV1
+Date - Week -36 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 65.56
+Order0
+StoreCode : HOV1
+Date - Week -36 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 10.31
+Order0
+StoreCode : HOV1
+Date - Week -36 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 90.36
+Order0
+StoreCode : HOV1
+Date - Week -36 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 51.89
+Order0
+StoreCode : HOV1
+Date - Week -36 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 10.33
+Order0
+StoreCode : HOV1
+Date - Week -36 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 0.36
+Order0
+StoreCode : HOV1
+Date - Week -36 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 16.59
+Order0
+StoreCode : HOV1
+Date - Week -36 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 56.73
+Order0
+StoreCode : HOV1
+Date - Week -36 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 49.53
+Order0
+StoreCode : HOV1
+Date - Week -36 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 70.3
+Order0
+StoreCode : HOV1
+Date - Week -36 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 32.88
+Order0
+StoreCode : HOV1
+Date - Week -36 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 43.89
+Order0
+StoreCode : HOV1
+Date - Week -36 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 72.15
+Order0
+StoreCode : HOV1
+Date - Week -36 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 57.41
+Order0
+StoreCode : HOV1
+Date - Week -36 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 23.28
+Order0
+StoreCode : HOV1
+Date - Week -36 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 0.94
+Order0
+StoreCode : HOV1
+Date - Week -37 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 7.76
+Order0
+StoreCode : HOV1
+Date - Week -37 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 5.77
+Order0
+StoreCode : HOV1
+Date - Week -37 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 31.76
+Order0
+StoreCode : HOV1
+Date - Week -37 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 4.42
+Order0
+StoreCode : HOV1
+Date - Week -37 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 2.86
+Order0
+StoreCode : HOV1
+Date - Week -37 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 13.66
+Order0
+StoreCode : HOV1
+Date - Week -37 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 9.63
+Order0
+StoreCode : HOV1
+Date - Week -37 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 44.43
+Order0
+StoreCode : HOV1
+Date - Week -37 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 126.51
+Order0
+StoreCode : HOV1
+Date - Week -37 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 71.96
+Order0
+StoreCode : HOV1
+Date - Week -38 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 3.96
+Order0
+StoreCode : HOV1
+Date - Week -38 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 28.25
+Order0
+StoreCode : HOV1
+Date - Week -38 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 8.67
+Order0
+StoreCode : HOV1
+Date - Week -38 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 11.59
+Order0
+StoreCode : HOV1
+Date - Week -38 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 3.29
+Order0
+StoreCode : HOV1
+Date - Week -38 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 7.3
+Order0
+StoreCode : HOV1
+Date - Week -38 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 2.11
+Order0
+StoreCode : HOV1
+Date - Week -38 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 2.19
+Order0
+StoreCode : HOV1
+Date - Week -38 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 68.65
+Order0
+StoreCode : HOV1
+Date - Week -39 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 42.24
+Order0
+StoreCode : HOV1
+Date - Week -3 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 8.36
+Order0
+StoreCode : HOV1
+Date - Week -3 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 36.67
+Order0
+StoreCode : HOV1
+Date - Week -3 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 27.19
+Order0
+StoreCode : HOV1
+Date - Week -3 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 14.57
+Order0
+StoreCode : HOV1
+Date - Week -3 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 28.47
+Order0
+StoreCode : HOV1
+Date - Week -3 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 46.94
+Order0
+StoreCode : HOV1
+Date - Week -3 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 136.89
+Order0
+StoreCode : HOV1
+Date - Week -40 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 35.61
+Order0
+StoreCode : HOV1
+Date - Week -40 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 56.19
+Order0
+StoreCode : HOV1
+Date - Week -40 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 112.21
+Order0
+StoreCode : HOV1
+Date - Week -40 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 39.28
+Order0
+StoreCode : HOV1
+Date - Week -40 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 8.18
+Order0
+StoreCode : HOV1
+Date - Week -40 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 20.33
+Order0
+StoreCode : HOV1
+Date - Week -40 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 1.68
+Order0
+StoreCode : HOV1
+Date - Week -40 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 35.81
+Order0
+StoreCode : HOV1
+Date - Week -40 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 38.29
+Order0
+StoreCode : HOV1
+Date - Week -40 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 30.28
+Order0
+StoreCode : HOV1
+Date - Week -40 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 59.19
+Order0
+StoreCode : HOV1
+Date - Week -40 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 69.28
+Order0
+StoreCode : HOV1
+Date - Week -41 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 56.08
+Order0
+StoreCode : HOV1
+Date - Week -41 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 17.68
+Order0
+StoreCode : HOV1
+Date - Week -41 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 14.94
+Order0
+StoreCode : HOV1
+Date - Week -41 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 0.46
+Order0
+StoreCode : HOV1
+Date - Week -41 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 45.75
+Order0
+StoreCode : HOV1
+Date - Week -41 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 28.4
+Order0
+StoreCode : HOV1
+Date - Week -41 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 36.77
+Order0
+StoreCode : HOV1
+Date - Week -41 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 15.65
+Order0
+StoreCode : HOV1
+Date - Week -41 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 23.03
+Order0
+StoreCode : HOV1
+Date - Week -42 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 47.25
+Order0
+StoreCode : HOV1
+Date - Week -42 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 126.15
+Order0
+StoreCode : HOV1
+Date - Week -42 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 1.89
+Order0
+StoreCode : HOV1
+Date - Week -42 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 5.14
+Order0
+StoreCode : HOV1
+Date - Week -42 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 10.54
+Order0
+StoreCode : HOV1
+Date - Week -42 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 20.04
+Order0
+StoreCode : HOV1
+Date - Week -42 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 5.83
+Order0
+StoreCode : HOV1
+Date - Week -42 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 29.79
+Order0
+StoreCode : HOV1
+Date - Week -43 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 23.17
+Order0
+StoreCode : HOV1
+Date - Week -43 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 9.06
+Order0
+StoreCode : HOV1
+Date - Week -43 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 8.81
+Order0
+StoreCode : HOV1
+Date - Week -43 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 0.12
+Order0
+StoreCode : HOV1
+Date - Week -43 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 39.47
+Order0
+StoreCode : HOV1
+Date - Week -43 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 0.38
+Order0
+StoreCode : HOV1
+Date - Week -43 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 96.99
+Order0
+StoreCode : HOV1
+Date - Week -43 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 88.59
+Order0
+StoreCode : HOV1
+Date - Week -44 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 20.62
+Order0
+StoreCode : HOV1
+Date - Week -44 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 24.87
+Order0
+StoreCode : HOV1
+Date - Week -44 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 9
+Order0
+StoreCode : HOV1
+Date - Week -44 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 88.35
+Order0
+StoreCode : HOV1
+Date - Week -44 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 12.13
+Order0
+StoreCode : HOV1
+Date - Week -44 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 5.31
+Order0
+StoreCode : HOV1
+Date - Week -44 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 43.18
+Order0
+StoreCode : HOV1
+Date - Week -44 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 36.17
+Order0
+StoreCode : HOV1
+Date - Week -44 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 31.42
+Order0
+StoreCode : HOV1
+Date - Week -44 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 119.93
+Order0
+StoreCode : HOV1
+Date - Week -44 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 17.78
+Order0
+StoreCode : HOV1
+Date - Week -44 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 1.42
+Order0
+StoreCode : HOV1
+Date - Week -44 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 8.1
+Order0
+StoreCode : HOV1
+Date - Week -44 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 29.35
+Order0
+StoreCode : HOV1
+Date - Week -44 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 43.21
+Order0
+StoreCode : HOV1
+Date - Week -44 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 1.99
+Order0
+StoreCode : HOV1
+Date - Week -44 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 41.09
+Order0
+StoreCode : HOV1
+Date - Week -44 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 10.94
+Order0
+StoreCode : HOV1
+Date - Week -44 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 69.89
+Order0
+StoreCode : HOV1
+Date - Week -44 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 116.16
+Order0
+StoreCode : HOV1
+Date - Week -44 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 107.43
+Order0
+StoreCode : HOV1
+Date - Week -44 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 36.46
+Order0
+StoreCode : HOV1
+Date - Week -44 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 36.67
+Order0
+StoreCode : HOV1
+Date - Week -44 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 3.19
+Order0
+StoreCode : HOV1
+Date - Week -45 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 9.67
+Order0
+StoreCode : HOV1
+Date - Week -45 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 13.39
+Order0
+StoreCode : HOV1
+Date - Week -45 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 24.6
+Order0
+StoreCode : HOV1
+Date - Week -45 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 6.61
+Order0
+StoreCode : HOV1
+Date - Week -45 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 99.03
+Order0
+StoreCode : HOV1
+Date - Week -45 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 21.32
+Order0
+StoreCode : HOV1
+Date - Week -45 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 70.21
+Order0
+StoreCode : HOV1
+Date - Week -45 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 52.78
+Order0
+StoreCode : HOV1
+Date - Week -45 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 15.64
+Order0
+StoreCode : HOV1
+Date - Week -45 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 46.95
+Order0
+StoreCode : HOV1
+Date - Week -45 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 4.81
+Order0
+StoreCode : HOV1
+Date - Week -45 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 60.13
+Order0
+StoreCode : HOV1
+Date - Week -45 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 48.09
+Order0
+StoreCode : HOV1
+Date - Week -45 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 3.87
+Order0
+StoreCode : HOV1
+Date - Week -45 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 39.97
+Order0
+StoreCode : HOV1
+Date - Week -46 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 1.03
+Order0
+StoreCode : HOV1
+Date - Week -46 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 103.04
+Order0
+StoreCode : HOV1
+Date - Week -46 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 6.85
+Order0
+StoreCode : HOV1
+Date - Week -46 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 94.22
+Order0
+StoreCode : HOV1
+Date - Week -46 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 4.26
+Order0
+StoreCode : HOV1
+Date - Week -46 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 20.26
+Order0
+StoreCode : HOV1
+Date - Week -46 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 43.16
+Order0
+StoreCode : HOV1
+Date - Week -46 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 48.26
+Order0
+StoreCode : HOV1
+Date - Week -46 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 31.33
+Order0
+StoreCode : HOV1
+Date - Week -46 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 20.29
+Order0
+StoreCode : HOV1
+Date - Week -46 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 57.58
+Order0
+StoreCode : HOV1
+Date - Week -46 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 16.41
+Order0
+StoreCode : HOV1
+Date - Week -46 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 14.35
+Order0
+StoreCode : HOV1
+Date - Week -46 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 82.06
+Order0
+StoreCode : HOV1
+Date - Week -47 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 109.44
+Order0
+StoreCode : HOV1
+Date - Week -47 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 16.17
+Order0
+StoreCode : HOV1
+Date - Week -47 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 29.11
+Order0
+StoreCode : HOV1
+Date - Week -47 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 75.4
+Order0
+StoreCode : HOV1
+Date - Week -47 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 18.4
+Order0
+StoreCode : HOV1
+Date - Week -47 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 103.17
+Order0
+StoreCode : HOV1
+Date - Week -47 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 106.62
+Order0
+StoreCode : HOV1
+Date - Week -47 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 1.91
+Order0
+StoreCode : HOV1
+Date - Week -47 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 7.09
+Order0
+StoreCode : HOV1
+Date - Week -47 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 95.65
+Order0
+StoreCode : HOV1
+Date - Week -47 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 5.47
+Order0
+StoreCode : HOV1
+Date - Week -47 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 41.73
+Order0
+StoreCode : HOV1
+Date - Week -48 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 62.66
+Order0
+StoreCode : HOV1
+Date - Week -48 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 105.4
+Order0
+StoreCode : HOV1
+Date - Week -48 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 95.35
+Order0
+StoreCode : HOV1
+Date - Week -48 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 68.73
+Order0
+StoreCode : HOV1
+Date - Week -48 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 34.38
+Order0
+StoreCode : HOV1
+Date - Week -48 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 55.85
+Order0
+StoreCode : HOV1
+Date - Week -48 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 77.67
+Order0
+StoreCode : HOV1
+Date - Week -48 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 26.67
+Order0
+StoreCode : HOV1
+Date - Week -48 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 18.44
+Order0
+StoreCode : HOV1
+Date - Week -48 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 4.43
+Order0
+StoreCode : HOV1
+Date - Week -48 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 63.61
+Order0
+StoreCode : HOV1
+Date - Week -48 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 87.08
+Order0
+StoreCode : HOV1
+Date - Week -48 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 6.09
+Order0
+StoreCode : HOV1
+Date - Week -49 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 4.53
+Order0
+StoreCode : HOV1
+Date - Week -49 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 0.54
+Order0
+StoreCode : HOV1
+Date - Week -49 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 20.97
+Order0
+StoreCode : HOV1
+Date - Week -49 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 52.06
+Order0
+StoreCode : HOV1
+Date - Week -49 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 0.49
+Order0
+StoreCode : HOV1
+Date - Week -49 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 30.65
+Order0
+StoreCode : HOV1
+Date - Week -49 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 91.88
+Order0
+StoreCode : HOV1
+Date - Week -49 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 23.58
+Order0
+StoreCode : HOV1
+Date - Week -49 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 45.6
+Order0
+StoreCode : HOV1
+Date - Week -49 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 3.04
+Order0
+StoreCode : HOV1
+Date - Week -49 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 19.5
+Order0
+StoreCode : HOV1
+Date - Week -49 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 14.44
+Order0
+StoreCode : HOV1
+Date - Week -49 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 25.95
+Order0
+StoreCode : HOV1
+Date - Week -49 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 32.16
+Order0
+StoreCode : HOV1
+Date - Week -49 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 29.61
+Order0
+StoreCode : HOV1
+Date - Week -49 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 30.35
+Order0
+StoreCode : HOV1
+Date - Week -49 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 60.68
+Order0
+StoreCode : HOV1
+Date - Week -49 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 13.75
+Order0
+StoreCode : HOV1
+Date - Week -4 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 38.17
+Order0
+StoreCode : HOV1
+Date - Week -4 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 54.75
+Order0
+StoreCode : HOV1
+Date - Week -4 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 63.61
+Order0
+StoreCode : HOV1
+Date - Week -4 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 85.96
+Order0
+StoreCode : HOV1
+Date - Week -4 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 45.54
+Order0
+StoreCode : HOV1
+Date - Week -4 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 11.37
+Order0
+StoreCode : HOV1
+Date - Week -4 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 2.52
+Order0
+StoreCode : HOV1
+Date - Week -4 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 85.31
+Order0
+StoreCode : HOV1
+Date - Week -4 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 53.88
+Order0
+StoreCode : HOV1
+Date - Week -4 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 0.26
+Order0
+StoreCode : HOV1
+Date - Week -4 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 5.26
+Order0
+StoreCode : HOV1
+Date - Week -4 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 7
+Order0
+StoreCode : HOV1
+Date - Week -4 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 34.58
+Order0
+StoreCode : HOV1
+Date - Week -4 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 10.97
+Order0
+StoreCode : HOV1
+Date - Week -4 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 103.48
+Order0
+StoreCode : HOV1
+Date - Week -51 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 52.87
+Order0
+StoreCode : HOV1
+Date - Week -51 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 10.04
+Order0
+StoreCode : HOV1
+Date - Week -51 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 39.43
+Order0
+StoreCode : HOV1
+Date - Week -51 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 14.4
+Order0
+StoreCode : HOV1
+Date - Week -51 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 24.77
+Order0
+StoreCode : HOV1
+Date - Week -51 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 95.43
+Order0
+StoreCode : HOV1
+Date - Week -51 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 21.89
+Order0
+StoreCode : HOV1
+Date - Week -51 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 21.47
+Order0
+StoreCode : HOV1
+Date - Week -51 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 5.02
+Order0
+StoreCode : HOV1
+Date - Week -51 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 54.11
+Order0
+StoreCode : HOV1
+Date - Week -51 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 6.27
+Order0
+StoreCode : HOV1
+Date - Week -51 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 103.27
+Order0
+StoreCode : HOV1
+Date - Week -51 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 88.03
+Order0
+StoreCode : HOV1
+Date - Week -51 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 89.12
+Order0
+StoreCode : HOV1
+Date - Week -51 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 26.72
+Order0
+StoreCode : HOV1
+Date - Week -51 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 23.44
+Order0
+StoreCode : HOV1
+Date - Week -52 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 24.34
+Order0
+StoreCode : HOV1
+Date - Week -52 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 19.26
+Order0
+StoreCode : HOV1
+Date - Week -52 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 0.17
+Order0
+StoreCode : HOV1
+Date - Week -52 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 41.91
+Order0
+StoreCode : HOV1
+Date - Week -52 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 26.36
+Order0
+StoreCode : HOV1
+Date - Week -52 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 2.56
+Order0
+StoreCode : HOV1
+Date - Week -52 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 0.04
+Order0
+StoreCode : HOV1
+Date - Week -52 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 35.48
+Order0
+StoreCode : HOV1
+Date - Week -52 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 87.47
+Order0
+StoreCode : HOV1
+Date - Week -52 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 11.85
+Order0
+StoreCode : HOV1
+Date - Week -52 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 71.9
+Order0
+StoreCode : HOV1
+Date - Week -52 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 125.04
+Order0
+StoreCode : HOV1
+Date - Week -52 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 33.58
+Order0
+StoreCode : HOV1
+Date - Week -52 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 4.14
+Order0
+StoreCode : HOV1
+Date - Week -52 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 34.22
+Order0
+StoreCode : HOV1
+Date - Week -52 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 104.38
+Order0
+StoreCode : HOV1
+Date - Week -52 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 5.11
+Order0
+StoreCode : HOV1
+Date - Week -52 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 10.54
+Order0
+StoreCode : HOV1
+Date - Week -5 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 0.23
+Order0
+StoreCode : HOV1
+Date - Week -5 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 16.25
+Order0
+StoreCode : HOV1
+Date - Week -5 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 67.58
+Order0
+StoreCode : HOV1
+Date - Week -5 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 39.93
+Order0
+StoreCode : HOV1
+Date - Week -5 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 56.53
+Order0
+StoreCode : HOV1
+Date - Week -5 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 2.15
+Order0
+StoreCode : HOV1
+Date - Week -5 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 16.8
+Order0
+StoreCode : HOV1
+Date - Week -5 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 48.01
+Order0
+StoreCode : HOV1
+Date - Week -5 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 30.54
+Order0
+StoreCode : HOV1
+Date - Week -5 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 21.79
+Order0
+StoreCode : HOV1
+Date - Week -5 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 95.89
+Order0
+StoreCode : HOV1
+Date - Week -5 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 28.28
+Order0
+StoreCode : HOV1
+Date - Week -5 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 7.05
+Order0
+StoreCode : HOV1
+Date - Week -5 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 75.95
+Order0
+StoreCode : HOV1
+Date - Week -5 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 87.8
+Order0
+StoreCode : HOV1
+Date - Week -5 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 3.08
+Order0
+StoreCode : HOV1
+Date - Week -6 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 7.17
+Order0
+StoreCode : HOV1
+Date - Week -6 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 140.38
+Order0
+StoreCode : HOV1
+Date - Week -6 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 72.46
+Order0
+StoreCode : HOV1
+Date - Week -6 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 82.76
+Order0
+StoreCode : HOV1
+Date - Week -6 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 44.23
+Order0
+StoreCode : HOV1
+Date - Week -6 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 11.34
+Order0
+StoreCode : HOV1
+Date - Week -6 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 33.22
+Order0
+StoreCode : HOV1
+Date - Week -7 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 1.48
+Order0
+StoreCode : HOV1
+Date - Week -7 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 5.4
+Order0
+StoreCode : HOV1
+Date - Week -7 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 80.97
+Order0
+StoreCode : HOV1
+Date - Week -7 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 44.07
+Order0
+StoreCode : HOV1
+Date - Week -7 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 28
+Order0
+StoreCode : HOV1
+Date - Week -7 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 39.63
+Order0
+StoreCode : HOV1
+Date - Week -7 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 69.87
+Order0
+StoreCode : HOV1
+Date - Week -7 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 56.66
+Order0
+StoreCode : HOV1
+Date - Week -7 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 0.99
+Order0
+StoreCode : HOV1
+Date - Week -7 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 3.57
+Order0
+StoreCode : HOV1
+Date - Week -7 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 37.76
+Order0
+StoreCode : HOV1
+Date - Week -8 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 15.46
+Order0
+StoreCode : HOV1
+Date - Week -8 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 32.99
+Order0
+StoreCode : HOV1
+Date - Week -8 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 18.68
+Order0
+StoreCode : HOV1
+Date - Week -8 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 5.12
+Order0
+StoreCode : HOV1
+Date - Week -8 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 27.32
+Order0
+StoreCode : HOV1
+Date - Week -8 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 1.59
+Order0
+StoreCode : HOV1
+Date - Week -8 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 11.71
+Order0
+StoreCode : HOV1
+Date - Week -8 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 83.4
+Order0
+StoreCode : HOV1
+Date - Week -8 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 61.67
+Order0
+StoreCode : HOV1
+Date - Week -8 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 20.58
+Order0
+StoreCode : HOV1
+Date - Week -8 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 53.09
+Order0
+StoreCode : HOV1
+Date - Week -8 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 12.43
+Order0
+StoreCode : HOV1
+Date - Week -8 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 4.76
+Order0
+StoreCode : HOV1
+Date - Week -8 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 65.15
+Order0
+StoreCode : HOV1
+Date - Week -9 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 10.46
+Order0
+StoreCode : HOV1
+Date - Week -9 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 54.38
+Order0
+StoreCode : HOV1
+Date - Week -9 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 26.73
+Order0
+StoreCode : HOV1
+Date - Week -9 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 58.06
+Order0
+StoreCode : HOV1
+Date - Week -9 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 111.67
+Order0
+StoreCode : HOV1
+Date - Week -9 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 29.02
+Order0
+StoreCode : HOV1
+Date - Week -9 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 89.78
+Order0
+StoreCode : HOV1
+Date - Week -9 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 80.21
+Order0
+StoreCode : HOV1
+Date - Week -9 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 2.85
+Order0
+StoreCode : HOV1
+Date - Week -9 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 11.21
+Order0
+StoreCode : HOV1
+Date - Week -9 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 21.11
+Order0
+StoreCode : HOV1
+Date - Week -9 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 21.23
+Order0
+StoreCode : HOV1
+Date - Week -9 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 2.39
+Order0
+StoreCode : HOV1
+Date - Week -9 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 40.7
+Order0
+StoreCode : HOV1
+Date - Week -9 Year - 2013
+Supplier Type - Healthcare
+Supplier Name - Colgate
+Cost - 0.26

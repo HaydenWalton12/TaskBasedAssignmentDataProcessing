@@ -173,6 +173,7 @@ namespace TaskBasedForms
             this.OrderSerchResultsListView1.TabIndex = 7;
             this.OrderSerchResultsListView1.UseCompatibleStateImageBehavior = false;
             this.OrderSerchResultsListView1.View = System.Windows.Forms.View.Details;
+            this.OrderSerchResultsListView1.SelectedIndexChanged += new System.EventHandler(this.OrderSerchResultsListView1_SelectedIndexChanged);
             // 
             // StoreCode
             // 
