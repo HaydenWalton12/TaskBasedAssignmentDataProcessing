@@ -16,15 +16,7 @@ namespace TaskBasedForms
         }
 
 
-        /// <summary>
-        /// Since We Have Two Present Charts That Allow us to simplify and visulise 
-        /// query data , we can have two chart options that allow us to present the same queried data,  however
-        /// can visualise multiple types of data at once
-        /// 
-        /// </summary>
-        /// 
-
-        public void StoreChart(IEnumerable<Order> queried_orders)
+        public void StoreChart(IEnumerable<Order> QueriedOrders)
         {
             List<GraphData> ChartData = new List<GraphData>();
             List<GraphData> ChartResult = new List<GraphData>();
@@ -41,7 +33,7 @@ namespace TaskBasedForms
                 };
                 ChartData.Add(data);
             }
-            foreach (var order in queried_orders)
+            foreach (var order in QueriedOrders)
             {
                 for (int i = 0; i < ChartData.Count; i++)
                 {
@@ -79,7 +71,7 @@ namespace TaskBasedForms
 
         }
 
-        public  void DateChart(IEnumerable<Order> queried_orders)
+        public  void DateChart(IEnumerable<Order> QueriedOrders)
         {
             List<GraphData> ChartData = new List<GraphData>();
             List<GraphData> ChartResult = new List<GraphData>();
@@ -94,7 +86,7 @@ namespace TaskBasedForms
                 ChartData.Add(data);
             }
 
-            foreach (var order in queried_orders)
+            foreach (var order in QueriedOrders)
             {
                 for (int i = 0; i < ChartData.Count; i++)
                 {
@@ -134,7 +126,7 @@ namespace TaskBasedForms
 
         }
 
-        public void SupplierType(IEnumerable<Order> queried_orders)
+        public void SupplierType(IEnumerable<Order> QueriedOrders)
         {
             List<GraphData> ChartData = new List<GraphData>();
             List<GraphData> ChartResult = new List<GraphData>();
@@ -152,12 +144,12 @@ namespace TaskBasedForms
             }
 
             //iterates threw all queried data
-            foreach (var order in queried_orders)
+            foreach (var order in QueriedOrders)
             {
                 //Iterates Based Upon The chart Data count
                 for (int i = 0; i < ChartData.Count; i++)
                 {
-                    //If the Chartdate indexed field equals an orders suppliertype instance
+                    //If the Chartdate indexed field equals an Orders suppliertype instance
                     if (ChartData[i].Field == order.SupplierType)
                     {
                         ChartData[i].Count += order.Cost;
@@ -188,7 +180,7 @@ namespace TaskBasedForms
             }
         }
 
-        public void SupplierName(IEnumerable<Order> queried_orders)
+        public void SupplierName(IEnumerable<Order> QueriedOrders)
         {
             List<GraphData> ChartData = new List<GraphData>();
             List<GraphData> ChartResult = new List<GraphData>();
@@ -204,7 +196,7 @@ namespace TaskBasedForms
                 ChartData.Add(data);
             }
          
-            foreach (var order in queried_orders)
+            foreach (var order in QueriedOrders)
             {
                 for (int i = 0; i < ChartData.Count; i++)
                 {

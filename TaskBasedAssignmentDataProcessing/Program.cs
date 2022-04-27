@@ -9,16 +9,16 @@ namespace TaskBasedForms
 {
     class Program
     {
-        static Application _App;
+        static Application _Application;
         static bool _Running_Flag = true;
         [STAThread]
         static void Main(string[] args)
         {
 
-            _App = new Application();
+            _Application = new Application();
 
 
-            _App.Start(_App);
+            _Application.Start(_Application);
 
 
 

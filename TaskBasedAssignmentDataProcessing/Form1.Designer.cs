@@ -43,7 +43,7 @@ namespace TaskBasedForms
             this.StoreCodeTextBox = new System.Windows.Forms.TextBox();
             this.LoadDataButton = new System.Windows.Forms.Button();
             this.StoreCodesList = new System.Windows.Forms.ListBox();
-            this.OrderSerchResultsListView1 = new System.Windows.Forms.ListView();
+            this.OrderserchResultsListView1 = new System.Windows.Forms.ListView();
             this.StoreCode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SupplierType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SupplierName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -60,7 +60,7 @@ namespace TaskBasedForms
             this.SupplierNameSelectLabel = new System.Windows.Forms.Label();
             this.StoreCodeSelectLabel = new System.Windows.Forms.Label();
             this.SupplierTypeSelectLabel = new System.Windows.Forms.Label();
-            this.DateSelectLabel = new System.Windows.Forms.Label();
+            this.DateselectLabel = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -84,7 +84,7 @@ namespace TaskBasedForms
             this.DateList = new System.Windows.Forms.ListBox();
             this.SupplierTypeList = new System.Windows.Forms.ListBox();
             this.SupplierNameList = new System.Windows.Forms.ListBox();
-            this.button7 = new System.Windows.Forms.Button();
+            this.SaveOrderFolder = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -156,24 +156,23 @@ namespace TaskBasedForms
             this.StoreCodesList.TabIndex = 5;
             this.StoreCodesList.SelectedIndexChanged += new System.EventHandler(this.StoreCodesList_SelectedIndexChanged);
             // 
-            // OrderSerchResultsListView1
+            // OrderserchResultsListView1
             // 
-            this.OrderSerchResultsListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.OrderserchResultsListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.StoreCode,
             this.SupplierType,
             this.SupplierName,
             this.Date,
             this.Cost});
-            this.OrderSerchResultsListView1.FullRowSelect = true;
-            this.OrderSerchResultsListView1.GridLines = true;
-            this.OrderSerchResultsListView1.HideSelection = false;
-            this.OrderSerchResultsListView1.Location = new System.Drawing.Point(1025, 14);
-            this.OrderSerchResultsListView1.Name = "OrderSerchResultsListView1";
-            this.OrderSerchResultsListView1.Size = new System.Drawing.Size(799, 364);
-            this.OrderSerchResultsListView1.TabIndex = 7;
-            this.OrderSerchResultsListView1.UseCompatibleStateImageBehavior = false;
-            this.OrderSerchResultsListView1.View = System.Windows.Forms.View.Details;
-            this.OrderSerchResultsListView1.SelectedIndexChanged += new System.EventHandler(this.OrderSerchResultsListView1_SelectedIndexChanged);
+            this.OrderserchResultsListView1.FullRowSelect = true;
+            this.OrderserchResultsListView1.GridLines = true;
+            this.OrderserchResultsListView1.HideSelection = false;
+            this.OrderserchResultsListView1.Location = new System.Drawing.Point(1025, 14);
+            this.OrderserchResultsListView1.Name = "OrderserchResultsListView1";
+            this.OrderserchResultsListView1.Size = new System.Drawing.Size(799, 364);
+            this.OrderserchResultsListView1.TabIndex = 7;
+            this.OrderserchResultsListView1.UseCompatibleStateImageBehavior = false;
+            this.OrderserchResultsListView1.View = System.Windows.Forms.View.Details;
             // 
             // StoreCode
             // 
@@ -302,15 +301,15 @@ namespace TaskBasedForms
             this.SupplierTypeSelectLabel.TabIndex = 21;
             this.SupplierTypeSelectLabel.Text = "Supplier Type : ";
             // 
-            // DateSelectLabel
+            // DateselectLabel
             // 
-            this.DateSelectLabel.AutoSize = true;
-            this.DateSelectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.DateSelectLabel.Location = new System.Drawing.Point(833, 223);
-            this.DateSelectLabel.Name = "DateSelectLabel";
-            this.DateSelectLabel.Size = new System.Drawing.Size(36, 13);
-            this.DateSelectLabel.TabIndex = 22;
-            this.DateSelectLabel.Text = "Date :";
+            this.DateselectLabel.AutoSize = true;
+            this.DateselectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.DateselectLabel.Location = new System.Drawing.Point(833, 223);
+            this.DateselectLabel.Name = "DateselectLabel";
+            this.DateselectLabel.Size = new System.Drawing.Size(36, 13);
+            this.DateselectLabel.TabIndex = 22;
+            this.DateselectLabel.Text = "Date :";
             // 
             // label7
             // 
@@ -545,14 +544,15 @@ namespace TaskBasedForms
             this.SupplierNameList.TabIndex = 65;
             this.SupplierNameList.SelectedIndexChanged += new System.EventHandler(this.SupplierNameList_SelectedIndexChanged);
             // 
-            // button7
+            // SaveOrderFolder
             // 
-            this.button7.Location = new System.Drawing.Point(628, 12);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(198, 63);
-            this.button7.TabIndex = 66;
-            this.button7.Text = "Saved Order Results Folder";
-            this.button7.UseVisualStyleBackColor = true;
+            this.SaveOrderFolder.Location = new System.Drawing.Point(628, 12);
+            this.SaveOrderFolder.Name = "SaveOrderFolder";
+            this.SaveOrderFolder.Size = new System.Drawing.Size(198, 63);
+            this.SaveOrderFolder.TabIndex = 66;
+            this.SaveOrderFolder.Text = "Saved Order Results Folder";
+            this.SaveOrderFolder.UseVisualStyleBackColor = true;
+            this.SaveOrderFolder.Click += new System.EventHandler(this.SaveOrderFolder_Click);
             // 
             // label4
             // 
@@ -599,7 +599,7 @@ namespace TaskBasedForms
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.SaveOrderFolder);
             this.Controls.Add(this.SupplierNameList);
             this.Controls.Add(this.SupplierTypeList);
             this.Controls.Add(this.DateList);
@@ -622,7 +622,7 @@ namespace TaskBasedForms
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.DateSelectLabel);
+            this.Controls.Add(this.DateselectLabel);
             this.Controls.Add(this.SupplierTypeSelectLabel);
             this.Controls.Add(this.StoreCodeSelectLabel);
             this.Controls.Add(this.SupplierNameSelectLabel);
@@ -634,7 +634,7 @@ namespace TaskBasedForms
             this.Controls.Add(this.DeselectStoreCode);
             this.Controls.Add(this.TotalCostFilteredOrders);
             this.Controls.Add(this.SearchOrderButton);
-            this.Controls.Add(this.OrderSerchResultsListView1);
+            this.Controls.Add(this.OrderserchResultsListView1);
             this.Controls.Add(this.StoreCodesList);
             this.Controls.Add(this.LoadDataButton);
             this.Controls.Add(this.StoreCodeTextBox);
@@ -666,7 +666,7 @@ namespace TaskBasedForms
         public System.Windows.Forms.TextBox StoreCodeTextBox;
         public System.Windows.Forms.Button LoadDataButton;
         public System.Windows.Forms.ListBox StoreCodesList;
-        public System.Windows.Forms.ListView OrderSerchResultsListView1;
+        public System.Windows.Forms.ListView OrderserchResultsListView1;
         public System.Windows.Forms.Button SearchOrderButton;
         public System.Windows.Forms.ColumnHeader SupplierType;
         public System.ComponentModel.BackgroundWorker backgroundWorker1;
@@ -684,7 +684,7 @@ namespace TaskBasedForms
         public System.Windows.Forms.Label SupplierNameSelectLabel;
         public System.Windows.Forms.Label StoreCodeSelectLabel;
         public System.Windows.Forms.Label SupplierTypeSelectLabel;
-        public System.Windows.Forms.Label DateSelectLabel;
+        public System.Windows.Forms.Label DateselectLabel;
         public System.Windows.Forms.Label label7;
         public System.Windows.Forms.Label label8;
         public System.Windows.Forms.Label label9;
@@ -708,7 +708,7 @@ namespace TaskBasedForms
         public System.Windows.Forms.ListBox DateList;
         public System.Windows.Forms.ListBox SupplierTypeList;
         public System.Windows.Forms.ListBox SupplierNameList;
-        public System.Windows.Forms.Button button7;
+        public System.Windows.Forms.Button SaveOrderFolder;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
