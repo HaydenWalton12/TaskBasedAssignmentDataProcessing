@@ -73,10 +73,10 @@ namespace TaskBasedForms
             this.SupplierTypeChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.SupplierNameChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label3 = new System.Windows.Forms.Label();
-            this.SupplierTypeChartResultList = new System.Windows.Forms.ListBox();
-            this.SupplierNameChartResultList = new System.Windows.Forms.ListBox();
-            this.StoreChartResultList = new System.Windows.Forms.ListBox();
-            this.DateChartResultList = new System.Windows.Forms.ListBox();
+            this.SupplierTypechart_resultList = new System.Windows.Forms.ListBox();
+            this.SupplierNamechart_resultList = new System.Windows.Forms.ListBox();
+            this.Storechart_resultList = new System.Windows.Forms.ListBox();
+            this.Datechart_resultList = new System.Windows.Forms.ListBox();
             this.DateList = new System.Windows.Forms.ListBox();
             this.SupplierTypeList = new System.Windows.Forms.ListBox();
             this.SupplierNameList = new System.Windows.Forms.ListBox();
@@ -435,37 +435,37 @@ namespace TaskBasedForms
             this.label3.Size = new System.Drawing.Size(0, 13);
             this.label3.TabIndex = 52;
             // 
-            // SupplierTypeChartResultList
+            // SupplierTypechart_resultList
             // 
-            this.SupplierTypeChartResultList.FormattingEnabled = true;
-            this.SupplierTypeChartResultList.Location = new System.Drawing.Point(606, 429);
-            this.SupplierTypeChartResultList.Name = "SupplierTypeChartResultList";
-            this.SupplierTypeChartResultList.Size = new System.Drawing.Size(207, 251);
-            this.SupplierTypeChartResultList.TabIndex = 53;
+            this.SupplierTypechart_resultList.FormattingEnabled = true;
+            this.SupplierTypechart_resultList.Location = new System.Drawing.Point(606, 429);
+            this.SupplierTypechart_resultList.Name = "SupplierTypechart_resultList";
+            this.SupplierTypechart_resultList.Size = new System.Drawing.Size(207, 251);
+            this.SupplierTypechart_resultList.TabIndex = 53;
             // 
-            // SupplierNameChartResultList
+            // SupplierNamechart_resultList
             // 
-            this.SupplierNameChartResultList.FormattingEnabled = true;
-            this.SupplierNameChartResultList.Location = new System.Drawing.Point(606, 733);
-            this.SupplierNameChartResultList.Name = "SupplierNameChartResultList";
-            this.SupplierNameChartResultList.Size = new System.Drawing.Size(207, 238);
-            this.SupplierNameChartResultList.TabIndex = 56;
+            this.SupplierNamechart_resultList.FormattingEnabled = true;
+            this.SupplierNamechart_resultList.Location = new System.Drawing.Point(606, 733);
+            this.SupplierNamechart_resultList.Name = "SupplierNamechart_resultList";
+            this.SupplierNamechart_resultList.Size = new System.Drawing.Size(207, 238);
+            this.SupplierNamechart_resultList.TabIndex = 56;
             // 
-            // StoreChartResultList
+            // Storechart_resultList
             // 
-            this.StoreChartResultList.FormattingEnabled = true;
-            this.StoreChartResultList.Location = new System.Drawing.Point(1632, 737);
-            this.StoreChartResultList.Name = "StoreChartResultList";
-            this.StoreChartResultList.Size = new System.Drawing.Size(207, 238);
-            this.StoreChartResultList.TabIndex = 62;
+            this.Storechart_resultList.FormattingEnabled = true;
+            this.Storechart_resultList.Location = new System.Drawing.Point(1632, 737);
+            this.Storechart_resultList.Name = "Storechart_resultList";
+            this.Storechart_resultList.Size = new System.Drawing.Size(207, 238);
+            this.Storechart_resultList.TabIndex = 62;
             // 
-            // DateChartResultList
+            // Datechart_resultList
             // 
-            this.DateChartResultList.FormattingEnabled = true;
-            this.DateChartResultList.Location = new System.Drawing.Point(1632, 429);
-            this.DateChartResultList.Name = "DateChartResultList";
-            this.DateChartResultList.Size = new System.Drawing.Size(207, 251);
-            this.DateChartResultList.TabIndex = 59;
+            this.Datechart_resultList.FormattingEnabled = true;
+            this.Datechart_resultList.Location = new System.Drawing.Point(1632, 429);
+            this.Datechart_resultList.Name = "Datechart_resultList";
+            this.Datechart_resultList.Size = new System.Drawing.Size(207, 251);
+            this.Datechart_resultList.TabIndex = 59;
             // 
             // DateList
             // 
@@ -559,10 +559,10 @@ namespace TaskBasedForms
             this.Controls.Add(this.SupplierNameList);
             this.Controls.Add(this.SupplierTypeList);
             this.Controls.Add(this.DateList);
-            this.Controls.Add(this.StoreChartResultList);
-            this.Controls.Add(this.DateChartResultList);
-            this.Controls.Add(this.SupplierNameChartResultList);
-            this.Controls.Add(this.SupplierTypeChartResultList);
+            this.Controls.Add(this.Storechart_resultList);
+            this.Controls.Add(this.Datechart_resultList);
+            this.Controls.Add(this.SupplierNamechart_resultList);
+            this.Controls.Add(this.SupplierTypechart_resultList);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.SupplierNameChart);
             this.Controls.Add(this.SupplierTypeChart);
@@ -645,10 +645,10 @@ namespace TaskBasedForms
         public System.Windows.Forms.DataVisualization.Charting.Chart SupplierTypeChart;
         public System.Windows.Forms.DataVisualization.Charting.Chart SupplierNameChart;
         public System.Windows.Forms.Label label3;
-        public System.Windows.Forms.ListBox SupplierTypeChartResultList;
-        public System.Windows.Forms.ListBox SupplierNameChartResultList;
-        public System.Windows.Forms.ListBox StoreChartResultList;
-        public System.Windows.Forms.ListBox DateChartResultList;
+        public System.Windows.Forms.ListBox SupplierTypechart_resultList;
+        public System.Windows.Forms.ListBox SupplierNamechart_resultList;
+        public System.Windows.Forms.ListBox Storechart_resultList;
+        public System.Windows.Forms.ListBox Datechart_resultList;
         public System.Windows.Forms.ListBox DateList;
         public System.Windows.Forms.ListBox SupplierTypeList;
         public System.Windows.Forms.ListBox SupplierNameList;

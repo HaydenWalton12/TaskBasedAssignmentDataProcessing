@@ -1,7 +1,7 @@
-﻿      //Old Attempt Of Creating Query Load Function , This Was Created In Purpose Of Refactoring The Code To Generate The ListViewFields Quicker Since Depending On The
-       //Queried Results, THe Time TO Populate Can Take  A While , This Said I decided To split up the ListFields into two , split the query data into two chunks
-       //then populate each field parralel using TPL, this had mixed results with a few minor errors, once eventually resolving it and timing it , It performed around the same
-       //time as the current function in place, so I removed it in favour for cleaner code , I find this design to be overengineered 
+﻿//Old Attempt Of Creating Query Load Function , This Was Created In Purpose Of Refactoring The Code To Generate The ListViewFields Quicker Since Depending On The
+//Queried Results, THe Time TO Populate Can Take  A While , This Said I decided To split up the ListFields into two , split the query data into two chunks
+//then populate each field parralel using TPL, this had mixed results with a few minor errors, once eventually resolving it and timing it , It performed around the same
+//time as the current function in place, so I removed it in favour for cleaner code , I find this design to be overengineered 
 /*
         foreach (var item in items1)
                     {OrderSearchResultsListView.Items.Add(item);}
@@ -75,9 +75,9 @@
             if (item != null) {OrderserchResultsListView2.Items.Add(item[0]);}
         }
 */
-    
-    //These Are The two functions that accompany the code above (seen being executed as functions for TPL tasks) , these functions are what populate the ListView Lists
-    //With populated items to add to the lists
+
+//These Are The two functions that accompany the code above (seen being executed as functions for TPL tasks) , these functions are what populate the ListView Lists
+//With populated items to add to the lists
 /*
     private void LoadList1(List<ListViewItem> data)
     {
@@ -104,4 +104,32 @@
 
 
     }
+*/
+
+
+//Old Method , Used For Testing Charting 
+//Link - https://www.c-sharpcorner.com/UploadFile/1e050f/chart-control-in-windows-form-application/
+/*
+ 
+        private void LoadSupplierTypeChart_Click(object sender, EventArgs e)
+        {
+            List<GraphData> chart_data = new List<GraphData>();
+            foreach (var Type in DateList.Items)
+            {
+     
+                GraphData data = new GraphData
+                {
+
+
+                    Field = Type.ToString(),
+                    Count = 0
+                };
+                chart_data.Add(data);
+            }
+            StoreChart.ChartAreas[0].AxisX.LabelStyle.Interval = 1;
+            foreach (var data in chart_data)
+            { StoreChart.Series[0].Points.AddXY(data.Field, data.Count); }
+
+        }
+
 */
