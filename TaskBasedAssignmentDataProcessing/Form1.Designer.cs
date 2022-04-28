@@ -56,15 +56,15 @@ namespace TaskBasedForms
             this.DeselectSupplierName = new System.Windows.Forms.Button();
             this.DeselectSupplierType = new System.Windows.Forms.Button();
             this.DeselectDateList = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.SearchOrderParameterLabel = new System.Windows.Forms.Label();
             this.SupplierNameSelectLabel = new System.Windows.Forms.Label();
             this.StoreCodeSelectLabel = new System.Windows.Forms.Label();
             this.SupplierTypeSelectLabel = new System.Windows.Forms.Label();
             this.DateselectLabel = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.SelectItemLabel1 = new System.Windows.Forms.Label();
+            this.SelectItemSearchOrderParameterLabel = new System.Windows.Forms.Label();
+            this.SelectItemLabel3 = new System.Windows.Forms.Label();
+            this.SelectItemLabel4 = new System.Windows.Forms.Label();
             this.SaveOrderButton = new System.Windows.Forms.Button();
             this.ColumnChartTextBox = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -73,30 +73,22 @@ namespace TaskBasedForms
             this.SupplierTypeChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.SupplierNameChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SupplierTypeChartResultList = new System.Windows.Forms.ListBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.SupplierNameChartResultList = new System.Windows.Forms.ListBox();
             this.StoreChartResultList = new System.Windows.Forms.ListBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.DateChartResultList = new System.Windows.Forms.ListBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.DateList = new System.Windows.Forms.ListBox();
             this.SupplierTypeList = new System.Windows.Forms.ListBox();
             this.SupplierNameList = new System.Windows.Forms.ListBox();
             this.SaveOrderFolder = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.StoreChartLabel = new System.Windows.Forms.Label();
+            this.DateChartLabel = new System.Windows.Forms.Label();
+            this.SupplierNameChartLabel = new System.Windows.Forms.Label();
+            this.SupplierTypeChartLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DateChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SupplierTypeChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SupplierNameChart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // FolderSearchButton
@@ -262,14 +254,14 @@ namespace TaskBasedForms
             this.DeselectDateList.UseVisualStyleBackColor = true;
             this.DeselectDateList.Click += new System.EventHandler(this.DeselectDateList_Click);
             // 
-            // label2
+            // SearchOrderParameterLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(833, 165);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 13);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Order Search Parameters :";
+            this.SearchOrderParameterLabel.AutoSize = true;
+            this.SearchOrderParameterLabel.Location = new System.Drawing.Point(833, 165);
+            this.SearchOrderParameterLabel.Name = "SearchOrderParameterLabel";
+            this.SearchOrderParameterLabel.Size = new System.Drawing.Size(132, 13);
+            this.SearchOrderParameterLabel.TabIndex = 19;
+            this.SearchOrderParameterLabel.Text = "Order Search Parameters :";
             // 
             // SupplierNameSelectLabel
             // 
@@ -311,41 +303,41 @@ namespace TaskBasedForms
             this.DateselectLabel.TabIndex = 22;
             this.DateselectLabel.Text = "Date :";
             // 
-            // label7
+            // SelectItemLabel1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 82);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 13);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "Select Item";
+            this.SelectItemLabel1.AutoSize = true;
+            this.SelectItemLabel1.Location = new System.Drawing.Point(8, 82);
+            this.SelectItemLabel1.Name = "SelectItemLabel1";
+            this.SelectItemLabel1.Size = new System.Drawing.Size(60, 13);
+            this.SelectItemLabel1.TabIndex = 23;
+            this.SelectItemLabel1.Text = "Select Item";
             // 
-            // label8
+            // SelectItemSearchOrderParameterLabel
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(211, 82);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 13);
-            this.label8.TabIndex = 24;
-            this.label8.Text = "Select Item";
+            this.SelectItemSearchOrderParameterLabel.AutoSize = true;
+            this.SelectItemSearchOrderParameterLabel.Location = new System.Drawing.Point(211, 82);
+            this.SelectItemSearchOrderParameterLabel.Name = "SelectItemSearchOrderParameterLabel";
+            this.SelectItemSearchOrderParameterLabel.Size = new System.Drawing.Size(60, 13);
+            this.SelectItemSearchOrderParameterLabel.TabIndex = 24;
+            this.SelectItemSearchOrderParameterLabel.Text = "Select Item";
             // 
-            // label9
+            // SelectItemLabel3
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(420, 82);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(60, 13);
-            this.label9.TabIndex = 25;
-            this.label9.Text = "Select Item";
+            this.SelectItemLabel3.AutoSize = true;
+            this.SelectItemLabel3.Location = new System.Drawing.Point(420, 82);
+            this.SelectItemLabel3.Name = "SelectItemLabel3";
+            this.SelectItemLabel3.Size = new System.Drawing.Size(60, 13);
+            this.SelectItemLabel3.TabIndex = 25;
+            this.SelectItemLabel3.Text = "Select Item";
             // 
-            // label10
+            // SelectItemLabel4
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(624, 82);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 13);
-            this.label10.TabIndex = 26;
-            this.label10.Text = "Select Item";
+            this.SelectItemLabel4.AutoSize = true;
+            this.SelectItemLabel4.Location = new System.Drawing.Point(624, 82);
+            this.SelectItemLabel4.Name = "SelectItemLabel4";
+            this.SelectItemLabel4.Size = new System.Drawing.Size(60, 13);
+            this.SelectItemLabel4.TabIndex = 26;
+            this.SelectItemLabel4.Text = "Select Item";
             // 
             // SaveOrderButton
             // 
@@ -443,15 +435,6 @@ namespace TaskBasedForms
             this.label3.Size = new System.Drawing.Size(0, 13);
             this.label3.TabIndex = 52;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pictureBox1.Location = new System.Drawing.Point(589, 425);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(237, 264);
-            this.pictureBox1.TabIndex = 50;
-            this.pictureBox1.TabStop = false;
-            // 
             // SupplierTypeChartResultList
             // 
             this.SupplierTypeChartResultList.FormattingEnabled = true;
@@ -459,15 +442,6 @@ namespace TaskBasedForms
             this.SupplierTypeChartResultList.Name = "SupplierTypeChartResultList";
             this.SupplierTypeChartResultList.Size = new System.Drawing.Size(207, 251);
             this.SupplierTypeChartResultList.TabIndex = 53;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pictureBox2.Location = new System.Drawing.Point(589, 724);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(237, 264);
-            this.pictureBox2.TabIndex = 55;
-            this.pictureBox2.TabStop = false;
             // 
             // SupplierNameChartResultList
             // 
@@ -485,15 +459,6 @@ namespace TaskBasedForms
             this.StoreChartResultList.Size = new System.Drawing.Size(207, 238);
             this.StoreChartResultList.TabIndex = 62;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pictureBox3.Location = new System.Drawing.Point(1615, 724);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(237, 264);
-            this.pictureBox3.TabIndex = 61;
-            this.pictureBox3.TabStop = false;
-            // 
             // DateChartResultList
             // 
             this.DateChartResultList.FormattingEnabled = true;
@@ -501,15 +466,6 @@ namespace TaskBasedForms
             this.DateChartResultList.Name = "DateChartResultList";
             this.DateChartResultList.Size = new System.Drawing.Size(207, 251);
             this.DateChartResultList.TabIndex = 59;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pictureBox4.Location = new System.Drawing.Point(1615, 425);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(237, 264);
-            this.pictureBox4.TabIndex = 58;
-            this.pictureBox4.TabStop = false;
             // 
             // DateList
             // 
@@ -554,79 +510,75 @@ namespace TaskBasedForms
             this.SaveOrderFolder.UseVisualStyleBackColor = true;
             this.SaveOrderFolder.Click += new System.EventHandler(this.SaveOrderFolder_Click);
             // 
-            // label4
+            // StoreChartLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(842, 708);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 13);
-            this.label4.TabIndex = 67;
-            this.label4.Text = "Store Chart";
+            this.StoreChartLabel.AutoSize = true;
+            this.StoreChartLabel.Location = new System.Drawing.Point(842, 708);
+            this.StoreChartLabel.Name = "StoreChartLabel";
+            this.StoreChartLabel.Size = new System.Drawing.Size(60, 13);
+            this.StoreChartLabel.TabIndex = 67;
+            this.StoreChartLabel.Text = "Store Chart";
             // 
-            // label5
+            // DateChartLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(833, 409);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 13);
-            this.label5.TabIndex = 68;
-            this.label5.Text = "Date Chart";
+            this.DateChartLabel.AutoSize = true;
+            this.DateChartLabel.Location = new System.Drawing.Point(833, 409);
+            this.DateChartLabel.Name = "DateChartLabel";
+            this.DateChartLabel.Size = new System.Drawing.Size(58, 13);
+            this.DateChartLabel.TabIndex = 68;
+            this.DateChartLabel.Text = "Date Chart";
             // 
-            // label6
+            // SupplierNameChartLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 708);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(104, 13);
-            this.label6.TabIndex = 69;
-            this.label6.Text = "Supplier Name Chart";
+            this.SupplierNameChartLabel.AutoSize = true;
+            this.SupplierNameChartLabel.Location = new System.Drawing.Point(12, 708);
+            this.SupplierNameChartLabel.Name = "SupplierNameChartLabel";
+            this.SupplierNameChartLabel.Size = new System.Drawing.Size(104, 13);
+            this.SupplierNameChartLabel.TabIndex = 69;
+            this.SupplierNameChartLabel.Text = "Supplier Name Chart";
             // 
-            // label11
+            // SupplierTypeChartLabel
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(8, 416);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(100, 13);
-            this.label11.TabIndex = 70;
-            this.label11.Text = "Supplier Type Chart";
+            this.SupplierTypeChartLabel.AutoSize = true;
+            this.SupplierTypeChartLabel.Location = new System.Drawing.Point(8, 416);
+            this.SupplierTypeChartLabel.Name = "SupplierTypeChartLabel";
+            this.SupplierTypeChartLabel.Size = new System.Drawing.Size(100, 13);
+            this.SupplierTypeChartLabel.TabIndex = 70;
+            this.SupplierTypeChartLabel.Text = "Supplier Type Chart";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1851, 1000);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.SupplierTypeChartLabel);
+            this.Controls.Add(this.SupplierNameChartLabel);
+            this.Controls.Add(this.DateChartLabel);
+            this.Controls.Add(this.StoreChartLabel);
             this.Controls.Add(this.SaveOrderFolder);
             this.Controls.Add(this.SupplierNameList);
             this.Controls.Add(this.SupplierTypeList);
             this.Controls.Add(this.DateList);
             this.Controls.Add(this.StoreChartResultList);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.DateChartResultList);
-            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.SupplierNameChartResultList);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.SupplierTypeChartResultList);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.SupplierNameChart);
             this.Controls.Add(this.SupplierTypeChart);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.DateChart);
             this.Controls.Add(this.ColumnChartTextBox);
             this.Controls.Add(this.SaveOrderButton);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.SelectItemLabel4);
+            this.Controls.Add(this.SelectItemLabel3);
+            this.Controls.Add(this.SelectItemSearchOrderParameterLabel);
+            this.Controls.Add(this.SelectItemLabel1);
             this.Controls.Add(this.DateselectLabel);
             this.Controls.Add(this.SupplierTypeSelectLabel);
             this.Controls.Add(this.StoreCodeSelectLabel);
             this.Controls.Add(this.SupplierNameSelectLabel);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.SearchOrderParameterLabel);
             this.Controls.Add(this.StoreChart);
             this.Controls.Add(this.DeselectDateList);
             this.Controls.Add(this.DeselectSupplierType);
@@ -647,10 +599,6 @@ namespace TaskBasedForms
             ((System.ComponentModel.ISupportInitialize)(this.StoreChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SupplierTypeChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SupplierNameChart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -680,15 +628,15 @@ namespace TaskBasedForms
         public System.Windows.Forms.Button DeselectSupplierName;
         public System.Windows.Forms.Button DeselectSupplierType;
         public System.Windows.Forms.Button DeselectDateList;
-        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label SearchOrderParameterLabel;
         public System.Windows.Forms.Label SupplierNameSelectLabel;
         public System.Windows.Forms.Label StoreCodeSelectLabel;
         public System.Windows.Forms.Label SupplierTypeSelectLabel;
         public System.Windows.Forms.Label DateselectLabel;
-        public System.Windows.Forms.Label label7;
-        public System.Windows.Forms.Label label8;
-        public System.Windows.Forms.Label label9;
-        public System.Windows.Forms.Label label10;
+        public System.Windows.Forms.Label SelectItemLabel1;
+        public System.Windows.Forms.Label SelectItemSearchOrderParameterLabel;
+        public System.Windows.Forms.Label SelectItemLabel3;
+        public System.Windows.Forms.Label SelectItemLabel4;
         public System.Windows.Forms.Button SaveOrderButton;
         public System.Windows.Forms.Label ColumnChartTextBox;
         public System.Windows.Forms.Label label13;
@@ -697,22 +645,19 @@ namespace TaskBasedForms
         public System.Windows.Forms.DataVisualization.Charting.Chart SupplierTypeChart;
         public System.Windows.Forms.DataVisualization.Charting.Chart SupplierNameChart;
         public System.Windows.Forms.Label label3;
-        public System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.ListBox SupplierTypeChartResultList;
-        public System.Windows.Forms.PictureBox pictureBox2;
         public System.Windows.Forms.ListBox SupplierNameChartResultList;
         public System.Windows.Forms.ListBox StoreChartResultList;
-        public System.Windows.Forms.PictureBox pictureBox3;
         public System.Windows.Forms.ListBox DateChartResultList;
-        public System.Windows.Forms.PictureBox pictureBox4;
         public System.Windows.Forms.ListBox DateList;
         public System.Windows.Forms.ListBox SupplierTypeList;
         public System.Windows.Forms.ListBox SupplierNameList;
         public System.Windows.Forms.Button SaveOrderFolder;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label11;
+
+        private System.Windows.Forms.Label StoreChartLabel;
+        private System.Windows.Forms.Label DateChartLabel;
+        private System.Windows.Forms.Label SupplierNameChartLabel;
+        private System.Windows.Forms.Label SupplierTypeChartLabel;
     }
 }
 

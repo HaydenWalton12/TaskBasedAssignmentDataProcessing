@@ -145,8 +145,6 @@ namespace TaskBasedForms
         //Logic Is The Same Just Translated Further For The F# Project, That Said , This Code Is Self-Explanatory
         public void LoadData(int start, int end)
         {
-            string[] arr = new string[100000];
-
             for (int i = start; i < end; i++)
             {
                
@@ -163,7 +161,7 @@ namespace TaskBasedForms
                 string[] orderData = File.ReadAllLines(fileNames[i]);
 
                 Date date = new Date { Week = Convert.ToInt32(fileNameSplit[1]), Year = Convert.ToInt32(fileNameSplit[2]) };
-
+                Dates.Add(date);
 
                 //From The Current File Instance , Loads All Order Data , We Then Use This ForEach To Fill In Local Data , This
                 //Data Then Gets Added To A List That Stores All Orders From All Files , Store Each Order Using Order Structure
@@ -186,7 +184,8 @@ namespace TaskBasedForms
             }
         }
 
-        //
+        //Function Using OpenFileDialog , 
+        //Source (Assisted to create) - https://docs.microsoft.com/en-us/dotnet/desktop/winforms/controls/how-to-open-files-using-the-openfiledialog-component?view=netframeworkdesktop-4.8#:~:text=OpenFileDialog%20component%20opens%20the%20Windows,StreamReader%20class.
         private void LoadStoreCodeClick(object sender, EventArgs e)
         {
             OpenFileDialog open_file_dialog = new OpenFileDialog();
@@ -203,33 +202,31 @@ namespace TaskBasedForms
             }
         }
 
+        //With provided loaded list data , This Funciton Generates The List Values, Visualising Query Options
         public void LoadList()
         {
-            string[] _StoreCodeData = File.ReadAllLines(StoreCodesFile);
+            string[] store_code_data = File.ReadAllLines(StoreCodesFile);
             int i = 0;
 
-            foreach (var StoreData in _StoreCodeData.AsParallel())
+            foreach (var store_data in store_code_data.AsParallel())
             {
                 //Splits data using ".split" , creating and storing into string array , the string code is split into two strings.
                 //split determined by single unicode character ',' , will split from this considered middle point. E.G Hello =  .split('l') , s1(he) s2(lo)
                 //This splits up the StoreCode data into two , the store code in s1 , then store location in s2
-                string[] storeDataSplit = StoreData.Split(',');
-                StoreCodesList.Items.Add(storeDataSplit[0] + " : " + storeDataSplit[1]);
-                stores[i] = storeDataSplit[0];
+                string[] store_data_split = store_data.Split(',');
+                StoreCodesList.Items.Add(store_data_split[0] + " : " + store_data_split[1]);
+                stores[i] = store_data_split[0];
                 i++;
             }
 
-
-
-
-            foreach (var suppliertype in SupplierTypes.AsParallel())
+            foreach (var supplier_type in SupplierTypes.AsParallel())
             {
-                SupplierTypeList.Items.Add(suppliertype.ToString());
+                SupplierTypeList.Items.Add(supplier_type.ToString());
             }
 
-            foreach (var suppliername in SupplierNames.AsParallel())
+            foreach (var supplier_name in SupplierNames.AsParallel())
             {
-                SupplierNameList.Items.Add(suppliername.ToString());
+                SupplierNameList.Items.Add(supplier_name.ToString());
             }
             foreach (var date in Dates.AsParallel())
             {
@@ -476,6 +473,7 @@ namespace TaskBasedForms
             }
 
             //Clear Data For Next Queried Search
+
             SelectionCode = 0;
 
             SelectedSupplierNameIndex = -1;
@@ -488,6 +486,7 @@ namespace TaskBasedForms
             SupplierTypeList.SelectedIndex = -1;
             DateList.SelectedIndex = -1;
 
+
             SupplierTypeActive = false;
             DateActive = false;
             StoreCodeActive = false;
@@ -497,9 +496,6 @@ namespace TaskBasedForms
         //UpDates the query filtering results, and some minor data
         private void UpdateQueryListView(IEnumerable<Order> Orders)
         {
-
-            //Stores The Type & Cost
-            
             //Clear Previous Results
             OrderSearchResultsListView.Items.Clear();
       
@@ -509,8 +505,10 @@ namespace TaskBasedForms
 
             //Takes First Half Of Order Data
             IEnumerable<Order> splitOrder1 = Orders.Take(order_half_size);
+            
             //Skip Previous First Half Of Data Taken , Allows Us To Take Next Half Of Data
             Orders = Orders.Skip(order_half_size);
+            
             //Take Next Half Of Data
             IEnumerable<Order> splitOrder2 = Orders.Take(order_half_size - 1);
 
@@ -520,150 +518,30 @@ namespace TaskBasedForms
 
             //Load Queried Data From Query Filters , Process Them Into Individual ListViewItems ,Store Into ListViewItem Lists
             Task task1 = new Task(() => { items1 = LoadData1(splitOrder1); });
-            Task task2 = new Task(() => { items2 = LoadData2(splitOrder2); });
+            Task task2 = new Task(() => { items2 = LoadData1(splitOrder2); });
           
+            //Start Tasks
             task1.Start();
             task2.Start();
+
+            //Wait For Task To Finish
             task2.Wait();
 
             //Using .AddRange , We Add The ListViewItem List Values Into The OrderSearchResultsView 
             OrderSearchResultsListView.Items.AddRange(items1.ToArray());
             OrderSearchResultsListView.Items.AddRange(items2.ToArray());
 
-            //foreach (var item in items1)
-            //{
-
-            //        OrderSearchResultsListView.Items.Add(item);
-
-            //}
-            //foreach (var item in items2)
-            //{
-
-            //    OrderserchResultsListView2.Items.Add(item);
-
-            //}
-            //int orderquarter = Ordersize / 4;
-            //int k = 1;
-            //int j = 2;
-            //int f = 3;
-            //for (int i = 0; i < orderquarter; i++)
-            //{
-            //    //OrderSearchResultsListView.Items.Add(items1[i]);
-            //    //if (i < orderhalfsize - 1)
-            //    //{
-            //    //    OrderserchResultsListView2.Items.Add(items2[i]);
-            //    //}
-
-            //    OrderSearchResultsListView.Items.Add(items1[i]);
-            //    OrderSearchResultsListView.Items.Add(items1[k]);
-            //    OrderSearchResultsListView.Items.Add(items1[j]);
-            //    OrderSearchResultsListView.Items.Add(items1[f]);
-
-            //    if (k < items2.Count || i < items2.Count - 1)
-            //    {
-            //        OrderserchResultsListView2.Items.Add(items2[i]);
-            //        OrderSearchResultsListView.Items.Add(items2[k]);
-            //    }
-            //    i = i + 3;
-            //    k =  k + 4;
-            //    j = j + 4;
-            //    f = f + 4;
-
-            //}
-            //Task task3 = new Task(() => {  LoadList1(items1); });
-            //Task task4 = new Task(() => { LoadList2(items2); });
-
-            //task3.Start();
-            //task4.Start();
-            //task4.Wait();
-            //foreach (var order in Orders)
-            //{
-            //    string[] subitem = new string[5];
-
-            //    subitem[0] = order.StoreCode;
-            //    subitem[1] = order.SupplierName;
-            //    subitem[2] = order.SupplierType;
-            //    subitem[3] = order.Date.Week.ToString() + " , " + order.Date.Year.ToString();
-            //    subitem[4] = "£ " + order.Cost.ToString();
-
-            //    ListViewItem item = new ListViewItem(subitem);
-
-            //    OrderSearchResultsListView.Items.Add(item);
-            //}
-
-
-
-            //foreach (var item in orderchunk1)
-            //{
-
-            //    if (item != null)
-            //    {
-            //        OrderSearchResultsListView.Items.Add(item[0]);
-            //    }
-            //}
-            //foreach (var item in orderchunk2)
-            //{
-            //    if (item != null)
-            //    {
-            //        OrderserchResultsListView2.Items.Add(item[0]);
-            //    }
-            //}
         }
-        //private void LoadList1(List<ListViewItem> data)
-        //{
-        //    foreach(var item in data)
-        //    {
-        //        Invoke(new Action(() =>
-        //     {
-        //        OrderSearchResultsListView.Items.Add(item);
-        //      }));
-        //    }
-           
 
-        //}
-        //private void LoadList2(List<ListViewItem> data)
-        //{
-        //    foreach (var item in data)
-        //    {
-        //        Invoke(new Action(() =>
-        //        {
-        //            OrderserchResultsListView2.Items.Add(item);
-        //        }));
-        //    }
-
-
-        //}
-
-
+        //Populates The List ItemView
         private List<ListViewItem> LoadData1(IEnumerable<Order> data)
         {
-            List<ListViewItem> listViewItems = new List<ListViewItem>();
+
+            List<ListViewItem> list_view_items = new List<ListViewItem>();
          
+            //Data provided is broken into string array in correct order , to then store in list_view_item
             foreach (var order in data)
             {
-             
-                string[] subitem = new string[5];
-
-            subitem[0] = order.StoreCode;
-            subitem[1] = order.SupplierName;
-            subitem[2] = order.SupplierType;
-            subitem[3] = order.Date.Week.ToString() + " , " + order.Date.Year.ToString();
-            subitem[4] = "£ " + order.Cost.ToString();
-
-                ListViewItem item = new ListViewItem(subitem);
-
-                listViewItems.Add(item);
-               
-            }
-            return listViewItems;
-        }
-        private List<ListViewItem> LoadData2(IEnumerable<Order> data)
-        {
-            List<ListViewItem> listViewItems = new List<ListViewItem>();
-            int i = 0;
-            foreach (var order in data)
-            {
-         
                 string[] subitem = new string[5];
 
                 subitem[0] = order.StoreCode;
@@ -673,10 +551,11 @@ namespace TaskBasedForms
                 subitem[4] = "£ " + order.Cost.ToString();
 
                 ListViewItem item = new ListViewItem(subitem);
-                listViewItems.Add(item);
-            }
-            return listViewItems;
 
+                list_view_items.Add(item);
+               
+            }
+            return list_view_items;
         }
         private void CheckQuery(IEnumerable<Order> QueriedOrders)
         {
