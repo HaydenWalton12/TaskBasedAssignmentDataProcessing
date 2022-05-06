@@ -189,7 +189,7 @@ namespace TaskBasedForms
             {
                 GraphData data = new GraphData
                 {
-                    Field = Type.ToString(),
+                    Field = type.ToString(),
                     Count = 0
                 };
 

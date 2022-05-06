@@ -35,6 +35,10 @@ namespace TaskBasedForms
 
         int SelectionCode = 0;
 
+
+        double TotalCost = 0.0f;
+
+
         //Directory Variables - Used To Correctly Locate The Project Directories , To Store And Open Files & Folder
         //Solution Found From - https://stackoverflow.com/questions/816566/how-do-you-get-the-current-project-directory-from-c-sharp-code-when-creating-a-c
 
@@ -196,6 +200,7 @@ namespace TaskBasedForms
 
                     //Add To Order
                     Orders.Add(order);
+                    TotalCost += order.Cost;
                 }
             }
         }
